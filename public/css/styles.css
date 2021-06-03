@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* -------------- FOOTER -------------- */
+/* ------- CONTENEDOR FOOTER PRINCIPAL ------- */
+.principalFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px 15px 0px 15px;
+    background-color: #f5fff6;
+}
+
+.content__footer_follow_icons a, .content__footer_payment_icons a, .area2 a {
+    text-decoration:none;
+}
+
+.content__footer_links a {
+    display: block;
+}
+
+/* ----PRIMER BLOQUE---- */
+.content__footer_follow_icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot_icon_follow {
+    color: #ffffff;;
+    background-color: #2478ba;
+    display: flex;
+    justify-content: center;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 7px;
+    border-radius: 50%;
+    font-size: 25px;
+    min-width: 25px;
+}
+
+.fa-facebook-f {
+    background-color: #3b5998;
+}
+
+.fa-instagram {
+    background-color: #3f729b;
+}
+
+.fa-twitter {
+    background-color: #55acee;
+}
+
+.fa-facebook-f:hover, .fa-instagram:hover, .fa-twitter:hover, .foot_icon_payment:hover {
+    opacity: 0.8;
+}
+
+/* ----SEGUNDO BLOQUE---- */
+.content__footer_payment_icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.foot_icon_payment {
+    color: rgba(16, 53, 16, 0.712);
+    display: flex;
+    justify-content: center;
+    fill:hotpink;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 0px;
+    font-size: 40px;
+    min-width: 40px;
+}
+
+/* ----TERCER BLOQUE---- */
+.medium_footer {
+text-align: center; 
+font-size: 0.9375rem;
+}
+
+.medium_footer p {
+    margin-bottom: 0.4375rem;
+}
+
+.logoFooter {
+    margin-top: 1.17rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 90px;
+    height: 90px;
+}
+
+/* ----CUARTO Y QUINTO BLOQUE---- */
+.content__footer_links a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+.content__footer_links a:hover {
+    text-decoration:underline ;
+    font-weight:500;
+}
