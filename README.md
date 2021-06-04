@@ -17,3 +17,8 @@ Somos Alejandro Espíndola, Juan Jiménez y Elisa Villeda, un tercio con perfile
 - [Nanah](https://nanah.mx/ "Nanah"): Sitio web con productos similares. La página está bien organizada.
 
 - [Verdecitos](https://verdecitos.mx/ "Verdecitos"): Sitio web orientado a la venta de productos ecólogicos, apunta a un publico que lleva la sustentabilidad como un estilo de vida, además de publicar artículos relacionados a la ecología.
+
+## Retrospectiva
+
+## Trello
+- [Proyecto Integrador](https://trello.com/b/s7m1O6XI/proyecto-integrador-e9/ "Proyecto Integrador")
