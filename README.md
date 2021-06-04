@@ -40,6 +40,10 @@ Usar las siguientes medidas para sus media queries **320px**, **768px** y **1280
 ### 5. Nombre de archivos CSS
 Nombrar sus archivos CSS con el mismo nombre de la sección que estén trabajando. Ej. login.css, register.css, productCart.css, etc.
 
+### 6. Medidas relativas
+
+**Tratar** de usar medidas **_rem_**, la medida por default del navegador es 16px. Por lo tanto, 1 rem = 16px, si quiero que un margen tenga 5px usaria `margin: 0.3125rem` (5/16).
+
 ### Importante: Antes de hacer un git push, siempre hacer git pull para traer los cambios más recientes ya que alguien del equipo pudo haber hecho cambios.
 
 ##### Cualquier pregunta, sugerencia o cambio lo comentamos por WhatsApp 🤠
