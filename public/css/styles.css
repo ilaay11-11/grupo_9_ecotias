@@ -1,10 +1,28 @@
-body {
+/*
+ * ESTE ARCHIVO INCLUYE LOS ESTILOS DEL DOCUMENTO GENERAL, HEADER Y FOOTER.
+ */
+
+
+/* Estilos del documento (general)
+   ============================================================================================================== */
+* {
     margin: 0;
     padding:0;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* -------------- FOOTER -------------- */
+
+/* Estilos del header
+   ============================================================================================================== */
+
+
+
+   
+
+
+/* Estilos del footer
+   ============================================================================================================== */
+
 /* ------- CONTENEDOR FOOTER PRINCIPAL ------- */
 .principalFooter {
     display: flex;
