@@ -1,0 +1,322 @@
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+marquee{
+    background-color: thistle;
+    color: black;
+    margin-top: 0px;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul li{
+    margin-left: 25px ;
+    margin-right: 25px;
+    display:inline;
+    padding: 15px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    font-weight: bold;
+}
+
+ul div{
+    display: inline-flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    
+    
+}
+#log-in{
+    width: 100px;
+    height: 30px;
+}
+
+
+.descripcion{
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    margin-right: 100px;
+    text-align: left;
+    justify-content: space-around;
+}
+
+#imagen-principal{
+    width: 400px;
+    height: 400px;
+    margin-left: 100px;
+}
+
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+p {
+    text-align: justify;
+    width: 350px;
+    
+}
+
+input,
+textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+}
+
+input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-group {
+  clear: both;
+  margin: 15px 0;
+  position: relative;
+}
+
+.input-group input[type='button'] {
+  background-color: #eeeeee;
+  min-width: 38px;
+  width: auto;
+  transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+  font-weight: bold;
+  height: 38px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.input-group .quantity-field {
+  position: relative;
+  height: 38px;
+  left: -6px;
+  text-align: center;
+  width: 62px;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0 5px;
+  resize: vertical;
+  margin-top: 10px;
+}
+
+.button-plus {
+  left: -13px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+#descripcion-producto{
+    margin-top: 40px;
+}
+
+.imagenes{
+    margin-top: 20px;
+}
+
+#log-in{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    text-align:justify;
+    font-size: 11px;
+    position: relative;
+    background-color: white;
+}
+
+#buscador{
+    border-radius: 5px;
+    height: 20px;
+    text-align: left;
+}
+
+#imagen2{
+    
+    width: 80px;
+    height: 80px;
+    margin-left: 100px;
+    margin-top: 13px;
+}
+#reviews{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+#t-reviews{
+    margin-left: 105px;
+    margin-top: 1px;
+    font-style: italic;
+    background-color:lightgreen;
+    padding: 10px;
+}
+
+#write-r{
+    border-radius: 5px;
+    width: 120px;
+    margin-left: 350px;
+}
+.agregar{
+    margin-right: 50px;
+    
+}
+#wa{
+    width: 200px;
+    height: 100px;
+    margin-left: 180px;
+}
+
+.t-t-p-i{
+    margin-top: 80px;
+    text-align: center;
+    background: rgb(211, 253, 211);
+    height: 80px;
+}
+
+.img-ttpi{
+    display: flex;
+    justify-content: space-around;
+    
+    background: rgb(211, 253, 211);;
+
+}
+#b-regresar{
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 50px;
+       
+}
+
+/* -------------- FOOTER -------------- */
+/* ------- CONTENEDOR FOOTER PRINCIPAL ------- */
+.principalFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px 15px 0px 15px;
+    background-color: #f5fff6;
+}
+
+.content__footer_follow_icons a, .content__footer_payment_icons a, .area2 a {
+    text-decoration:none;
+}
+
+.content__footer_links a {
+    display: block;
+}
+
+/* ----PRIMER BLOQUE---- */
+.content__footer_follow_icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot_icon_follow {
+    color: #ffffff;;
+    background-color: #2478ba;
+    display: flex;
+    justify-content: center;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 7px;
+    border-radius: 50%;
+    font-size: 25px;
+    min-width: 25px;
+}
+
+.fa-facebook-f {
+    background-color: #3b5998;
+}
+
+.fa-instagram {
+    background-color: #3f729b;
+}
+
+.fa-twitter {
+    background-color: #55acee;
+}
+
+.fa-facebook-f:hover, .fa-instagram:hover, .fa-twitter:hover, .foot_icon_payment:hover {
+    opacity: 0.8;
+}
+
+/* ----SEGUNDO BLOQUE---- */
+.content__footer_payment_icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.foot_icon_payment {
+    color: rgba(16, 53, 16, 0.712);
+    display: flex;
+    justify-content: center;
+    fill:hotpink;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 0px;
+    font-size: 40px;
+    min-width: 40px;
+}
+
+/* ----TERCER BLOQUE---- */
+.medium_footer {
+text-align: center; 
+font-size: 0.9375rem;
+}
+
+.medium_footer p {
+    margin-bottom: 0.4375rem;
+}
+
+.logoFooter {
+    margin-top: 1.17rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 90px;
+    height: 90px;
+}
+
+/* ----CUARTO Y QUINTO BLOQUE---- */
+.content__footer_links a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+.content__footer_links a:hover {
+    text-decoration:underline ;
+    font-weight:500;
+}
