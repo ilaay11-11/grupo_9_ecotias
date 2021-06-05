@@ -17,33 +17,20 @@
         <marquee>Envíos gratis a partir de $599</marquee>
         
         <ul class="menu">
-            <li><a href="#home">INICIO</a></li>
-            <li><a href="#shop">TIENDA</a></li>
-            <li><a href="#Us">NOSOTROS</a></li>
-            <li><a href="#Blog">BLOG</a></li>
-            <li><a href="#Contact">CONTACTO</a></li>
+            <li type="none"><a href="#home" class="link-h">INICIO</a></li>
+            <li type="none"><a href="#shop" class="link-h">TIENDA</a></li>
+            <li type="none"><a href="#Us"class="link-h">NOSOTROS</a></li>
+            <li type="none"><a href="#Blog"class="link-h">BLOG</a></li>
+            <li type="none"><a href="#Contact" class="link-h">CONTACTO</a></li>
             <img src="/images/Logo-ecotias.JPG" id="logo">
-            <div>
-                <label for="carrito">
-                    <span class="material-icons material-icons-outlined">
-                        add_shopping_cart
-                    </span>    
-                </label>
-            </div>
+            <button class="carrito"><i class="fas fa-cart-plus"></i></button>          
+            
             <div  class="icono-input">
                 <img src="/images/search_black_24dp.svg" alt="" id="buscar-i">
                 <input id="buscador" type="text" placeholder="Buscar producto" aria-live="polite" />
             </div>
             
-            <div>
-                <label for="show-profile">
-                    <span class="material-icons material-icons-outlined">
-                        person
-                    </span>
-                    
-                </label>
-                <input id="log-in" type="button" value="Regístrate/Inicia Sesión">
-            </div>          
+            <button class="user"><i class="fas fa-user"></i>Log in/Sign up</button>     
         </ul>
                 
         
@@ -53,7 +40,7 @@
             <img src="/images/shampoo.JPG" id="imagen-principal">
             <img src="/images/shampoo.JPG" id="imagen2"> 
             
-            <h4 id="reviews">CUSTOMER REVIEWS</h4>
+            <h3 id="reviews">CUSTOMER REVIEWS</h3>
             <p id="t-reviews">
                 "Realmente hidrata el cabello y su aroma es delicioso.
                 Lo recomiendo ampliamente."
@@ -103,24 +90,24 @@
     </div>
     <div class="img-ttpi">
         <div>
-            <img src="/images/shampoo2.JPG">
+            <img src="/images/shampoo2.JPG" class="sh">
             <h4 style="text-align: center;">
-                <a href="s2">Shampoo de Romero</a>
+                <a href="s2" class="link-h">Shampoo de Romero</a>
             </h4>
             <h4 style="text-align: center;">$180.00 MXN</h4>
         </div>
         <div>
-            <img src="/images/shampoo3.JPG" style="width: 289px; height: 336px;">
+            <img src="/images/shampoo3.JPG" style="width: 289px; height: 336px;" class="sh">
             <h4 style="text-align: center;">
-                <a href="#s3">Shampoo de Mandarina</a>
+                <a href="#s3" class="link-h">Shampoo de Mandarina</a>
             </h4>
             <h4 style="text-align: center;">$180.00 MXN</h4>
 
         </div>
         <div>
-            <img src="/images/shampoo4.JPG" style="width: 289px; height: 336px;">
+            <img src="/images/shampoo4.JPG" style="width: 289px; height: 336px;" class="sh">
             <h4 style="text-align: center;">
-                <a href="#s4">Shampoo Cabello Rizado</a>
+                <a href="#s4" class="link-h">Shampoo Cabello Rizado</a>
             </h4>
             <h4 style="text-align: center;">$180.00 MXN</h4>
 
@@ -129,11 +116,10 @@
 
     </div>
     <div id="b-regresar">
-        <input type="button" value=" ← REGRESAR" style="font-weight: bold; border-color: black;
-        border-radius: 3px; background-color: cornsilk;" >
+        <button style="background-color: white; border-radius: 5px;"><i class="fas fa-long-arrow-alt-left"></i>   REGRESAR</button>
     </div>
 
-//FOOTER//   
+ 
     <footer class="bigFooter">
         <div class="principalFooter">
             <div>

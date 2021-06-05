@@ -35,7 +35,9 @@ El archivo  está disponible en la rama develop, hacer un git pull para traer el
 `<link rel="stylesheet" href="/css/styles.css">`
 
 ### 4. Breakpoints
-Usar las siguientes medidas para sus media queries **320px**, **768px** y **1280px**. Se recomienda utilizar la estrategia _mobile first_.
+Usar las siguientes medidas para sus media queries **768px** y **opcionalmente 1280px**. Se recomienda utilizar la estrategia _mobile first_.
+
+`@media (min-width: 768px)` y opcionalmente ``@media (min-width: 1280px)``
 
 ### 5. Nombre de archivos CSS
 Nombrar sus archivos CSS con el mismo nombre de la sección que estén trabajando. Ej. login.css, register.css, productCart.css, etc.
