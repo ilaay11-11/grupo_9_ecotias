@@ -90,6 +90,7 @@ input[type="checkbox"]:checked + .menu_items {
     background-color: rgba(229, 255, 232, 0.95);
     width: 100%;
     position: fixed;
+    z-index: 1;
   }
 
 .buscarNav {
