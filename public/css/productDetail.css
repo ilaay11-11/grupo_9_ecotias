@@ -9,13 +9,12 @@
     text-align: left;
     justify-content: space-around;
 }
-#descripcion-producto p {
-    text-align: justify;
-    width: 350px;
+.descripcion-producto {
+  margin-left: 100px;
+  text-align: justify;
+  width: 55%;
+  margin-top: 20px;
     
-}
-#descripcion-producto{
-    margin-top: 40px;
 }
 /*BOTÓN DE CANTIDAD PARA AÑADIR PRODUCTOS*/
 input,
@@ -81,10 +80,13 @@ input[type="number"] {
   -moz-appearance: textfield;
   -webkit-appearance: none;
 }
+.input-group{
+  margin-left: 25%;
+}
 /*BOTÓN AGREGAR*/
 .agregar{
-    margin-right: 50px;
-    
+  margin-right: 50px;
+  margin-left: 25%;
 }
 /*IMG WA*/
 #wa{
