@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
     <title>Home</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
                 <a href="#"><i class="head_icon_follow fab fa-twitter-square"></i></a>
             </div>
         </div>
-        
+<!-- ---------------- Navegación mobile ---------------- -->
         <div class="nav_mobile">
             <div class="main_nav_mobile">
                 <div class="menu_icon">
@@ -38,6 +39,7 @@
         </div>
         <input type="checkbox" id="show-nav" hidden>
             <ul class="menu_items">
+                <li type="none"><a id="loging_option" href="#home"><i class="fas fa-sign-in-alt"></i> Registrate / Inicia sesión</a></li>
                 <li type="none" class="buscarNav">
                     <input type="text" placeholder="Buscar...">
                     <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
@@ -49,7 +51,7 @@
                 <li type="none"><a href="#Contact">CONTACTO</a></li>
             </ul>
     </div>
-
+<!-- ---------------- Navegación normal ---------------- -->
     <div class="nav_normal">
         <nav class="menu_normal">
             <ul class="menu_items_normal">
@@ -60,13 +62,16 @@
                 <li type="none"><a href="#Contact">CONTACTO</a></li>
             </ul>
         </nav>
-            
+
         <div>
             <img class="logo_header" src="/images/logo.png" alt="logo">
         </div>
-        <div class="searchBar">
-            <input type="text" placeholder="Buscar...">
-            <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
+        <div class="login_search">
+            <a id="loging_option_normal" href="#home">Registrate / Inicia sesión <i class="fas fa-sign-in-alt"></i></a>
+            <div class="searchBar">
+                <input type="text" placeholder="Buscar...">
+                <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
+            </div>
         </div>
 
         <div class="cart_status">
@@ -75,7 +80,110 @@
         </div>
     </div>
     </header>
-    <main></main>
+    <main class="principalHome">
+        <section class="section1_slider_home">
+            <img class="img_slider_home" src="/images/sliderimg.jpg" alt="slider-imgage"/>
+        </section>
+        <section class="section2_features_home">
+            <div class="featureHome">
+                <i class="fas fa-truck"></i>
+                <h3>Envío a todo México y USA</h3>
+                <p>Envíos gratis a partir de $599 con tiempos de entrega menor a 24 hrs.</p>
+            </div>
+            <div class="featureHome">
+                <i class="fas fa-user-shield"></i>
+                <h3>Compra protegida</h3>
+                <p>Datos personales protegidos, entrega de producto garantizada.</p>
+            </div>
+            <div class="featureHome">
+                <i class="far fa-life-ring"></i>
+                <h3>Increíble servicio al cliente</h3>
+                <p>Dispuestos a ayudarte las 24 horas todos los días.</p>
+            </div>
+        </section>
+        <section class="section3_offers_home">
+            <h2>Ofertas</h2>
+            <div class="products_show_home">
+                <div class="product_home">
+                    <img src="/images/shampoo.JPG" alt="producto">
+                    <p class="product-name">Producto de prueba</p>
+                    <p class="price">$300.00</p>
+                    <button class="addCartButton" type="submit">Agregar al carrito</button>
+                </div>
+                <div class="product_home">
+                    <img src="/images/shampoo.JPG" alt="producto">
+                    <p class="product-name">Producto de prueba</p>
+                    <p class="price">$300.00</p>
+                    <button class="addCartButton" type="submit">Agregar al carrito</button>
+                </div>
+                <div class="product_home">
+                    <img src="/images/shampoo.JPG" alt="producto">
+                    <p class="product-name">Producto de prueba</p>
+                    <p class="price">$300.00</p>
+                    <button class="addCartButton" type="submit">Agregar al carrito</button>
+                </div>
+                <div class="product_home">
+                    <img src="/images/shampoo.JPG" alt="producto">
+                    <p class="product-name">Producto de prueba</p>
+                    <p class="price">$300.00</p>
+                    <button class="addCartButton" type="submit">Agregar al carrito</button>
+                </div>
+            </div>
+        </section>
+        <section class="section4_category_home">
+            <h2>Categoría misteriosa</h2>
+            <div class="products_show_home">
+                <div class="product_home">
+                    <img src="/images/shampoo.JPG" alt="producto">
+                    <p class="product-name">Producto de prueba</p>
+                    <p class="price">$300.00</p>
+                    <button class="addCartButton" type="submit">Agregar al carrito</button>
+                </div>
+                <div class="product_home">
+                    <img src="/images/shampoo.JPG" alt="producto">
+                    <p class="product-name">Producto de prueba</p>
+                    <p class="price">$300.00</p>
+                    <button class="addCartButton" type="submit">Agregar al carrito</button>
+                </div>
+                <div class="product_home">
+                    <img src="/images/shampoo.JPG" alt="producto">
+                    <p class="product-name">Producto de prueba</p>
+                    <p class="price">$300.00</p>
+                    <button class="addCartButton" type="submit">Agregar al carrito</button>
+                </div>
+                <div class="product_home">
+                    <img src="/images/shampoo.JPG" alt="producto">
+                    <p class="product-name">Producto de prueba</p>
+                    <p class="price">$300.00</p>
+                    <button class="addCartButton" type="submit">Agregar al carrito</button>
+                </div>
+            </div>
+        </section>
+        <section class="section5_newsletter_home">
+            <div class="newsletter_img">
+                <img src="/images/deal-hero.png" alt="newsletter image">
+            </div>
+            <div class="newsletter_info">
+                <p class="suscribe_text">Suscríbete a nuestro newsletter y recibe las mejores ofertas en tu email</p>
+                <input class="enterEmail" type="text" placeholder="Escribe tu email" required>
+                <p>
+                    <button class="buttonNewsletter" type="submit">Enviar</button>
+                </p>
+            </div>
+        </section>
+        <section class="section6_blog_home">            
+            <div class="entradaBlog">
+                <a href="#"><img src="/images/shampoo.JPG" alt="producto"></a>
+                <h3>Entrada del blog</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#">[...]</a></p>
+            </div>
+            <div class="entradaBlog">
+                <a href="#"><img src="/images/shampoo.JPG" alt="producto"></a>
+                <h3>Entrada del blog</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#">[...]</a></p>
+            </div>
+        </section>
+    </main>
     <footer class="principalFooter">
             <div class="section1">
                 <h3 class="headH3">Síguenos</h3>
