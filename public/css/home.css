@@ -211,7 +211,7 @@
     padding: 5px 10px 5px 10px;
 }
 
-/* ---- MEDIA QUERY 768px ---- */
+/* -------------------- MEDIA QUERY 768px -------------------- */
 @media (min-width: 768px) {
 
 /* -------- Newsletter block -------- */
@@ -269,7 +269,7 @@
     }
 }
 
-/* ---- MEDIA QUERY 1024px ---- */
+/* -------------------- MEDIA QUERY 1024px -------------------- */
 @media (min-width: 1024px) {
 /* -------- Features blocks -------- */
     .section2_features_home {

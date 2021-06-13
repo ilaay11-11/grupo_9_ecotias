@@ -233,7 +233,7 @@ background-color: rgb(208, 255, 190);
     font-size: .98rem;
 }
 
-/* ---- MEDIA QUERY 768px ---- */
+/* -------------------- MEDIA QUERY 768px -------------------- */
 
 @media (min-width: 768px){
 /* ---- HEADER HEADER HEADER HEADER ---- */
@@ -398,7 +398,7 @@ background-color: rgb(208, 255, 190);
  
 }
 
-/* ---- MEDIA QUERY 1024px ---- */
+/* -------------------- MEDIA QUERY 1024px -------------------- */
 @media (min-width: 1024px){
     /* ---- Topbar header ---- */
     .textSlider {
@@ -505,7 +505,7 @@ background-color: rgb(208, 255, 190);
 }
 
 
-/* ---- MEDIA QUERY 1280px ---- */
+/* -------------------- MEDIA QUERY 1280px -------------------- */
 @media (min-width: 1280px){
     /* ----PRIMER BLOQUE FOOTER---- */
     .section1 {

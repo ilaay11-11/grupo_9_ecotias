@@ -10,4 +10,4 @@ app.get('/carrito', (req, res) => res.sendFile('/productCart.html', {root: 'view
 app.get('/login', (req, res) => res.sendFile('/login.html', {root: 'views'}));
 app.get('/registro', (req, res) => res.sendFile('/register.html', {root: 'views'}));
 
-app.listen(PORT, () => console.log(`Servidor corriendo en el ${PORT}`));
+app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
