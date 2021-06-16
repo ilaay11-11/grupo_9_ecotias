@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 08c58e6f377e8f9a4215216facaea135649ff845
+
 # Eco-tías 🌱
 Las eco-tías es principalmente una distribuidora de productos ecológicos, está conformado por dos amigos que, su pasión es chismear y cuidar el planeta. Cuentan con una gran variedad de productos: Cuidado del cabello, cuerpo, íntimo, bucal; productos de belleza; y accesorios.
 Dentro de sus principales objetivos está el crear consciencia sobre la cantidad de residuos que se generan diariamente a través de lo que hacen mejor, chismear.
@@ -24,10 +21,14 @@ Somos Alejandro Espíndola, Juan Jiménez y Elisa Villeda, un tercio con perfile
 
 ## Retrospectiva
 
+Siguiendo la dinámica "estrella de mar", los 3 concluimos que deberíamos organizarnos y comenzar con el sprint desde el día en el que éste comienza; de esta forma tendríamos tiempo para que el profesor pueda darnos retroalimentación de nuestros avances antes del día de entrega. Por otro lado, nos dimos cuenta que necesitamos mejorar nuestra comunicación en cada paso que demos en el sprint, incluido el uso de Trello. También consideramos externar nuestras dudas en el momento en el que surgen y establecer un canal de comunicación con nuestro profesor a cargo. 
+En cuanto a las actividades que debemos continuar haciendo están el repartir las tareas homogeneamente y tener presente nuestro objetivo que es el de aprender.
+Acordamos dejar de procrastinar y realmente comprometernos y practicar lo más que podamos. 
+
 ## Trello
-<<<<<<< HEAD
+
 - [Proyecto Integrador](https://trello.com/b/s7m1O6XI/proyecto-integrador-e9/ "Proyecto Integrador")
-=======
+
 # Lineamientos generales
 ### 1. Documentar el código
 Es importante que escribamos comentarios en código para hacerlo más entendible para todo el equipo y no solo para quien lo escribe.
@@ -79,7 +80,4 @@ Nombrar sus archivos CSS con el mismo nombre de la sección que estén trabajand
 ### Importante: Antes de hacer un git push, siempre hacer git pull para traer los cambios más recientes ya que alguien del equipo pudo haber hecho cambios.
 
 ##### Cualquier pregunta, sugerencia o cambio lo comentamos por WhatsApp 🤠
->>>>>>> 6d650044855901c3437886cb97c9a2360197af4f
-=======
-- [Proyecto Integrador](https://trello.com/b/s7m1O6XI/proyecto-integrador-e9/ "Proyecto Integrador")
->>>>>>> 08c58e6f377e8f9a4215216facaea135649ff845
+
