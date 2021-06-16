@@ -18,8 +18,8 @@
     
 }
 .campos input{
-    width: 80vw;
-    height: 30px;
+    width: 85vw;
+    height: 33px;
     border-radius: 99px;
     border: 1px solid #4c8444;
 }
@@ -30,26 +30,28 @@
     border: 1px solid #4c8444;
     border-radius: 99px;
     background-color: white;
-    width: 28px;
+    width: 33px;
     
 
 }
 #password input{
 
     
-    width: 73vw;
-    height: 30px;
+    width: 78vw;
+    height: 33px;
     
 }
 
 .campos input:focus{
     border-width:medium;
+    border-radius: 99px;
+    border: solid #4c8444;
 
 }
 /*REQUERIMIENTOS PARA LA CONTRASEÑA*/
 #p-caract{
     font-size: 9px;
-    margin-left: -165px;
+    margin-left: -200px;
 
 }
 /*ENLACES*/
