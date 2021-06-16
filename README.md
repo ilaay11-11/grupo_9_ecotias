@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 08c58e6f377e8f9a4215216facaea135649ff845
 # Eco-tías 🌱
 Las eco-tías es principalmente una distribuidora de productos ecológicos, está conformado por dos amigos que, su pasión es chismear y cuidar el planeta. Cuentan con una gran variedad de productos: Cuidado del cabello, cuerpo, íntimo, bucal; productos de belleza; y accesorios.
 Dentro de sus principales objetivos está el crear consciencia sobre la cantidad de residuos que se generan diariamente a través de lo que hacen mejor, chismear.
@@ -22,6 +25,7 @@ Somos Alejandro Espíndola, Juan Jiménez y Elisa Villeda, un tercio con perfile
 ## Retrospectiva
 
 ## Trello
+<<<<<<< HEAD
 - [Proyecto Integrador](https://trello.com/b/s7m1O6XI/proyecto-integrador-e9/ "Proyecto Integrador")
 =======
 # Lineamientos generales
@@ -76,3 +80,6 @@ Nombrar sus archivos CSS con el mismo nombre de la sección que estén trabajand
 
 ##### Cualquier pregunta, sugerencia o cambio lo comentamos por WhatsApp 🤠
 >>>>>>> 6d650044855901c3437886cb97c9a2360197af4f
+=======
+- [Proyecto Integrador](https://trello.com/b/s7m1O6XI/proyecto-integrador-e9/ "Proyecto Integrador")
+>>>>>>> 08c58e6f377e8f9a4215216facaea135649ff845
