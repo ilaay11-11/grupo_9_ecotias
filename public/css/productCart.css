@@ -1,0 +1,186 @@
+.titulo-pagina{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 60%;
+}
+
+.titulo-tabla{
+  display: none;
+}
+
+/*ARTICULOS SELECCIONADOS*/
+.item, .item2, .item3{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+      
+}
+
+.imagenes{
+  width: 100px;
+}
+
+.precio-unitario{
+  font-weight: lighter;
+}
+
+/*BOTÓN DE CANTIDAD PARA AÑADIR PRODUCTOS*/
+input,
+textarea {
+border: 1px solid #eeeeee;
+box-sizing: border-box;
+margin: 0;
+outline: none;
+padding: 10px;
+}
+
+input[type="button"] {
+-webkit-appearance: button;
+cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+}
+
+.input-group {
+clear: both;
+margin: 15px 0;
+position: relative;
+}
+
+.input-group input[type='button'] {
+background-color: #eeeeee;
+min-width: 38px;
+width: auto;
+transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+font-weight: bold;
+height: 30px;
+padding: 0;
+width: 33px;
+position: relative;
+border-radius: 5px;
+}
+
+.input-group .quantity-field {
+position: relative;
+height: 30px;
+left: -6px;
+text-align: center;
+width: 45px;
+display: inline-block;
+font-size: 13px;
+margin: 0 0 5px;
+resize: vertical;
+margin-top: 10px;
+}
+
+.button-plus {
+left: -13px;
+}
+
+input[type="number"] {
+-moz-appearance: textfield;
+-webkit-appearance: none;
+}
+
+.input-group{
+  top: 26px;
+}
+.total-p{
+  position: relative;
+  top: 90px;
+  left: -10px;
+}
+
+/*AGREGAR NOTA Y SUBTOTAL*/
+.pie-tabla{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.agregar-nota{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 300px;
+  position: relative;
+  left: 20px;
+  
+}
+
+.subtotal{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: space-between;
+  position: relative;
+  margin-right: 20px;
+}
+
+/*----VERSIÓN DESKTOP----*/
+@media (min-width: 1024px){
+  .titulo-pagina{
+      display: flex;
+      flex-direction: column;
+      gap: 1%;
+      margin-top: 5%;
+      justify-content: center;
+      font-size: inherit;
+  }
+  .titulo-tabla{
+      display: flex;
+      justify-content: space-around;
+      margin-top: 8%;
+  }
+  #precio{
+      margin-left: 15%;
+  }
+  .imagenes{
+      width: 300px;
+  }
+  .item, .item2, .item3, .componentes{
+    display: flex;
+              
+  }
+  .nombre-item{
+    position:relative;
+    left: -225px;
+    top: 20px;
+    font-size: 120%;
+    
+
+  }
+  .precio-unitario{
+    position: relative;
+    top: 20px;
+    left: -145px;
+    font-size: 124%;
+    font-weight: normal;
+  }
+  .input-group{
+    position: relative;
+    top: -10px;
+    left: 28px;
+  }
+  .total-p{
+    position: relative;
+    font-size: 125%;
+    top: 14px;
+    left: 12px;
+  }
+  #mandarina{
+    position: relative;
+    left: -13rem;
+  }
+  
+
+}

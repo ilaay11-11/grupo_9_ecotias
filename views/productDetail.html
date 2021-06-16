@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/productDetail.css" />
+    <title>Product Detail</title>
+</head>
+<body>
+    <header>
+        <div class="topbar_header">
+            <p class="textSlider">Envíos gratis a partir de $599</p>
+            <div class="content__header_follow_icons">
+                <a href="#"><i class="head_icon_follow fab fa-facebook-square"></i></a>
+                <a href="#"><i class="head_icon_follow fab fa-instagram-square"></i></a>
+                <a href="#"><i class="head_icon_follow fab fa-twitter-square"></i></a>
+            </div>
+        </div>
+        
+        <div class="nav_mobile">
+            <div class="main_nav_mobile">
+                <div class="menu_icon">
+                <label for="show-nav">
+                    <i class="fas fa-bars"></i>
+                </label>
+            </div>
+            <div>
+                <img class="logo_header" src="/images/logo.png" alt="logo">
+            </div>
+            <div class="cart_status">
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <p>40</p>
+            </div>
+        </div>
+        <input type="checkbox" id="show-nav" hidden>
+            <ul class="menu_items">
+                <li type="none" class="buscarNav">
+                    <input type="text" placeholder="Buscar...">
+                    <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
+                </li>
+                <li type="none"><a href="#home">INICIO</a></li>
+                <li type="none"><a href="#shop">TIENDA</a></li>
+                <li type="none"><a href="#Us">NOSOTROS</a></li>
+                <li type="none"><a href="#Blog">BLOG</a></li>
+                <li type="none"><a href="#Contact">CONTACTO</a></li>
+            </ul>
+    </div>
+
+    <div class="nav_normal">
+        <nav class="menu_normal">
+            <ul class="menu_items_normal">
+                <li type="none"><a href="#home">INICIO</a></li>
+                <li type="none"><a href="#shop">TIENDA</a></li>
+                <li type="none"><a href="#Us">NOSOTROS</a></li>
+                <li type="none"><a href="#Blog">BLOG</a></li>
+                <li type="none"><a href="#Contact">CONTACTO</a></li>
+            </ul>
+        </nav>
+            
+        <div>
+            <img class="logo_header" src="/images/logo.png" alt="logo">
+        </div>
+        <div class="searchBar">
+            <input type="text" placeholder="Buscar...">
+            <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
+        </div>
+
+        <div class="cart_status">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <p>40</p>
+        </div>
+    </div>
+    </header>
+    <div class = "descripcion">
+        <div class="imagenes">
+            <img src="/images/shampoo.JPG" id="imagen-principal">
+            <img src="/images/shampoo.JPG" id="imagen2"> 
+            
+            <h3 id="reviews">CUSTOMER REVIEWS</h3>
+            <p id="t-reviews">
+                "Realmente hidrata el cabello y su aroma es delicioso.
+                Lo recomiendo ampliamente."
+            </p>
+            <input type="button" value="Write a Review" id="write-r">
+    
+        </div>
+        <div>
+            <h2 class="descripcion-producto">Shampoo de cacao</h2>
+            <h2 class="descripcion-producto">$180.00 MXN</h2>
+
+            <div class="input-group">
+                <input type="button" value="-" class="button-minus" data-field="quantity">
+                <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                <input type="button" value="+" class="button-plus" data-field="quantity">
+            </div>
+            <div class = "agregar">
+                <input type="button" value="AGREGAR AL CARRITO" id="agregar">
+            </div>
+              
+
+
+        <p class="descripcion-producto"> 
+            Este shampoo protege, fortalece, e hidrata en profundidad. Elaborado a base de cacao puro
+            y manteca de cacao, este shampoo es un aliado increíble para cabellos rebeldes, 
+            ya que suaviza y repara el cabello.
+          
+        </p>
+        <h3 class="descripcion-producto">Ingredientes:</h3>
+            <p class="descripcion-producto">SCI (Sodium Cocoyl Isethionate), Harina de Avena, Proteína de Chícharo,
+                Manteca de Cacao, Agua de Rosas, Aceite de Almendras, y Cacao en Polvo.
+            </p>
+        <h3 class="descripcion-producto">Contenido: 100g</h3>
+
+        <h3 class="descripcion-producto">Modo de uso:</h3>
+             <p class="descripcion-producto">
+                Humedece tu cabello y aplica directamente. Masajea, y luego enjuaga.
+                Tras su uso, enjuaga tu sólido y colócalo en un lugar seco, fresco, y lejos del sol.
+             </p>
+             <img src="/images/WA.JPG" id="wa">
+        </div>
+              
+    </div>
+
+    <div class="t-t-p-i">
+        <h2>TAMBIÉN TE PUEDE INTERESAR</h2>
+    </div>
+    <div class="img-ttpi">
+        <div>
+            <img src="/images/shampoo2.JPG" class="sh">
+            <h4 style="text-align: center;">
+                <a href="s2" class="link-h">Shampoo de Romero</a>
+            </h4>
+            <h4 style="text-align: center;">$180.00 MXN</h4>
+        </div>
+        <div>
+            <img src="/images/shampoo3.JPG" style="width: 289px; height: 336px;" class="sh">
+            <h4 style="text-align: center;">
+                <a href="#s3" class="link-h">Shampoo de Mandarina</a>
+            </h4>
+            <h4 style="text-align: center;">$180.00 MXN</h4>
+
+        </div>
+        <div>
+            <img src="/images/shampoo4.JPG" style="width: 289px; height: 336px;" class="sh">
+            <h4 style="text-align: center;">
+                <a href="#s4" class="link-h">Shampoo Cabello Rizado</a>
+            </h4>
+            <h4 style="text-align: center;">$180.00 MXN</h4>
+
+        </div>
+               
+
+    </div>
+    <div id="b-regresar">
+        <button style="background-color: white; border-radius: 5px;"><i class="fas fa-long-arrow-alt-left"></i>   REGRESAR</button>
+    </div>
+
+ 
+    <footer class="principalFooter">
+        <div class="section1">
+            <h3 class="headH3">Síguenos</h3>
+            <div class="content__footer_follow_icons">
+                <a href="#"><i class="foot_icon_follow fab fa-facebook-f"></i></a>
+                <a href="#"><i class="foot_icon_follow fab fa-instagram"></i></a>
+                <a href="#"><i class="foot_icon_follow fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="section2">
+            <h3 class="headH3">Formas de pago</h3>
+            <div class="content__footer_payment_icons">
+                <a href="#"><i class="foot_icon_payment fab fa-cc-paypal"></i></a>
+                <a href="#"><i class="foot_icon_payment fab fa-cc-visa"></i></a>
+                <a href="#"><i class="foot_icon_payment fab fa-cc-mastercard"></i></a>
+                <a href="#"><i class="foot_icon_payment fab fa-cc-stripe"></i></a>
+                <a href="#"><i class="foot_icon_payment fab fa-cc-amex"></i></a>
+            </div>
+        </div>
+        <div class="section2a">
+            <a href="#">Home</a>
+            <a href="#">Tienda</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+        </div>
+        <div class="section3">
+            <a href="#"><img class="logoFooter" src="/images/logo.png" alt="logo"></a>
+            <p>© Eco-tías 2021 🌱</p>
+        </div>
+        <div class="section4">
+            <h3 class="headH3">Enlaces rápidos</h3>
+            <div class="content__footer_links">
+                <a href="#">Categoría uno</a>
+                <a href="#">Categoría dos</a>
+                <a href="#">Categoría tres</a>
+            </div>
+        </div>
+        <div class="section5">
+            <h3 class="headH3">Información</h3>
+            <div class="content__footer_links">
+                <a href="#">Aviso de privacidad</a>
+                <a href="#">Formas de envío</a>
+                <a href="#">Políticas de compra</a>
+            </div>
+        </div>
+</footer>
+   
+    
+</body>
+</html>
