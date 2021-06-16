@@ -145,7 +145,7 @@ input[type="number"] {
       margin-left: 15%;
   }
   .imagenes{
-      width: 300px;
+      width: 200px;
   }
   .item, .item2, .item3, .componentes{
     display: flex;
@@ -153,23 +153,24 @@ input[type="number"] {
   }
   .nombre-item{
     position:relative;
-    left: -225px;
+    left: -180px;
     top: 20px;
-    font-size: 120%;
+    font-size: 110%;
     
 
   }
+  
   .precio-unitario{
     position: relative;
     top: 20px;
-    left: -145px;
+    left: -80px;
     font-size: 124%;
     font-weight: normal;
   }
   .input-group{
     position: relative;
     top: -10px;
-    left: 28px;
+    left: 75px;
   }
   .total-p{
     position: relative;
@@ -179,7 +180,34 @@ input[type="number"] {
   }
   #mandarina{
     position: relative;
-    left: -13rem;
+    left: -10rem;
+  }
+  .agregar-nota{
+    position: relative;
+    top: 30px;
+    left: 120px;
+    margin-bottom: 50px;
+  }
+  .agregar-nota input[type="text"]{
+    width: 400px;
+    height: 100px;
+  }
+  .agregar-nota input[type="button"]{
+    width: 90px;
+    position: relative;
+    left:310px;
+    top: 5px;
+    
+  }
+  .subtotal h3{
+    position: relative;
+    right: 60px;
+    top: 50px;
+  }
+  .subtotal input[type="button"]{
+    position: relative;
+    bottom: 60px;
+    right: 50px;
   }
   
 
