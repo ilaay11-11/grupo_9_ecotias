@@ -116,6 +116,16 @@ input[type="number"] {
   left: 20px;
   
 }
+.agregar-nota input[type="text"]{
+  width: 150px;
+  height: 40px;
+}
+.agregar-nota input[type="button"]{
+  width: 150px;
+  height: 30px;
+  font-size: 10px;
+  
+}
 
 .subtotal{
   display: flex;
@@ -124,6 +134,13 @@ input[type="number"] {
   justify-content: space-between;
   position: relative;
   margin-right: 20px;
+}
+.subtotal input[type="button"]{
+  width: 130px;
+  font-size: 10px;
+}
+.subtotal h3{
+  font-size: 15px;
 }
 
 /*----VERSIÓN DESKTOP----*/
