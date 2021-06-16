@@ -16,7 +16,17 @@
 }
 .c{
     margin-bottom: 12px;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+.campos input{
+    border-radius: 99px;
+    border: 1px solid #4c8444;
+}
+#password button{
+    border: 1px solid #4c8444;
+    border-radius: 99px;
+    background-color: white;
+
 }
 #password{
     display: flex;
@@ -81,7 +91,7 @@ a{
 }
 
 /*PANTALLA 768px*/
-@media (min-width: 768px){
+@media (min-width: 761px){
     /*TITULO*/
     #registrate{
         font-size: 26px;
