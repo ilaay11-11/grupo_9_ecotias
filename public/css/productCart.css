@@ -143,6 +143,32 @@ input[type="number"] {
   font-size: 15px;
 }
 
+/*----VERSIÓN TABLET----*/
+@media (min-width: 761px){
+  .agregar-nota{
+    margin-top: 30px;
+    margin-left: 55px;
+  }
+  .agregar-nota input[type="text"]{
+    width: 250px;
+  }
+  .agregar-nota input[type="button"]{
+    width: 70px;
+    position: relative;
+    top: 5px;
+    left: 180px;
+  }
+ 
+  .subtotal h3{
+    font-size: medium;
+  }
+  .subtotal input[type="button"]{
+    font-size: 15px;
+    width: 180px;
+  }
+
+}
+
 /*----VERSIÓN DESKTOP----*/
 @media (min-width: 1024px){
   .titulo-pagina{
