@@ -1,3 +1,8 @@
+/*BANNER*/
+.signup_banner{
+    display: none;
+}
+
 /*TITULO*/
 #registrate{
     text-align: center;
@@ -97,50 +102,41 @@ a{
     
 }
 
-/*PANTALLA 768px*/
+/*PANTALLA 761px*/
 @media (min-width: 761px){
     /*TITULO*/
     #registrate{
         font-size: 26px;
     }
-    /*CAMPOS A LLENAR*/
-    .campos{
+    
+    .campos input{
+        width: 90vw;
+        height: 40px;
+        margin-bottom: 20px;
         
-        gap: 20px;
     }
-    form input{
-        width: 300px;
-        height: 30px;
-    }
-    #psswrd{
-        width: 266px;
-        margin-left: 61px;
+    #password input{
+        width: 83vw;
+        height: 40px;
     }
     #password button{
-        width: 32px;
+        width: 40px;
+        height: 40px;
     }
     #p-caract{
         position: relative;
-        left: -54px;
-        top: -20px;
-    }
-    .aceptar p{
-        font-size: 14px;
-        
+        right: 170px;
+        bottom: 15px;
     }
     .aceptar{
         justify-content: center;
-        align-items: center;
+        font-size: medium;
+
     }
     #b-r{
+        width: 300px;
         position: relative;
-        right: -170px;
-    }
-    #IS{
-        font-size: 14px;
-        position: relative;
-        left: 265px;
-    
+        left: 180px;
     }
 }
 
@@ -151,51 +147,13 @@ a{
     #registrate{
         font-size: 30px;
         margin-top: 70px;
-        margin-bottom: 60px;
-
-    }
-    /*CAMPOS A LLENAR*/
-    .campos{
-        gap: 25px;
-    }
-    form input{ 
-        width: 500px;
-        height: 40px;
-    }
-    #psswrd{
-        width: 460px;
-        margin-left: 126px;
-    }
-    #password button{
-        width: 40px;
-
-    }
-    #p-caract{
-        position: relative;
-        left: -158px;
-        top: -20px;
-    }
-    .aceptar{
-        margin-top: 36px;
-        justify-content: center ;
         
-    }
-    .aceptar p{
-        font-size: 18px;
-    }
-    .aceptar input{
-        width: 60px;
     }
     #b-r{
         position: relative;
         left: 450px;
-        top: 20px;
-        width: 300px;
     }
-    #IS{
-        font-size: 18px;
-        left: 520px;
-        margin-bottom: 80px;
-    }
+    
+    
 
 }
