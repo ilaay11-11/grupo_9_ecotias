@@ -12,72 +12,76 @@
     <link rel="stylesheet" href="css/productCart.css" />
     <title>Product Cart</title>
 </head>
-<header>
-    <div class="topbar_header">
-        <p class="textSlider">Envíos gratis a partir de $599</p>
-        <div class="content__header_follow_icons">
-            <a href="#"><i class="head_icon_follow fab fa-facebook-square"></i></a>
-            <a href="#"><i class="head_icon_follow fab fa-instagram-square"></i></a>
-            <a href="#"><i class="head_icon_follow fab fa-twitter-square"></i></a>
+<body>
+    <header>
+        <div class="topbar_header">
+            <p class="textSlider">Envíos gratis a partir de $599</p>
+            <div class="content__header_follow_icons">
+                <a href="#"><i class="head_icon_follow fab fa-facebook-square"></i></a>
+                <a href="#"><i class="head_icon_follow fab fa-instagram-square"></i></a>
+                <a href="#"><i class="head_icon_follow fab fa-twitter-square"></i></a>
+            </div>
         </div>
+    <!-- ---------------- Navegación mobile ---------------- -->
+        <div class="nav_mobile">
+            <div class="main_nav_mobile">
+                <div class="menu_icon">
+                <label for="show-nav">
+                    <i class="fas fa-bars"></i>
+                </label>
+            </div>
+            <div>
+                <img class="logo_header" src="/images/logo.png" alt="logo">
+            </div>
+            <div class="cart_status">
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                <p>40</p>
+            </div>
+        </div>
+        <input type="checkbox" id="show-nav" hidden>
+            <ul class="menu_items">
+                <li type="none"><a id="loging_option" href="/login"><i class="fas fa-sign-in-alt"></i> Registrate / Inicia sesión</a></li>
+                <li type="none" class="buscarNav">
+                    <input type="text" placeholder="Buscar...">
+                    <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
+                </li>
+                <li type="none"><a href="/">INICIO</a></li>
+                <li type="none"><a href="#shop">TIENDA</a></li>
+                <li type="none"><a href="#Us">NOSOTROS</a></li>
+                <li type="none"><a href="#Blog">BLOG</a></li>
+                <li type="none"><a href="#Contact">CONTACTO</a></li>
+            </ul>
     </div>
+    <!-- ---------------- Navegación normal ---------------- -->
+    <div class="nav_normal">
+        <nav class="menu_normal">
+            <ul class="menu_items_normal">
+                <li type="none"><a href="/">INICIO</a></li>
+                <li type="none"><a href="#shop">TIENDA</a></li>
+                <li type="none"><a href="#Us">NOSOTROS</a></li>
+                <li type="none"><a href="#Blog">BLOG</a></li>
+                <li type="none"><a href="#Contact">CONTACTO</a></li>
+            </ul>
+        </nav>
     
-    <div class="nav_mobile">
-        <div class="main_nav_mobile">
-            <div class="menu_icon">
-            <label for="show-nav">
-                <i class="fas fa-bars"></i>
-            </label>
-        </div>
         <div>
             <img class="logo_header" src="/images/logo.png" alt="logo">
         </div>
+        <div class="login_search">
+            <a id="loging_option_normal" href="/login">Registrate / Inicia sesión <i class="fas fa-sign-in-alt"></i></a>
+            <div class="searchBar">
+                <input type="text" placeholder="Buscar...">
+                <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    
         <div class="cart_status">
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
             <p>40</p>
         </div>
     </div>
-    <input type="checkbox" id="show-nav" hidden>
-        <ul class="menu_items">
-            <li type="none" class="buscarNav">
-                <input type="text" placeholder="Buscar...">
-                <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
-            </li>
-            <li type="none"><a href="#home">INICIO</a></li>
-            <li type="none"><a href="#shop">TIENDA</a></li>
-            <li type="none"><a href="#Us">NOSOTROS</a></li>
-            <li type="none"><a href="#Blog">BLOG</a></li>
-            <li type="none"><a href="#Contact">CONTACTO</a></li>
-        </ul>
-</div>
+    </header>
 
-<div class="nav_normal">
-    <nav class="menu_normal">
-        <ul class="menu_items_normal">
-            <li type="none"><a href="#home">INICIO</a></li>
-            <li type="none"><a href="#shop">TIENDA</a></li>
-            <li type="none"><a href="#Us">NOSOTROS</a></li>
-            <li type="none"><a href="#Blog">BLOG</a></li>
-            <li type="none"><a href="#Contact">CONTACTO</a></li>
-        </ul>
-    </nav>
-        
-    <div>
-        <img class="logo_header" src="/images/logo.png" alt="logo">
-    </div>
-    <div class="searchBar">
-        <input type="text" placeholder="Buscar...">
-        <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
-    </div>
-
-    <div class="cart_status">
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <p>40</p>
-    </div>
-</div>
-
-</header>
-<body>
     <div class="titulo-pagina">
         <h1>CARRITO DE COMPRA</h1>
         <a href="#home">SEGUIR COMPRANDO</a>

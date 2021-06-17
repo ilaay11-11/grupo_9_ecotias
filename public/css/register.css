@@ -102,8 +102,8 @@ a{
     
 }
 
-/*PANTALLA 761px*/
-@media (min-width: 761px){
+/*PANTALLA 768px*/
+@media (min-width: 768px){
     /*TITULO*/
     #registrate{
         font-size: 26px;
