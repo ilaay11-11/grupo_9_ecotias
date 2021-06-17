@@ -48,4 +48,4 @@ Nombrar sus archivos CSS con el mismo nombre de la sección que estén trabajand
 
 ### Importante: Antes de hacer un git push, siempre hacer git pull para traer los cambios más recientes ya que alguien del equipo pudo haber hecho cambios.
 
-##### Cualquier pregunta, sugerencia o cambio lo comentamos por WhatsApp 🤠
+##### Cualquier pregunta, sugerencia o cambio lo comentamos por WhatsApp.
