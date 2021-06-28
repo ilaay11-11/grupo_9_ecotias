@@ -15,7 +15,7 @@ app.set('views', './views');
 
 // Routes
 app.use('/', mainRoutes);
-app.use('/products', productsRoutes);
+app.use('/productos', productsRoutes);
 
 // Server
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
