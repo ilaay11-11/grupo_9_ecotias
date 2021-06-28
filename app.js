@@ -1,5 +1,6 @@
 const express = require('express');
 const mainRoutes = require('./routes/mainRoutes');
+const productsRoutes = require('./routes/productsRoutes');
 
 // App
 const app = express();
@@ -14,6 +15,7 @@ app.set('views', './views');
 
 // Routes
 app.use('/', mainRoutes);
+app.use('/products', productsRoutes);
 
 // Server
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
