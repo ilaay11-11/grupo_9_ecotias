@@ -16,6 +16,7 @@ app.set('views', './views');
 // Routes
 app.use('/', mainRoutes);
 app.use('/productos', productsRoutes);
+app.use((req, res, next) => res.render('users/not-found'));
 
 // Server
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
