@@ -19,11 +19,6 @@ Somos Alejandro Espíndola, Juan Jiménez y Elisa Villeda, un tercio con perfile
 
 - [Verdecitos](https://verdecitos.mx/ "Verdecitos"): Sitio web orientado a la venta de productos ecólogicos, apunta a un publico que lleva la sustentabilidad como un estilo de vida, además de publicar artículos relacionados a la ecología.
 
-## Retrospectiva
-
-Siguiendo la dinámica "estrella de mar", los 3 concluimos que deberíamos organizarnos y comenzar con el sprint desde el día en el que éste comienza; de esta forma tendríamos tiempo para que el profesor pueda darnos retroalimentación de nuestros avances antes del día de entrega. Por otro lado, nos dimos cuenta que necesitamos mejorar nuestra comunicación en cada paso que demos en el sprint, incluido el uso de Trello. También consideramos externar nuestras dudas en el momento en el que surgen y establecer un canal de comunicación con nuestro profesor a cargo. 
-En cuanto a las actividades que debemos continuar haciendo están el repartir las tareas homogeneamente y tener presente nuestro objetivo que es el de aprender.
-Acordamos dejar de procrastinar y realmente comprometernos y practicar lo más que podamos. 
 
 ## Trello
 
