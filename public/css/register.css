@@ -1,3 +1,7 @@
+/*BACKGROUND EXCLUSIVO PARA REGISTER*/
+body{
+    background-color:#02a35a;
+}
 /*BANNER*/
 .signup_banner{
     display: none;
@@ -5,8 +9,10 @@
 
 /*TITULO*/
 #registrate{
+    display: none;
     text-align: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     
 }
 /*CAMPOS A LLENAR DEL FORMULARIO*/
@@ -17,11 +23,14 @@
     position: relative;
     background:  rgba(255,255,255, 0.3);
     border-radius: 1rem;
-    z-index: 2;
-    backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-    width: 360px;
-    margin-bottom: 10%;
+    /*z-index: 2;*/
+    backdrop-filter: blur(30px) saturate(100%) contrast(48%) brightness(120%);;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+    
+    
+    margin: 8% 8%;
+    
+    
     
 
 }
@@ -33,7 +42,7 @@
     margin: 20%;
     margin-bottom: 10%;
     outline:olivedrab;
-    z-index: 3;
+    
     
 }
 .c{
@@ -127,37 +136,18 @@ a{
 
 /*PANTALLA 768px*/
 @media (min-width: 768px){
-    /*TITULO*/
-    #registrate{
-        font-size: 26px;
-    }
-    .campos{
-        margin: 0;
-    }
-    
-    .campos input{
-        width: 90vw;
-        height: 40px;
-        margin-bottom: 20px;
-        
-    }
-    #password input{
-        width: 85vw;
-        height: 40px;
-    }
-    #password button{
-        width: 40px;
-        height: 40px;
-    }
-    #p-caract{
-        position: relative;
-        right: 170px;
-        bottom: 15px;
-    }
     .aceptar{
         justify-content: center;
-        font-size: medium;
+        font-size: 14px;
 
+    }
+    #password input{
+        width:75vw;
+    }
+
+
+    #IS{
+        font-size: 16px;
     }
     
 }
@@ -165,14 +155,32 @@ a{
 
 /*PANTALLA 1024px*/
 @media (min-width: 1024px){
-    /*TITULO*/
-    #registrate{
-        font-size: 30px;
-        margin-top: 70px;
-        
+    .register_essential{
+        display: flex;
+        width: 55vw;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 15%;
+    }
+    .c{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 700px;
+    }
+    #password{
+        width: 693px;
+    }
+    #password button{
+        width: 50px;
+    }
+    #p-caract{
+        position: relative;
+        right: 180px;
+        font-size: 10px;
     }
     
     
-    
-
 }
