@@ -9,11 +9,9 @@ body{
 
 /*TITULO*/
 #registrate{
-    display: none;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: -1rem;
     margin-bottom: 2rem;
-    
 }
 /*CAMPOS A LLENAR DEL FORMULARIO*/
 .register_essential{
@@ -81,10 +79,9 @@ body{
 
 }
 /*REQUERIMIENTOS PARA LA CONTRASEÑA*/
-#p-caract{
+#p-caract p{
     font-size: 9px;
-    margin-left: -200px;
-
+    transform: translateX(-23vw);
 }
 /*ENLACES*/
 a{
@@ -149,6 +146,12 @@ a{
     #IS{
         font-size: 16px;
     }
+
+    #p-caract{
+        position: relative;
+        right: 50px;
+        font-size: 10px;
+    }
     
 }
 
@@ -156,31 +159,27 @@ a{
 /*PANTALLA 1024px*/
 @media (min-width: 1024px){
     .register_essential{
-        display: flex;
-        width: 55vw;
-        align-items: center;
-        justify-content: center;
-        position: relative;
+        width: 57vw;
         left: 15%;
     }
+    
     .c{
         display: flex;
         align-items: center;
         justify-content: center;
         height: 60px;
-        width: 700px;
+        width: 550px;
     }
     #password{
-        width: 693px;
+        width: 543px;
     }
     #password button{
         width: 50px;
     }
     #p-caract{
         position: relative;
-        right: 180px;
+        right: -7vw;
         font-size: 10px;
     }
-    
     
 }

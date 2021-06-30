@@ -11,16 +11,10 @@
     <div class="signup_banner">
         <img src="/images/banner_login.jpg" alt="banner">
     </div>
-
-    <div>
-        <h2 id="registrate">REGÍSTRATE</h2>
-    </div>
-    
-    
-
         <div class="register_essential">
             
             <form action="/register" method="POST" class="campos">
+                <h2 id="registrate">REGÍSTRATE</h2>
                 <p class="c">
                     <input type="text" name="nombre" placeholder="  Nombre(s)*" required>
                 </p>
@@ -36,8 +30,9 @@
                     <button><i class="far fa-eye-slash"></i></button>
                     
                 </div>
-                <p id="p-caract">Mínimo 8 caracteres</p>
-            
+                <div id="p-caract">
+                <p>Mínimo 8 caracteres</p>
+                </div>
                 <div class="aceptar">
                     <input type="checkbox" name="terminos">
                     <p>He leído y acepto los <a href="#Terminos">Términos y condiciones</a> y el <a href="#Aviso">Aviso de privacidad</a></p>
