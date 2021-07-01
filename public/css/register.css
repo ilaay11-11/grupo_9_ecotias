@@ -178,8 +178,19 @@ a{
     }
     #p-caract{
         position: relative;
-        right: -7vw;
+        right: -3vw;
         font-size: 10px;
     }
     
+}
+
+@media (min-width: 1280px){
+    #p-caract{
+        right: -7vw;
+    }
+
+    #p-caract p{
+        font-size: 9px;
+        transform: translateX(-17vw);
+    }
 }
