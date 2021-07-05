@@ -185,7 +185,7 @@ background-color: rgb(208, 255, 190);
    .principalFooter {
     background-color: #f5fff6;
     padding-top: .5rem;
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
 }

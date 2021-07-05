@@ -1,0 +1,9 @@
+
+.editar_producto {
+    background-color: red;
+    border: 1px solid red;
+}
+
+.crear_producto, .create_edit_product {
+    border: 1px solid red;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/crearProduct.css">
+    <title>Home</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+                <div class="sections">
+
+                    <div id="crear_producto">
+                        <h2>Nuevo producto</h2>
+                        <li class="ingresa_codigo">Nombre:
+                            <input class="input_codigo" type="text" name="codigo" required
+                            maxlength="6" required>
+                        </li>    
+                        <li class="ingresa_descripcion">Descripción:
+                            <input class="input_descripcion" type="text" name="descripcion" required>
+                        </li>  
+                        <li class="ingresa_imagen">Imagen:
+                            <input class="input_imagen" type="file" name="imagen" required>
+                        </li>     
+                        <li class="ingresa_categoria">Categoría:
+                            <input class="input_categoria" type="text" name="categoria" required>
+                        </li>   
+                        <li class="ingresa_tamaño">
+                            <label for="tamaño">Tamaño:</label>
+                            <select>
+                                <option value="tamaño1">Tamaño1</option>
+                                <option value="tamaño2">Tamaño2</option>
+                                <option value="tamaño3">Tamaño3</option>
+                            </select>
+                        </li>  
+                        <li class="ingresa_precio">Precio de venta:
+                            <input class="input_precio" type="text" name="precio" required>
+                        </li>  
+                        <li class="ingresa_boton">
+                            <input class= "input_boton" type="button" name ="Guardar" value="Guardar">
+                        </li> 
+                    </div>
+
+                    <div id="editar_producto">
+                        <h2>Producto</h2>
+                        <li class="ingresa_codigo1">Nombre:
+                            <input class="input_codigo1" type="text" name="codigo" required
+                            maxlength="6" required>
+                        </li>    
+                        <li class="ingresa_imagen1">
+                            <img src="/images/banner_login.jpg" alt="banner">
+                        </li> 
+                        <li class="ingresa_tamaño1">
+                            <label for="tamaño">Tamaño:</label>
+                            <select>
+                                <option value="tamaño1">Tamaño1</option>
+                                <option value="tamaño2">Tamaño2</option>
+                                <option value="tamaño3">Tamaño3</option>
+                            </select>
+                        </li> 
+                        <li class="ingresa_descripcion1">
+                            <input class="input_descripcion1" type="text" name="descripcion" required>
+                        </li>      
+                        <li class="ingresa_categoria1">Categoría:
+                            <input class="input_categoria1" type="text" name="categoria" required>
+                        </li>    
+                        <li class="ingresa_precio1">Precio de venta:
+                            <input class="input_precio1" type="text" name="precio" required>
+                        </li>  
+                        <li class="ingresa_boton1">
+                            <input class= "input_boton1" type="button" name ="Actualizar" value="Actualizar">
+                        </li> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>
