@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Register</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <div class="signup_banner">
+        <img src="/images/banner_login.jpg" alt="banner">
+    </div>
+        <div class="register_essential">
+            
+            <form action="/register" method="POST" class="campos">
+                <h2 id="registrate">REGÍSTRATE</h2>
+                <p class="c">
+                    <input type="text" name="nombre" placeholder="  Nombre(s)*" required>
+                </p>
+                <p class="c">
+                    <input type="text" name="apellido" placeholder="  Apellidos*" required>
+                </p>
+                <div class="c">
+                    <input type="email" name="email" placeholder="  Ingrese su e-mail*" required>
+                </div>
+                <div id="password">
+
+                    <input type="password" name="contraseña" placeholder="  Contraseña*" required id="psswrd">
+                    <button><i class="far fa-eye-slash"></i></button>
+                    
+                </div>
+                <div id="p-caract">
+                <p>Mínimo 8 caracteres</p>
+                </div>
+                <div class="aceptar">
+                    <input type="checkbox" name="terminos">
+                    <p>He leído y acepto los <a href="#Terminos">Términos y condiciones</a> y el <a href="#Aviso">Aviso de privacidad</a></p>
+                </div>
+                <div class="aceptar">
+                    <input type="checkbox" name="ofertas">
+                    <p>Quiero recibir ofertas y promociones en mi correo electrónico</p>
+                </div>
+                <div id="button-registrar">
+                    <button id="b-r">REGISTRAR</button>
+                </div>
+                <div id="IS">
+                    <p>¿Ya tienes cuenta? <a href="#Inicia">Inicia Sesión</a></p>
+                </div>
+            </form>
+            
+        </div>
+        
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
