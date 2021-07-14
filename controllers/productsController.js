@@ -11,8 +11,11 @@ const productsController = {
     edit: (req, res) => {
         res.render('products/editProduct')
     },
-    store: () => {
-
+    store: (req, res) => {
+        const newInfo = req.body;
+        const newProduct = products.push({...newInfo, id: products.length +1});
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        res.redirect('users/index');
     },
     detail: (req, res) => {
         const productId = parseInt(req.params.id);
@@ -24,8 +27,14 @@ const productsController = {
 
         res.render('products/productDetail', { productSelected })
     },
-    update: () => {
-
+    update: (req, res) => {
+        const productInfo = req.body;
+        const productIndex = products.findIndex((producto) => {
+            return producto.id === parseInt(req.params.id)
+        })
+        products[productIndex] = {...products[productIndex], ...productInfo};
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        res.redirect('users/index')
     },
     destroy: () => {
 
