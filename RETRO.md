@@ -14,3 +14,10 @@ Como en la ocasión pasada, utilizamos la dinámica "Estrella de Mar" y a partir
 4. Hacer menos: Procastinar.
 
 5. Dejar de hacer: Entregar las tareas justo el día y hora límite de las mismas, sin oportunidad de retroalimentación antes de la entrega definitiva. 
+
+# Retrospectiva S3-S4
+1. Comenzar a hacer: Trabajar desde la primera semana en el Sprint y comentar las dificultades que se vayan presentando en el proceso. No descuidar la recomendaciones y retroalimentación de sprints anteriores. Darle prioridad a la fecha de entrega.
+2. Hacer más: Motivarnos cada día e implementar más Trello día con día. 
+3. Continuar haciendo: Seguir apoyándonos como equipo, comunicarnos periódicamente, y continuar con la asignación de trabajo para seguir un flujo de trabajo. 
+4. Hacer menos: Procastinar.
+5. Dejar de hacer: Dejar todo el trabajo (por sencillo que sea) hasta al final. 
