@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/crearProduct.css">
-    <title>Crear producto</title>
+    <link rel="stylesheet" href="/css/editProduct.css">
+    <title>Editar producto</title>
 </head>
 <body>
     <%- include('../partials/header') %>
     <main>
-        <h2>Crear producto</h2>
+        <h2>Editar producto: nombre</h2>
         <form action="/products/createProduct" method="POST">
             <div class="crear_producto">
                 <div class="field">
@@ -63,7 +63,12 @@
                 </div>
                 <div class="field">
                     <div class="control">
-                        <button type="submit">Crear producto</button>
+                        <button type="submit">Guardar producto</button>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button type="submit">Borrar producto</button>
                     </div>
                 </div>
             </div>

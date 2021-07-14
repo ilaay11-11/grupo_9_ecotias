@@ -3,450 +3,450 @@
     "id": 1,
     "name": "FENTANYL CITRATE",
     "description": "dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis",
-    "image": "product_1.jpg",
+    "image": "shampoo.JPG",
     "category": "Stone",
     "price": 972.47,
-    "brand": "Corkery-Considine"
+    "maker": "Corkery-Considine"
   },
   {
     "id": 2,
     "name": "Gabapentin",
     "description": "hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed",
-    "image": "product_2.jpg",
+    "image": "shampoo.JPG",
     "category": "Vinyl",
     "price": 1575.65,
-    "brand": "Bauch-Waters"
+    "maker": "Bauch-Waters"
   },
   {
     "id": 3,
     "name": "Flucytosine",
     "description": "sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum",
-    "image": "product_3.jpg",
+    "image": "shampoo.JPG",
     "category": "Brass",
     "price": 351.57,
-    "brand": "Block LLC"
+    "maker": "Block LLC"
   },
   {
     "id": 4,
     "name": "Elta Block",
     "description": "sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum",
-    "image": "product_4.jpg",
+    "image": "shampoo.JPG",
     "category": "Plexiglass",
     "price": 673.02,
-    "brand": "Predovic and Sons"
+    "maker": "Predovic and Sons"
   },
   {
     "id": 5,
     "name": "Sulfasalazine",
     "description": "pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus",
-    "image": "product_5.jpg",
+    "image": "shampoo.JPG",
     "category": "Vinyl",
     "price": 1566.35,
-    "brand": "Koepp-Pollich"
+    "maker": "Koepp-Pollich"
   },
   {
     "id": 6,
     "name": "PVP Iodine Prep Pad",
     "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis",
-    "image": "product_6.jpg",
+    "image": "shampoo.JPG",
     "category": "Rubber",
     "price": 2161.73,
-    "brand": "DuBuque-Fadel"
+    "maker": "DuBuque-Fadel"
   },
   {
     "id": 7,
     "name": "Eight Hour Cream Lip Protectant Sheer Tint SPF 15 Melon",
     "description": "non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis",
-    "image": "product_7.jpg",
+    "image": "shampoo.JPG",
     "category": "Plastic",
     "price": 1739.19,
-    "brand": "Wyman-Gleason"
+    "maker": "Wyman-Gleason"
   },
   {
     "id": 8,
     "name": "TRAMADOL HYDROCHLORIDE",
     "description": "nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur",
-    "image": "product_8.jpg",
+    "image": "shampoo.JPG",
     "category": "Vinyl",
     "price": 2439.28,
-    "brand": "Schoen-Mraz"
+    "maker": "Schoen-Mraz"
   },
   {
     "id": 9,
     "name": "Neosporin Plus Pain Relief Neo To Go First Aid Antiseptic Pain Relieving",
     "description": "purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut",
-    "image": "product_9.jpg",
+    "image": "shampoo.JPG",
     "category": "Granite",
     "price": 1195.87,
-    "brand": "Borer-O'Kon"
+    "maker": "Borer-O'Kon"
   },
   {
     "id": 10,
     "name": "AVAPRO",
     "description": "lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec",
-    "image": "product_10.jpg",
+    "image": "shampoo.JPG",
     "category": "Brass",
     "price": 2281.31,
-    "brand": "Lynch, Abernathy and Bergnaum"
+    "maker": "Lynch, Abernathy and Bergnaum"
   },
   {
     "id": 11,
     "name": "Adult Low Strength Aspirin",
     "description": "donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac",
-    "image": "product_11.jpg",
+    "image": "shampoo.JPG",
     "category": "Aluminum",
     "price": 1879.29,
-    "brand": "Leannon-Bosco"
+    "maker": "Leannon-Bosco"
   },
   {
     "id": 12,
     "name": "Hydrocodone Acetaminophen",
     "description": "elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat",
-    "image": "product_12.jpg",
+    "image": "shampoo.JPG",
     "category": "Aluminum",
     "price": 632.17,
-    "brand": "Farrell-Fadel"
+    "maker": "Farrell-Fadel"
   },
   {
     "id": 13,
     "name": "BAYER",
     "description": "turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium",
-    "image": "product_13.jpg",
+    "image": "shampoo.JPG",
     "category": "Stone",
     "price": 745.17,
-    "brand": "Kiehn, Block and Ryan"
+    "maker": "Kiehn, Block and Ryan"
   },
   {
     "id": 14,
     "name": "Glipizide",
     "description": "ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at",
-    "image": "product_14.jpg",
+    "image": "shampoo.JPG",
     "category": "Stone",
     "price": 2039.14,
-    "brand": "Fahey-Vandervort"
+    "maker": "Fahey-Vandervort"
   },
   {
     "id": 15,
     "name": "Ventavis",
     "description": "gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus",
-    "image": "product_15.jpg",
+    "image": "shampoo.JPG",
     "category": "Vinyl",
     "price": 981.58,
-    "brand": "Friesen, Jakubowski and Toy"
+    "maker": "Friesen, Jakubowski and Toy"
   },
   {
     "id": 16,
     "name": "Lidocaine Hydrochloride and Epinephrine",
     "description": "nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis",
-    "image": "product_16.jpg",
+    "image": "shampoo.JPG",
     "category": "Vinyl",
     "price": 2170.25,
-    "brand": "Hills-Quitzon"
+    "maker": "Hills-Quitzon"
   },
   {
     "id": 17,
     "name": "Quetiapine fumarate",
     "description": "nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero",
-    "image": "product_17.jpg",
+    "image": "shampoo.JPG",
     "category": "Brass",
     "price": 256.91,
-    "brand": "Adams Group"
+    "maker": "Adams Group"
   },
   {
     "id": 18,
     "name": "MESNEX",
     "description": "arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper",
-    "image": "product_18.jpg",
+    "image": "shampoo.JPG",
     "category": "Granite",
     "price": 621.41,
-    "brand": "Bayer-Dickens"
+    "maker": "Bayer-Dickens"
   },
   {
     "id": 19,
     "name": "Argentum Viscum",
     "description": "justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam",
-    "image": "product_19.jpg",
+    "image": "shampoo.JPG",
     "category": "Brass",
     "price": 1267.6,
-    "brand": "Predovic-Hammes"
+    "maker": "Predovic-Hammes"
   },
   {
     "id": 20,
     "name": "Tamsulosin hydrochloride",
     "description": "molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur",
-    "image": "product_20.jpg",
+    "image": "shampoo.JPG",
     "category": "Granite",
     "price": 313.43,
-    "brand": "Douglas Group"
+    "maker": "Douglas Group"
   },
   {
     "id": 21,
     "name": "Kleenex Antiseptic Skin Cleanser",
     "description": "justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque",
-    "image": "product_21.jpg",
+    "image": "shampoo.JPG",
     "category": "Wood",
     "price": 2466.77,
-    "brand": "Harber Inc"
+    "maker": "Harber Inc"
   },
   {
     "id": 22,
     "name": "Regional Allergies Desert U.S.",
     "description": "rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non",
-    "image": "product_22.jpg",
+    "image": "shampoo.JPG",
     "category": "Plastic",
     "price": 1634.34,
-    "brand": "Labadie, Stanton and Fisher"
+    "maker": "Labadie, Stanton and Fisher"
   },
   {
     "id": 23,
     "name": "dg health cold head congestion severe",
     "description": "placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat",
-    "image": "product_23.jpg",
+    "image": "shampoo.JPG",
     "category": "Vinyl",
     "price": 2028.35,
-    "brand": "Hessel, Bechtelar and Marks"
+    "maker": "Hessel, Bechtelar and Marks"
   },
   {
     "id": 24,
     "name": "Bacitracin Zinc",
     "description": "felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-    "image": "product_24.jpg",
+    "image": "shampoo.JPG",
     "category": "Stone",
     "price": 1883.85,
-    "brand": "Carroll-Schneider"
+    "maker": "Carroll-Schneider"
   },
   {
     "id": 25,
     "name": "Carisoprodol",
     "description": "mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat",
-    "image": "product_25.jpg",
+    "image": "shampoo.JPG",
     "category": "Rubber",
     "price": 817.57,
-    "brand": "Treutel-Davis"
+    "maker": "Treutel-Davis"
   },
   {
     "id": 26,
     "name": "Omeprazole",
     "description": "sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci",
-    "image": "product_26.jpg",
+    "image": "shampoo.JPG",
     "category": "Granite",
     "price": 1038.02,
-    "brand": "Anderson, Kuvalis and Kohler"
+    "maker": "Anderson, Kuvalis and Kohler"
   },
   {
     "id": 27,
     "name": "Regular Strength Pain Relief",
     "description": "orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu",
-    "image": "product_27.jpg",
+    "image": "shampoo.JPG",
     "category": "Granite",
     "price": 1739.22,
-    "brand": "Hintz LLC"
+    "maker": "Hintz LLC"
   },
   {
     "id": 28,
     "name": "Coral S",
     "description": "nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes",
-    "image": "product_28.jpg",
+    "image": "shampoo.JPG",
     "category": "Glass",
     "price": 1432.2,
-    "brand": "Schmeler Group"
+    "maker": "Schmeler Group"
   },
   {
     "id": 29,
     "name": "Uroxatral",
     "description": "erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla",
-    "image": "product_29.jpg",
+    "image": "shampoo.JPG",
     "category": "Rubber",
     "price": 1402.89,
-    "brand": "Medhurst, Tromp and Bashirian"
+    "maker": "Medhurst, Tromp and Bashirian"
   },
   {
     "id": 30,
     "name": "Oxygen",
     "description": "ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet",
-    "image": "product_30.jpg",
+    "image": "shampoo.JPG",
     "category": "Rubber",
     "price": 191.19,
-    "brand": "Abshire, Sawayn and Block"
+    "maker": "Abshire, Sawayn and Block"
   },
   {
     "id": 31,
     "name": "Polyethylene Glycol 3350 and Electrolytes",
     "description": "habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus",
-    "image": "product_31.jpg",
+    "image": "shampoo.JPG",
     "category": "Glass",
     "price": 762.71,
-    "brand": "Jakubowski Inc"
+    "maker": "Jakubowski Inc"
   },
   {
     "id": 32,
     "name": "IT RADIANT CC CUSHION",
     "description": "tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus",
-    "image": "product_32.jpg",
+    "image": "shampoo.JPG",
     "category": "Plexiglass",
     "price": 1453.44,
-    "brand": "Skiles Inc"
+    "maker": "Skiles Inc"
   },
   {
     "id": 33,
     "name": "Gemcitabine hydrochloride",
     "description": "sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero",
-    "image": "product_33.jpg",
+    "image": "shampoo.JPG",
     "category": "Aluminum",
     "price": 913.26,
-    "brand": "Wolf, Nitzsche and Feeney"
+    "maker": "Wolf, Nitzsche and Feeney"
   },
   {
     "id": 34,
     "name": "Rectiv",
     "description": "congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim",
-    "image": "product_34.jpg",
+    "image": "shampoo.JPG",
     "category": "Granite",
     "price": 521.1,
-    "brand": "Bauch, Johns and Haley"
+    "maker": "Bauch, Johns and Haley"
   },
   {
     "id": 35,
     "name": "Orphenadrine Citrate",
     "description": "montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget",
-    "image": "product_35.jpg",
+    "image": "shampoo.JPG",
     "category": "Brass",
     "price": 384.94,
-    "brand": "Rice-Lehner"
+    "maker": "Rice-Lehner"
   },
   {
     "id": 36,
     "name": "Jafra Brightening",
     "description": "est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut",
-    "image": "product_36.jpg",
+    "image": "shampoo.JPG",
     "category": "Wood",
     "price": 441.24,
-    "brand": "Cartwright, Buckridge and Senger"
+    "maker": "Cartwright, Buckridge and Senger"
   },
   {
     "id": 37,
     "name": "Phentermine Hydrochloride",
     "description": "dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat",
-    "image": "product_37.jpg",
+    "image": "shampoo.JPG",
     "category": "Aluminum",
     "price": 1091.02,
-    "brand": "Conroy Group"
+    "maker": "Conroy Group"
   },
   {
     "id": 38,
     "name": "Excedrin",
     "description": "augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam",
-    "image": "product_38.jpg",
+    "image": "shampoo.JPG",
     "category": "Plastic",
     "price": 295.71,
-    "brand": "Kirlin, Reichert and Braun"
+    "maker": "Kirlin, Reichert and Braun"
   },
   {
     "id": 39,
     "name": "GEOTRICHUM CANDIDUM",
     "description": "in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit",
-    "image": "product_39.jpg",
+    "image": "shampoo.JPG",
     "category": "Vinyl",
     "price": 1924.62,
-    "brand": "Kohler LLC"
+    "maker": "Kohler LLC"
   },
   {
     "id": 40,
     "name": "TRUSOPT",
     "description": "aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare",
-    "image": "product_40.jpg",
+    "image": "shampoo.JPG",
     "category": "Wood",
     "price": 760.45,
-    "brand": "Hermiston, Hartmann and Yost"
+    "maker": "Hermiston, Hartmann and Yost"
   },
   {
     "id": 41,
     "name": "Nitetime Cold and Flu",
     "description": "consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam",
-    "image": "product_41.jpg",
+    "image": "shampoo.JPG",
     "category": "Glass",
     "price": 2266.35,
-    "brand": "Weimann, Berge and Ratke"
+    "maker": "Weimann, Berge and Ratke"
   },
   {
     "id": 42,
     "name": "HydrOXYzine Hydrochloride",
     "description": "augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit",
-    "image": "product_42.jpg",
+    "image": "shampoo.JPG",
     "category": "Plastic",
     "price": 831.45,
-    "brand": "Kirlin LLC"
+    "maker": "Kirlin LLC"
   },
   {
     "id": 43,
     "name": "Silphen",
     "description": "morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in",
-    "image": "product_43.jpg",
+    "image": "shampoo.JPG",
     "category": "Rubber",
     "price": 1626.3,
-    "brand": "Herzog, Mertz and Beer"
+    "maker": "Herzog, Mertz and Beer"
   },
   {
     "id": 44,
     "name": "Pollens - Trees, Acacia Acacia longifolia",
     "description": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget",
-    "image": "product_44.jpg",
+    "image": "shampoo.JPG",
     "category": "Stone",
     "price": 116.15,
-    "brand": "Strosin, Botsford and Mills"
+    "maker": "Strosin, Botsford and Mills"
   },
   {
     "id": 45,
     "name": "Nitroglycerin Transdermal Delivery System",
     "description": "nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices",
-    "image": "product_45.jpg",
+    "image": "shampoo.JPG",
     "category": "Plastic",
     "price": 784.33,
-    "brand": "Weissnat Group"
+    "maker": "Weissnat Group"
   },
   {
     "id": 46,
     "name": "Amoxicillin and Clavulanate Potassium",
     "description": "metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis",
-    "image": "product_46.jpg",
+    "image": "shampoo.JPG",
     "category": "Aluminum",
     "price": 636.69,
-    "brand": "Fisher Group"
+    "maker": "Fisher Group"
   },
   {
     "id": 47,
     "name": "Extra-Virt Plus DHA",
     "description": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius",
-    "image": "product_47.jpg",
+    "image": "shampoo.JPG",
     "category": "Plastic",
     "price": 1615.56,
-    "brand": "Harris, Senger and Stehr"
+    "maker": "Harris, Senger and Stehr"
   },
   {
     "id": 48,
     "name": "No7 Beautiful Skin Oil Free Skin Protector All Skin Types SPF 25",
     "description": "libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis",
-    "image": "product_48.jpg",
+    "image": "shampoo.JPG",
     "category": "Aluminum",
     "price": 2280.68,
-    "brand": "Hickle, Gibson and Gusikowski"
+    "maker": "Hickle, Gibson and Gusikowski"
   },
   {
     "id": 49,
     "name": "Neutrogena Oil Free Acne Stress Control Triple Action Toner",
     "description": "semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis",
-    "image": "product_49.jpg",
+    "image": "shampoo.JPG",
     "category": "Steel",
     "price": 2090.87,
-    "brand": "Rowe LLC"
+    "maker": "Rowe LLC"
   },
   {
     "id": 50,
     "name": "Trandolapril and Verapamil Hydrochloride",
     "description": "massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et",
-    "image": "product_50.jpg",
+    "image": "shampoo.JPG",
     "category": "Wood",
     "price": 877.22,
-    "brand": "VonRueden, Goodwin and Runolfsson"
+    "maker": "VonRueden, Goodwin and Runolfsson"
   }
 ]

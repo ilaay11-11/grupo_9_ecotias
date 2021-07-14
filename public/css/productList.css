@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+}
+.principalHome {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.productLink {
+    color: black;
+    text-decoration: none;
+}
+
+.productLink:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del body
+   ======================================================================================================================================= */
+/* -------- Imagen Slider -------- */
+
+.section1_slider_home {
+    width: 100%;
+    display: flex;
+}
+
+.img_slider_home {
+    width: 100%;
+    height: 50%;
+}
+/* -------- Features blocks -------- */
+.section2_features_home {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 7px 10px 7px 10px;
+    width: 100%;
+}
+
+.featureHome {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.featureHome:hover {
+    color: rgba(16, 53, 16, 0.712);
+}
+
+.section2_features_home i {
+    font-size: 32px;
+    min-width: 32px;
+    padding-bottom: 7px;
+}
+
+.section2_features_home p {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 7px;
+}
+
+/* -------- Offers block -------- */
+.section3_offers_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    background-color: #eaeaea;
+}
+
+.products_show_home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.products_show_home h2 {
+    display: block;
+}
+
+.product_home {
+    display: flex;
+    flex-direction: column;
+    width: calc(100%/2); /* La división marca el número de productos por fila */
+    align-items: center;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.product_home img {
+    width: calc(100% - 12px);
+    padding: 5px 10px 5px 10px;
+}
+
+.product-name {
+    font-weight: 500;
+}
+
+.price {
+    margin-bottom: 4px;
+}
+
+.addCartButton {
+    font-size: 0.85rem;
+    padding: 0 1.2em;
+    border: 1px solid transparent;
+    border-radius: 99px;
+    min-height: 2.5rem;
+    max-width: 85%;
+    background-color: #4c8444;
+    color: white;
+    font-weight: 500;
+}
+
+.addCartButton:hover {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #4bac3d;
+    cursor: pointer;
+}
+
+/* -------- Categoría block -------- */
+.section4_category_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    background-color: white;
+}
+
+/* -------- Newsletter block -------- */
+.section5_newsletter_home {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(/images/newsl_background.jpg);
+    background-position: top;
+    background-size: cover;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 100%;
+}
+
+.newsletter_img {
+    display: none;
+}
+
+.newsletter_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.section5_newsletter_home p{
+    text-align: center;
+    font-weight: 500;
+    margin: 8px;
+}
+
+.enterEmail {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.97rem;
+    padding: 0 16px;
+    border-radius: 99px;
+    border: 1px solid #4c8444;
+    height: 2.5rem;
+    width: 90%;
+}
+
+.buttonNewsletter {
+    padding: 0 1.2em;
+    border: 1px solid transparent;
+    border-radius: 99px;
+    min-height: 2.5em;
+    max-width: 100%;
+    background-color: #52a046;
+    color: white;
+    font-weight: 500;
+}
+
+.buttonNewsletter:hover {
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* -------- Blog block -------- */
+.section6_blog_home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.entradaBlog {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* La división marca el número de productos por fila */
+    align-items: center;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.entradaBlog img {
+    width: 85%;
+    padding: 5px 10px 5px 10px;
+}
+
+/* -------------------- MEDIA QUERY 768px -------------------- */
+@media (min-width: 768px) {
+
+/* -------- Newsletter block -------- */
+    .section5_newsletter_home {
+        display: flex;
+        flex-direction: row;
+    }
+    .suscribe_text {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 12px;
+    }
+
+    .newsletter_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .newsletter_img img{
+        width: 80%
+    }
+
+    .newsletter_info {
+        width: 50%;
+    }
+    
+    .enterEmail {
+        width: 60%;
+        height: 2.7rem;
+    }
+
+    .buttonNewsletter {
+        font-size: 1.1rem;
+        padding: 0 1.6em;
+        border: 1px solid transparent;
+        border-radius: 99px;
+        min-height: 2.5em;
+        max-width: 100%;
+        background-color: #52a046;
+        color: white;
+        font-weight: 500;
+    }
+
+/* -------- Blog block -------- */
+    .section6_blog_home {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        background-color: white;
+        padding: 8px 20px 8px 20px;
+    }
+}
+
+/* -------------------- MEDIA QUERY 1024px -------------------- */
+@media (min-width: 1024px) {
+/* -------- Features blocks -------- */
+    .section2_features_home {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .featureHome {
+        padding-left: 4px;
+        padding-right: 4px;
+        width: 85%;
+    }
+
+/* -------- Categoría block -------- */
+    .product_home {
+        display: flex;
+        flex-direction: column;
+        width: calc(100%/4); /* La división marca el número de productos por fila */
+        align-items: center;
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+/* -------- Newsletter block -------- */
+    .section5_newsletter_home {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly
+    }
+
+    .newsletter_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+/* -------- Blog block -------- */
+    .section6_blog_home {
+        justify-content: space-evenly
+    }
+
+    .entradaBlog {
+        width: 30%;
+    }
+}
