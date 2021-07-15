@@ -1,86 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <%- include('../partials/head') %>
-        <link rel="stylesheet" href="/css/editProduct.css">
-        <title>Editar producto</title>
+    <link rel="stylesheet" href="/css/editProduct.css">
+    <title>Editar producto</title>
 </head>
-
 <body>
     <%- include('../partials/header') %>
-        <main>
-            <h2>Editar producto:</h2>
-            <form action="/productos/<%= productToEdit.id %>?_method=PUT" method="POST">
-                <div class="crear_producto">
-                    <div class="field">
-                        <label for="name">Nombre</label>
-                        <div class="control">
-                            <input type="text" name="name" placeholder="Ej: Omeprazole"
-                                value="<%= productToEdit.name %>">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="description">Descripción</label>
-                        <div class="control">
-                            <textarea name="description" id=""><%= productToEdit.description %></textarea>
-                            <!-- <input type="text" name="description"> -->
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="image">Imágen</label>
-                        <div class="control">
-                            <input type="file" name="image" value="<%= productToEdit.image %>">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="category">Categoría: <%= productToEdit.category %></label>
-                        <div class="control">
-                            <select name="category" id="category">
-                                <option value="">Seleccionar</option>
-                                <option value="Stone">Stone</option>
-                                <option value="Vinyl">Vinyl</option>
-                                <option value="Brass">Brass</option>
-                                <option value="Plexiglass">Plexiglass</option>
-                                <option value="Rubber">Rubber</option>
-                                <option value="Plastic">Plastic</option>
-                                <option value="Granite">Granite</option>
-                                <option value="Aluminum">Aluminum</option>
-                                <option value="Wood">Wood</option>
-                                <option value="Glass">Glass</option>
-                                <option value="Steel">Steel</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="maker">Fabricante</label>
-                        <div class="control">
-                            <input type="text" name="maker" placeholder="Ej: Rowe LLC"
-                                value="<%= productToEdit.maker %>">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="price">Precio</label>
-                        <div class="control">
-                            <input type="text" name="price" placeholder="Ej: 750" value="<%= productToEdit.price %>">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <button type="submit">Guardar producto</button>
-                        </div>
+    <main>
+        <h2>Editar producto: nombre</h2>
+        <form action="/products/createProduct" method="POST">
+            <div class="crear_producto">
+                <div class="field">
+                    <label for="name">Nombre</label>
+                    <div class="control">
+                        <input type="text" name="name" placeholder="Ej: Omeprazole">
                     </div>
                 </div>
-            </form>
-            <div class="field">
-                <div class="control">
-                    <form action="/productos/<%= productToEdit.id %>?_method=DELETE" method="POST">
-                    <button type="submit">Borrar producto</button>
-                    </form>
+                <div class="field">
+                    <label for="description">Descripción</label>
+                    <div class="control">
+                        <textarea name="description" id=""></textarea>
+                        <!-- <input type="text" name="description"> -->
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="image">Imágen</label>
+                    <div class="control">
+                        <input type="file" name="image">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="category">Categoría</label>
+                    <div class="control">
+                        <select name="category" id="category">
+                            <option value="">Seleccionar</option>
+                            <option value="Stone">Stone</option>
+                            <option value="Vinyl">Vinyl</option>
+                            <option value="Brass">Brass</option>
+                            <option value="Plexiglass">Plexiglass</option>
+                            <option value="Rubber">Rubber</option>
+                            <option value="Plastic">Plastic</option>
+                            <option value="Granite">Granite</option>
+                            <option value="Aluminum">Aluminum</option>
+                            <option value="Wood">Wood</option>
+                            <option value="Glass">Glass</option>
+                            <option value="Steel">Steel</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="maker">Fabricante</label>
+                    <div class="control">
+                        <input type="text" name="maker" placeholder="Ej: Rowe LLC">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="price">Precio</label>
+                    <div class="control">
+                        <input type="text" name="price" placeholder="Ej: 750">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button type="submit">Guardar producto</button>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button type="submit">Borrar producto</button>
+                    </div>
                 </div>
             </div>
-        </main>
-        <%- include('../partials/footer') %>
+        </form>
+    </main>
+    <%- include('../partials/footer') %>
 </body>
-
 </html>
