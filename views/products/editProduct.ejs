@@ -67,7 +67,9 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                            <button type="submit">Guardar producto</button>
+                            <form action="/productos/<%= productToEdit.id %>?_method=PUT" method="POST">
+                                <button type="submit">Guardar producto</button>
+                            </form>    
                         </div>
                     </div>
                 </div>
