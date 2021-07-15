@@ -435,18 +435,27 @@
     "id": 49,
     "name": "Neutrogena Oil Free Acne Stress Control Triple Action Toner",
     "description": "semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis",
-    "image": "shampoo.JPG",
-    "category": "Steel",
-    "price": 2090.87,
+    "image": "Shampoo.JPG",
+    "category": "Stone",
+    "price": "2090.87",
     "maker": "Rowe LLC"
   },
   {
     "id": 50,
     "name": "Trandolapril and Verapamil Hydrochloride",
-    "description": "massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et",
-    "image": "shampoo.JPG",
-    "category": "Wood",
-    "price": 877.22,
+    "description": "Un producto...",
+    "image": "Shampoo.JPG",
+    "category": "",
+    "price": "877.22",
     "maker": "VonRueden, Goodwin and Runolfsson"
+  },
+  {
+    "id": 51,
+    "name": "Nuevo producto xD",
+    "description": "Producto...",
+    "image": "Shampoo.JPG",
+    "category": "Stone",
+    "maker": "Equipo 9",
+    "price": "Infinito :)"
   }
 ]
