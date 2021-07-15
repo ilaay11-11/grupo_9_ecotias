@@ -4,8 +4,8 @@
     "name": "FENTANYL CITRATE",
     "description": "dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis",
     "image": "shampoo.JPG",
-    "category": "Stone",
-    "price": 972.47,
+    "category": "",
+    "price": "979.47",
     "maker": "Corkery-Considine"
   },
   {
@@ -451,11 +451,11 @@
   },
   {
     "id": 51,
-    "name": "Nuevo producto xD",
-    "description": "Producto...",
-    "image": "Shampoo.JPG",
-    "category": "Stone",
-    "maker": "Equipo 9",
-    "price": "Infinito :)"
+    "image": "shampoo.JPG",
+    "name": "Jabón mágico",
+    "description": "Jabón quita mugre y quita pereza",
+    "category": "",
+    "maker": "Umbrella",
+    "price": "324.99"
   }
 ]
