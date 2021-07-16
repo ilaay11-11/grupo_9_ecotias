@@ -16,27 +16,14 @@
                     <div class="field">
                         <label for="name">Nombre</label>
                         <div class="control">
-                            <input type="text" name="name" placeholder="Ej: Omeprazole"
+                            <input type="text" name="name" class="input_info" placeholder="Ej: Omeprazole"
                                 value="<%= productToEdit.name %>">
                         </div>
                     </div>
                     <div class="field">
-                        <label for="description">Descripción</label>
+                        <label for="category">Categoría <%= productToEdit.category %></label>
                         <div class="control">
-                            <textarea name="description" id=""><%= productToEdit.description %></textarea>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="image">Imágen</label>
-                        <div class="control">
-                            <img src="/images/<%= productToEdit.image%>" alt="producto" width="10%">
-                            <!-- <input type="file" name="image" value="<%= productToEdit.image %>"> -->
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="category">Categoría actual: <%= productToEdit.category %></label>
-                        <div class="control">
-                            <select name="category" id="category">
+                            <select name="category" id="category" class="input_info" required>
                                 <option value="">Seleccionar</option>
                                 <option value="Stone">Stone</option>
                                 <option value="Vinyl">Vinyl</option>
@@ -55,28 +42,43 @@
                     <div class="field">
                         <label for="maker">Fabricante</label>
                         <div class="control">
-                            <input type="text" name="maker" placeholder="Ej: Rowe LLC"
+                            <input type="text" name="maker" class="input_info" placeholder="Ej: Rowe LLC"
                                 value="<%= productToEdit.maker %>">
                         </div>
                     </div>
                     <div class="field">
                         <label for="price">Precio</label>
                         <div class="control">
-                            <input type="number" name="price" placeholder="Ej: 750" value="<%= productToEdit.price %>">
+                            <input type="number" name="price" class="input_info" placeholder="Ej: 750" value="<%= productToEdit.price %>">
                         </div>
                     </div>
                     <div class="field">
+                        <label for="description">Descripción</label>
+                        <div class="control">
+                            <textarea name="description" id="" class="input_info"><%= productToEdit.description %></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="image">Imágen</label>
+                        <div class="control">
+                            <img src="/images/<%= productToEdit.image%>" alt="producto" width="10%">
+                            <!-- <input type="file" name="image" value="<%= productToEdit.image %>"> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="botones">
+                    <div class="buttonAction_save">
                         <div class="control">
                             <button type="submit">Guardar producto</button>
                         </div>
                     </div>
-                </div>
-            </form>
-            <div class="field">
-                <div class="control">
-                    <form action="/productos/<%= productToEdit.id %>?_method=DELETE" method="POST">
-                    <button type="submit">Borrar producto</button>
-                    </form>
+                </form>
+                <div class="buttonAction_delete">
+                    <div class="control">
+                        <form action="/productos/<%= productToEdit.id %>?_method=DELETE" method="POST">
+                        <button type="submit">Eliminar producto</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>

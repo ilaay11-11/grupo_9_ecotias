@@ -9,21 +9,20 @@
 <body>
     <%- include('../partials/header') %>
 
-    <main class="principalHome">
-        <section class="section3_offers_home">
+    <main class="mainArea">
             <h2>TODOS LOS PRODUCTOS</h2>
-            <div class="products_show_home">
-                <% for(i=0; i<products.length; i++) {%>
-                <div class="product_home">
+            <div class="productList_all">
+                <% for(i=0; i < products.length; i++) {%>
+                <div class="product_individual">
                     <a href="/productos/<%= products[i].id %>" class="productLink">
                         <img src="/images/<%= products[i].image%> " alt="producto">
-                        <p class="product-name"><%= products[i].name%> </p>
-                        <p class="price">$<%= products[i].price%> </p>
+                        <p class="product_name"><%= products[i].name%> </p>
                     </a>
+                        <p class="price">$<%= products[i].price%> </p>
                     <button class="addCartButton" type="submit">Agregar al carrito</button>
                 </div>
                 <% } %>
-        </section>
+            </div>
     </main>
     <%- include('../partials/footer') %>
 </body>

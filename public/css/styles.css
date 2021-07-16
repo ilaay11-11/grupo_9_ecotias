@@ -65,7 +65,7 @@
 
 
 .main_nav_mobile {
-    background-color: #f5fff6;
+    background-color: #DDFFD9;
     padding-top: 4px;
     padding-bottom: 4px;
 }
@@ -93,8 +93,8 @@ input[type="checkbox"]:checked + .menu_items {
     text-align: center;
     background-color: rgba(229, 255, 232, 0.95);
     width: 100%;
-    position: fixed;
-    z-index: 1;
+    position: absolute;
+    /* z-index: 1; */
   }
 
 #loging_option {
@@ -110,20 +110,25 @@ input[type="checkbox"]:checked + .menu_items {
     border-width: 0 0 1px;
     color: black;
     text-decoration: none;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px 0;
 }
 
 .buscarNav input {
     display: block;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 5px;
-    color: black;
     font-size: 24px;
     text-decoration: none;
     width: 180px;
-    padding-left: 8px;
+    padding: 0 .55rem;
+    line-height: 1.5rem;
+    outline: 0;
+    border-radius: 10px;
+    border: 2px solid #51834B;
 }
+
+.buscarNav input:hover {
+    border: 2px solid #4c8444b4;
+}
+
 .menu_items .botonBuscarNav {
     font-size: 22px;
     margin-left: 5px;
@@ -136,9 +141,6 @@ input[type="checkbox"]:checked + .menu_items {
     border: 0;
 }
 
-.buscarNav input:hover {
-    border: 1px solid rgba(0, 0, 0, .2);
-}
 
 .menu_items a {
     display: block;
@@ -183,7 +185,7 @@ background-color: rgb(208, 255, 190);
    ======================================================================================================================================= */
 /* ---- Contenedor footer principal ---- */
    .principalFooter {
-    background-color: #f5fff6;
+    background-color: #DDFFD9;
     padding-top: .5rem;
     position: relative;
     width: 100%;
@@ -222,10 +224,10 @@ background-color: rgb(208, 255, 190);
     margin-top: 0.5rem;
 }
 
-.section3 p{
+.section3 p {
     font-size: 0.9375rem;
+    font-weight: 500;
     margin-top: 0.3125rem;
-
 }
 
 
@@ -391,10 +393,7 @@ background-color: rgb(208, 255, 190);
         text-decoration: none;
         font-size: 0.9375rem;
     }
-
-    .content__footer_links a:hover {
-        text-decoration:underline ;
-    }
+    
     .content__footer_links a::before {
         content: "> "
     }
@@ -423,7 +422,7 @@ background-color: rgb(208, 255, 190);
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: #f5fff6;
+        background-color: #DDFFD9;
     }
 
     .menu_normal {
@@ -435,6 +434,7 @@ background-color: rgb(208, 255, 190);
         display: flex;
         justify-content: space-around;
         font-size: 20px;
+        font-weight: 500;
         min-width: 550px;
     }
 
@@ -443,13 +443,23 @@ background-color: rgb(208, 255, 190);
         text-decoration: none;
     }
 
-    .menu_items_normal a:hover {
-        font-weight: 500;
+    .linkEffect::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: black;
+        transition: width .3s;
+    }
+    
+    .linkEffect:hover::after {
+        width: 100%;
+        transition: width .3s;
     }
 
-    .menu_items_normal a:hover::before {
+    /* .menu_items_normal a:hover::before {
         content: "> ";
-    }
+    } */
 
    /* ---- Estilo logo header ---- */
     .logo_header {
@@ -461,7 +471,7 @@ background-color: rgb(208, 255, 190);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
 
    /* ---- Estilo Iniciar sesión header ---- */
@@ -473,10 +483,6 @@ background-color: rgb(208, 255, 190);
         padding-bottom: 8px;
     }
 
-    #loging_option_normal:hover {
-        text-decoration: underline;
-    }
-
    /* ---- Estilo busqueda header ---- */
    .searchBar {
        display: flex;
@@ -484,17 +490,16 @@ background-color: rgb(208, 255, 190);
        align-items: center;
    }
     .searchBar input {
-        border: 1px solid rgba(0, 0, 0, .15);
-        border-radius: 5px;
-        color: black;
         font-size: 18px;
-        padding-left: 8px;
-        /* min-width: 135px; */
-        width:auto;
+        padding: 0 .55rem;
+        line-height: 1.5rem;
+        outline: 0;
+        border-radius: 10px;
+        border: 2px solid #51834B;
     }
 
     .searchBar input:hover {
-        border: 1px solid rgba(0, 0, 0, .3);
+        border: 2px solid #4c8444b4;
     }
 
     .searchBar a {

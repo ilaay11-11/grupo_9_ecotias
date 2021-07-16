@@ -14,26 +14,13 @@
                 <div class="field">
                     <label for="name">Nombre</label>
                     <div class="control">
-                        <input type="text" name="name" placeholder="Ej: Omeprazole">
-                    </div>
-                </div>
-                <div class="field">
-                    <label for="description">Descripción</label>
-                    <div class="control">
-                        <textarea name="description" id=""></textarea>
-                    </div>
-                </div>
-                <div class="field">
-                    <label for="image">Imágen</label>
-                    <div class="control">
-                        <img src="/images/shampoo.JPG" alt="producto" width="10%">
-                        <!-- <input type="file" name="image"> -->
+                        <input type="text" name="name" class="input_info"placeholder="Ej: Omeprazole" required>
                     </div>
                 </div>
                 <div class="field">
                     <label for="category">Categoría</label>
                     <div class="control">
-                        <select name="category" id="category">
+                        <select name="category" id="category" class="input_info" required>
                             <option value="">Seleccionar</option>
                             <option value="Stone">Stone</option>
                             <option value="Vinyl">Vinyl</option>
@@ -52,19 +39,32 @@
                 <div class="field">
                     <label for="maker">Fabricante</label>
                     <div class="control">
-                        <input type="text" name="maker" placeholder="Ej: Rowe LLC">
+                        <input type="text" name="maker" class="input_info" placeholder="Ej: Rowe LLC" required>
                     </div>
                 </div>
                 <div class="field">
                     <label for="price">Precio</label>
                     <div class="control">
-                        <input type="number" name="price" placeholder="Ej: 750">
+                        <input type="number" name="price" class="input_info" step="0.01" placeholder="Ej: 750" required>
                     </div>
                 </div>
                 <div class="field">
+                    <label for="description">Descripción</label>
                     <div class="control">
-                        <button type="submit">Crear producto</button>
+                        <textarea name="description" id="" class="input_info" required></textarea>
                     </div>
+                </div>
+                <div class="field">
+                    <label for="image">Imágen</label>
+                    <div class="control">
+                        <img src="/images/shampoo.JPG" alt="producto">
+                        <!-- <input type="file" name="image"> -->
+                    </div>
+                </div>
+            </div>
+            <div class="buttonAction">
+                <div class="control">
+                    <button type="submit">Crear producto</button>
                 </div>
             </div>
         </form>
