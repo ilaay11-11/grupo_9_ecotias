@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 .principalHome {
-    /* background-color: bisque; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,17 +10,37 @@
 
 /* Estilos del body
    ======================================================================================================================================= */
-/* -------- Imagen Slider -------- */
-
+/* -------- Slider -------- */
 .section_slider_home {
-    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/hojas-verdes-poderosas.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
 }
 
-.img_slider_home {
-    width: 100%;
-    height: 50%;
+.sliderText {
+    text-align: center;
+    color: white;
 }
+
+.sliderText h1, .sliderText h2 {
+    background-color: rgba(27, 41, 25, 0.7);
+    padding: 4px 12px;
+    margin: 8px;
+}
+
+.sliderText h1 {
+    font-size: 1.7rem;
+}
+.sliderText h2 {
+    font-size: 1.5rem;
+}
+
 /* -------- Features block -------- */
 .section_features_home {
     background-color: white;
@@ -35,7 +54,6 @@
 .featureHome {
     margin: 8px 0;
     cursor: default;
-    /* border: 1px solid red; */
 }
 
 .featureHome:hover {
@@ -60,8 +78,6 @@
     padding-top: 12px;
     padding-bottom: 4px;
     background-color: white;
-    /* border-bottom: 1px solid red; */
-
 }
 
 /* -------- Link del producto (img, p) -------- */
@@ -166,7 +182,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url(/images/newsl_background.jpg);
+    background-image: url('/images/newsl_background.jpg');
     background-position: top;
     background-size: cover;
     padding-top: 4px;
@@ -242,6 +258,19 @@
 
 /* -------------------- MEDIA QUERY 768px -------------------- */
 @media (min-width: 768px) {
+/* -------- Slider -------- */
+    .section_slider_home {
+        height: 650px;
+    }
+
+    .sliderText h1 {
+        font-size: 2.8rem;
+    }
+    .sliderText h2 {
+        font-size: 2.7rem;
+    }
+
+/* -------- Category block -------- */
     .product_individual {
         flex-basis: 47%;
         max-width: 47%;
@@ -252,10 +281,6 @@
     }
 
 /* -------- Newsletter block -------- */
-    /* .section_newsletter_home {
-        display: flex;
-        flex-direction: row;
-    } */
     .suscribe_text {
         text-align: center;
         font-size: 1.2rem;
@@ -307,7 +332,6 @@
 
 /* -------------------- MEDIA QUERY 1024px -------------------- */
 @media (min-width: 1024px) {
-
 /* -------- Features blocks -------- */
     .section_features_home {
         display: flex;
@@ -326,12 +350,6 @@
     }
 
 /* -------- Newsletter block -------- */
-    /* .section_newsletter_home {
-        display: flex;
-        justify-content: space-evenly
-    } */
-
-
     .section_newsletter_home p{
         font-size: 1.5rem;
     }
@@ -348,14 +366,19 @@
 
 /* -------------------- MEDIA QUERY 1280px -------------------- */
 @media (min-width: 1280px) {
+/* -------- Slider -------- */
+    .sliderText h1 {
+        font-size: 3.7rem;
+    }
 
-    /* -------- Newsletter block -------- */
+    .sliderText h2 {
+        font-size: 2.8rem;
+    }
+
+/* -------- Newsletter block -------- */
     .section_newsletter_home p{
         font-size: 2rem;
     }
-
-
-
 
 /* -------- Category block -------- */
     .product_individual {
