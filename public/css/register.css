@@ -1,18 +1,47 @@
 /*BACKGROUND EXCLUSIVO PARA REGISTER*/
 body{
-    background-color:#02a35a;
+    background-image: url('https://i.pinimg.com/564x/8e/e1/dd/8ee1dd5c57373a4d3c131077a4505e93.jpg');
+    background-repeat: round;
 }
 /*BANNER*/
 .signup_banner{
     display: none;
 }
 
-/*TITULO*/
-#registrate{
-    text-align: center;
-    margin-top: -1rem;
-    margin-bottom: 2rem;
+
+/* IMAGEN USUARIO */
+#user_img{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -10%;
+    margin-bottom: 8%;
+    background: whitesmoke;
 }
+/*#photo{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#file{
+    display: none;
+       
+}
+#choose{
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    line-height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}*/
 /*CAMPOS A LLENAR DEL FORMULARIO*/
 .register_essential{
     display: flex;
@@ -22,7 +51,7 @@ body{
     background:  rgba(255,255,255, 0.3);
     border-radius: 1rem;
     /*z-index: 2;*/
-    backdrop-filter: blur(30px) saturate(100%) contrast(48%) brightness(120%);;
+    backdrop-filter: blur(11px) saturate(100%) contrast(48%) brightness(120%);;
     box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
     
     
@@ -152,6 +181,11 @@ a{
         right: 50px;
         font-size: 10px;
     }
+    #user_img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
     
 }
 
@@ -181,6 +215,11 @@ a{
         right: -3vw;
         font-size: 10px;
     }
+    #user_img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
     
 }
 
@@ -192,5 +231,10 @@ a{
     #p-caract p{
         font-size: 9px;
         transform: translateX(-17vw);
+    }
+    #user_img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
     }
 }
