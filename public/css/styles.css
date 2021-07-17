@@ -93,7 +93,7 @@ input[type="checkbox"]:checked + .menu_items {
     text-align: center;
     background-color: rgba(229, 255, 232, 0.95);
     width: 100%;
-    position: absolute;
+    position:static;
     /* z-index: 1; */
   }
 
