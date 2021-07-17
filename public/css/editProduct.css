@@ -7,12 +7,12 @@ main h2 {
 /* -------- Área principal -------- */
 .crear_producto {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 /* -------- Textos label -------- */
-.crear_producto label {
+.crear_producto label, .crear_producto p {
     font-weight: 500;
 }
 
@@ -43,7 +43,7 @@ input, select {
 }
 
 img {
-    width: 250px;
+    width: 150px;
     margin-top: 4px;
 }
 
@@ -90,6 +90,7 @@ img {
     justify-content: center;
 }
 
+
 /* -------------------- MEDIA QUERY 768px -------------------- */
 @media (min-width: 768px) {
 /* -------- Campos -------- */
@@ -97,19 +98,41 @@ img {
         width: 50%;
     }
 
-    .crear_producto label {
+    .crear_producto label, .crear_producto p {
         font-size: 1.2rem;
     }
 
-    img {
-        width: 280px;
+    .order1 {
+        order: 1;
+    }
+    .order2 {
+        order: 2;
+    }
+    .order3 {
+        order: 3;
+    }
+    .order4 {
+        order: 4;
+    }
+    .order5 {
+        order: 5;
+    }
+    .order6 {
+        order: 6;
+    }
+    .order7 {
+        order: 7;
     }
 }
 
 /* -------------------- MEDIA QUERY 1280px -------------------- */
 @media (min-width: 1280px) {
-/* -------- Área principal -------- */
+    /* -------- Área principal -------- */
     .crear_producto {
         margin: 0 110px;
+    }
+
+    img {
+        width: 200px;
     }
 }

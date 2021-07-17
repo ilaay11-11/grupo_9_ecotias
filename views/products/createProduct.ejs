@@ -9,7 +9,7 @@
     <%- include('../partials/header') %>
     <main>
         <h2>Crear producto</h2>
-        <form action="/productos" method="POST">
+        <form action="/productos" method="POST" enctype="multipart/form-data">
             <div class="crear_producto">
                 <div class="field">
                     <label for="name">Nombre</label>
@@ -55,10 +55,9 @@
                     </div>
                 </div>
                 <div class="field">
-                    <label for="image">Imágen</label>
+                    <label for="product-image">Imágen</label>
                     <div class="control">
-                        <img src="/images/producto_muestra.jpg" alt="producto">
-                        <!-- <input type="file" name="image"> -->
+                        <input type="file" name="product-image" id="product-image">
                     </div>
                 </div>
             </div>

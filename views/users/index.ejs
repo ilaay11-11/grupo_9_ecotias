@@ -40,7 +40,7 @@
                 <% for(i=0; i < brassProducts.length; i++) {%>
                 <div class="product_individual">
                     <a href="/productos/<%= brassProducts[i].id %>" class="productLink">
-                        <img src="/images/<%= brassProducts[i].image%> " alt="producto">
+                        <img src="/images/productImages/<%= brassProducts[i].image ? brassProducts[i].image : 'default.jpg' %> " alt="producto">
                         <p class="product_name"><%= brassProducts[i].name%> </p>
                     </a>
                         <p class="price">$<%= brassProducts[i].price%> </p>
@@ -57,7 +57,7 @@
                 <% for(i=0; i < stoneProducts.length; i++) {%>
                 <div class="product_individual">
                     <a href="/productos/<%= stoneProducts[i].id %>" class="productLink">
-                        <img src="/images/<%= stoneProducts[i].image%> " alt="producto">
+                        <img src="/images/productImages/<%= stoneProducts[i].image ? stoneProducts[i].image : 'default.jpg' %>" alt="producto">
                         <p class="product_name"><%= stoneProducts[i].name%> </p>
                     </a>
                         <p class="price">$<%= stoneProducts[i].price%> </p>
@@ -84,7 +84,7 @@
                 <% for(i=0; i < graniteProducts.length; i++) {%>
                 <div class="product_individual">
                     <a href="/productos/<%= graniteProducts[i].id %>" class="productLink">
-                        <img src="/images/<%= graniteProducts[i].image%> " alt="producto">
+                        <img src="/images/productImages/<%= graniteProducts[i].image ? graniteProducts[i].image : 'default.jpg' %>" alt="producto">
                         <p class="product_name"><%= graniteProducts[i].name%> </p>
                     </a>
                         <p class="price">$<%= graniteProducts[i].price%> </p>

@@ -9,8 +9,8 @@
     <%- include('../partials/header') %>
     <div class = "descripcion">
         <div class="imagenes">
-            <img src="/images/<%= productSelected.image %>" id="imagen-principal">
-            <img src="/images/<%= productSelected.image %>" id="imagen2"> 
+            <img src="/images/productImages/<%= productSelected.image ? productSelected.image : 'default.jpg' %>" id="imagen-principal">
+            <img src="/images/productImages/<%= productSelected.image ? productSelected.image : 'default.jpg' %>" id="imagen2"> 
         </div>
         
         <div>
@@ -27,11 +27,10 @@
             </div>
               
 
-
-        <p class="descripcion-producto"> 
-            <%= productSelected.description %>
-          
-        </p>
+        <h3 class="descripcion-producto">Descripción:</h3>
+            <p class="descripcion-producto">
+                <%= productSelected.description %>
+            </p>
         <h3 class="descripcion-producto">Ingredientes:</h3>
             <p class="descripcion-producto">SCI (Sodium Cocoyl Isethionate), Harina de Avena, Proteína de Chícharo,
                 Manteca de Cacao, Agua de Rosas, Aceite de Almendras, y Cacao en Polvo.
@@ -42,8 +41,7 @@
              <p class="descripcion-producto">
                 Humedece tu cabello y aplica directamente. Masajea, y luego enjuaga.
                 Tras su uso, enjuaga tu sólido y colócalo en un lugar seco, fresco, y lejos del sol.
-             </p>
-             
+             </p>             
         </div>
 
                       

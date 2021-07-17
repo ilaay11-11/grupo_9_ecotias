@@ -18,18 +18,8 @@
     text-decoration: none;
 }
 
-.product_name::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: rgba(0, 90, 20, 0.233);
-    transition: width .3s;
-}
-
-.product_name:hover::after {
-    width: 100%;
-    transition: width .3s;
+.product_name:hover {
+    text-decoration: underline #B0CCAD;
 }
 
 /* -------- Lista de productos -------- */
@@ -101,6 +91,13 @@
 
     .product_name {
         font-size: 1.05rem;
+    }
+}
+
+/* -------------------- MEDIA QUERY 768px -------------------- */
+@media (min-width: 768px) {
+    main h2 {
+        font-size: 2rem;
     }
 }
 

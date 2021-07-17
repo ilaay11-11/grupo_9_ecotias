@@ -9,80 +9,85 @@
 
 <body>
     <%- include('../partials/header') %>
-        <main>
-            <h2>Editar producto: <%= productToEdit.name %></h2>
-            <form action="/productos/<%= productToEdit.id %>?_method=PUT" method="POST">
-                <div class="crear_producto">
-                    <div class="field">
-                        <label for="name">Nombre</label>
-                        <div class="control">
-                            <input type="text" name="name" class="input_info" placeholder="Ej: Omeprazole"
-                                value="<%= productToEdit.name %>">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="category">Categoría <%= productToEdit.category %></label>
-                        <div class="control">
-                            <select name="category" id="category" class="input_info" required>
-                                <option value="">Seleccionar</option>
-                                <option value="Stone">Stone</option>
-                                <option value="Vinyl">Vinyl</option>
-                                <option value="Brass">Brass</option>
-                                <option value="Plexiglass">Plexiglass</option>
-                                <option value="Rubber">Rubber</option>
-                                <option value="Plastic">Plastic</option>
-                                <option value="Granite">Granite</option>
-                                <option value="Aluminum">Aluminum</option>
-                                <option value="Wood">Wood</option>
-                                <option value="Glass">Glass</option>
-                                <option value="Steel">Steel</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="maker">Fabricante</label>
-                        <div class="control">
-                            <input type="text" name="maker" class="input_info" placeholder="Ej: Rowe LLC"
-                                value="<%= productToEdit.maker %>">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="price">Precio</label>
-                        <div class="control">
-                            <input type="number" name="price" class="input_info" placeholder="Ej: 750" value="<%= productToEdit.price %>">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="description">Descripción</label>
-                        <div class="control">
-                            <textarea name="description" id="" class="input_info"><%= productToEdit.description %></textarea>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="image">Imágen</label>
-                        <div class="control">
-                            <img src="/images/<%= productToEdit.image%>" alt="producto" width="10%">
-                            <!-- <input type="file" name="image" value="<%= productToEdit.image %>"> -->
-                        </div>
+    <main>
+        <h2>Editar producto: <%= productToEdit.name %></h2>
+        <form action="/productos/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="crear_producto">
+                <div class="field order1">
+                    <label for="name">Nombre</label>
+                    <div class="control">
+                        <input type="text" name="name" class="input_info" placeholder="Ej: Omeprazole"
+                            value="<%= productToEdit.name %>">
                     </div>
                 </div>
-                <div class="botones">
-                    <div class="buttonAction_save">
-                        <div class="control">
-                            <button type="submit">Guardar producto</button>
-                        </div>
-                    </div>
-                </form>
-                <div class="buttonAction_delete">
+                <div class="field order2">
+                    <label for="category">Categoría <%= productToEdit.category %></label>
                     <div class="control">
-                        <form action="/productos/<%= productToEdit.id %>?_method=DELETE" method="POST">
-                        <button type="submit">Eliminar producto</button>
-                        </form>
+                        <select name="category" id="category" class="input_info" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Stone">Stone</option>
+                            <option value="Vinyl">Vinyl</option>
+                            <option value="Brass">Brass</option>
+                            <option value="Plexiglass">Plexiglass</option>
+                            <option value="Rubber">Rubber</option>
+                            <option value="Plastic">Plastic</option>
+                            <option value="Granite">Granite</option>
+                            <option value="Aluminum">Aluminum</option>
+                            <option value="Wood">Wood</option>
+                            <option value="Glass">Glass</option>
+                            <option value="Steel">Steel</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field order3">
+                    <label for="maker">Fabricante</label>
+                    <div class="control">
+                        <input type="text" name="maker" class="input_info" placeholder="Ej: Rowe LLC"
+                            value="<%= productToEdit.maker %>">
+                    </div>
+                </div>
+                <div class="field order4">
+                    <label for="price">Precio</label>
+                    <div class="control">
+                        <input type="number" name="price" class="input_info" placeholder="Ej: 750" value="<%= productToEdit.price %>">
+                    </div>
+                </div>
+                <div class="field order6">
+                    <label for="description">Descripción</label>
+                    <div class="control">
+                        <textarea name="description" id="" class="input_info"><%= productToEdit.description %></textarea>
+                    </div>
+                </div>
+                <div class="field order5">
+                    <p>Imágen actual</p>
+                    <div class="control">
+                        <img src="/images/productImages/<%= productToEdit.image ? productToEdit.image : 'default.jpg'%>" alt="producto">
+                    </div>
+                </div>
+                <div class="field order7">
+                    <label for="newProductImage">Subir nueva imágen</label>
+                    <div class="control">
+                        <input type="file" name="newProductImage" id="newProductImage">
                     </div>
                 </div>
             </div>
-        </main>
-        <%- include('../partials/footer') %>
+            <div class="botones">
+                <div class="buttonAction_save">
+                    <div class="control">
+                        <button type="submit">Guardar producto</button>
+                    </div>
+                </div>
+        </form>
+            <div class="buttonAction_delete">
+                <div class="control">
+                    <form action="/productos/<%= productToEdit.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar producto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
 </body>
 
 </html>
