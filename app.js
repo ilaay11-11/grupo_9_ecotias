@@ -1,8 +1,9 @@
 const express = require('express');
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
-// const logger = require('morgan');
+const usersRoutes = require('./routes/usersRoutes');
 const methodOverride =  require('method-override');
+// const logger = require('morgan');
 
 // App
 const app = express();
@@ -22,7 +23,9 @@ app.set('views', './views');
 
 // Routes
 app.use('/', mainRoutes); // Main
+app.use('/usuarios', usersRoutes); // Users
 app.use('/productos', productsRoutes); // Products
+
 app.use((req, res, next) => res.render('users/not-found')); // Error view
 
 // Server
