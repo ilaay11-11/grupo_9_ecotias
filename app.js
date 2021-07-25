@@ -2,6 +2,7 @@ const express = require('express');
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const usersRoutes = require('./routes/usersRoutes');
+const bcrypt = require('bcryptjs');
 const methodOverride =  require('method-override');
 // const logger = require('morgan');
 
