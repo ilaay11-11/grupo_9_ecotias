@@ -21,7 +21,7 @@ const uploadUserImage = multer({ storage });
 
 
 /*** GET ALL USERS ***/
-router.get('/usuarios', usersController.index); // MUESTRA LISTA DE USUARIOS
+// router.get('/', usersController.index); // MUESTRA LISTA DE USUARIOS
 
 /*** CREATE ONE USER ***/
 router.get('/register', usersController.create); // MUESTRA FORMULARIO DE REGISTRO

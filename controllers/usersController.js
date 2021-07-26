@@ -5,12 +5,12 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcrypt = require('bcryptjs');
 
 const usersController = {
-    index: (req, res) => res.render('users/index', {users}),
+    // index: (req, res) => res.render('users/index'),
     create: (req, res) => res.render('users/register'),
     store: (req, res) => {
         const newUser = req.body;
         
-        
+        console.log(req.file);
         if(req.file) {
             const userImage = req.file.filename;
             users.push({id: users.length +1, ...newUser, password: bcrypt.hashSync(req.body.password, 10), image: userImage});
@@ -34,7 +34,7 @@ const usersController = {
     detail: (req, res) => {
         const userId = parseInt(req.params.id);
         const userProfile = users.find((usuario) => {
-            return usuario.id == (userId);
+            return usuario.id === userId;
         });
 
         userProfile ? res.render('users/profile', {userProfile}) : res.render("users/not-found");
