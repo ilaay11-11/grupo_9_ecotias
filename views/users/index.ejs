@@ -10,10 +10,13 @@
     <%- include('../partials/header') %>
 
     <main class="principalHome">
-        <section class="section1_slider_home">
-            <img class="img_slider_home" src="/images/sliderimg.jpg" alt="slider-imgage"/>
+        <section class="section_slider_home">
+            <div class="sliderText">
+                <h1>BIENVENIDOS A ECO-TÍAS</h1>
+                <h2>La mejor tienda ecológica</h2>
+            </div>
         </section>
-        <section class="section2_features_home">
+        <section class="section_features_home">
             <div class="featureHome">
                 <i class="fas fa-truck"></i>
                 <h3>Envío a todo México y USA</h3>
@@ -30,87 +33,88 @@
                 <p>Dispuestos a ayudarte las 24 horas todos los días.</p>
             </div>
         </section>
-        <section class="section3_offers_home">
-            <h2>Ofertas</h2>
-            <div class="products_show_home">
-                <div class="product_home">
-                    <img src="/images/shampoo.JPG" alt="producto">
-                    <p class="product-name">Producto de prueba</p>
-                    <p class="price">$300.00</p>
+        <hr class="separator_dots"/>
+        <section class="product_category">
+            <h2>PRODUCTOS DE LATÓN</h2>
+            <div class="productList_all">
+                <% for(i=0; i < brassProducts.length; i++) {%>
+                <div class="product_individual">
+                    <a href="/productos/<%= brassProducts[i].id %>" class="productLink">
+                        <img src="/images/productImages/<%= brassProducts[i].image ? brassProducts[i].image : 'default.jpg' %> " alt="producto">
+                        <p class="product_name"><%= brassProducts[i].name%> </p>
+                    </a>
+                        <p class="price">$<%= brassProducts[i].price%> </p>
                     <button class="addCartButton" type="submit">Agregar al carrito</button>
                 </div>
-                <div class="product_home">
-                    <img src="/images/shampoo.JPG" alt="producto">
-                    <p class="product-name">Producto de prueba</p>
-                    <p class="price">$300.00</p>
-                    <button class="addCartButton" type="submit">Agregar al carrito</button>
-                </div>
-                <div class="product_home">
-                    <img src="/images/shampoo.JPG" alt="producto">
-                    <p class="product-name">Producto de prueba</p>
-                    <p class="price">$300.00</p>
-                    <button class="addCartButton" type="submit">Agregar al carrito</button>
-                </div>
-                <div class="product_home">
-                    <img src="/images/shampoo.JPG" alt="producto">
-                    <p class="product-name">Producto de prueba</p>
-                    <p class="price">$300.00</p>
-                    <button class="addCartButton" type="submit">Agregar al carrito</button>
-                </div>
+                <% } %>
             </div>
         </section>
-        <section class="section4_category_home">
-            <h2>Categoría misteriosa</h2>
-            <div class="products_show_home">
-                <div class="product_home">
-                    <img src="/images/shampoo.JPG" alt="producto">
-                    <p class="product-name">Producto de prueba</p>
-                    <p class="price">$300.00</p>
+        <br>
+        <hr class="separator_dots"/>
+        <section class="product_category">
+            <h2>PRODUCTOS DE PIEDRA</h2>
+            <div class="productList_all">
+                <% for(i=0; i < stoneProducts.length; i++) {%>
+                <div class="product_individual">
+                    <a href="/productos/<%= stoneProducts[i].id %>" class="productLink">
+                        <img src="/images/productImages/<%= stoneProducts[i].image ? stoneProducts[i].image : 'default.jpg' %>" alt="producto">
+                        <p class="product_name"><%= stoneProducts[i].name%> </p>
+                    </a>
+                        <p class="price">$<%= stoneProducts[i].price%> </p>
                     <button class="addCartButton" type="submit">Agregar al carrito</button>
                 </div>
-                <div class="product_home">
-                    <img src="/images/shampoo.JPG" alt="producto">
-                    <p class="product-name">Producto de prueba</p>
-                    <p class="price">$300.00</p>
-                    <button class="addCartButton" type="submit">Agregar al carrito</button>
-                </div>
-                <div class="product_home">
-                    <img src="/images/shampoo.JPG" alt="producto">
-                    <p class="product-name">Producto de prueba</p>
-                    <p class="price">$300.00</p>
-                    <button class="addCartButton" type="submit">Agregar al carrito</button>
-                </div>
-                <div class="product_home">
-                    <img src="/images/shampoo.JPG" alt="producto">
-                    <p class="product-name">Producto de prueba</p>
-                    <p class="price">$300.00</p>
-                    <button class="addCartButton" type="submit">Agregar al carrito</button>
-                </div>
+                <% } %>
             </div>
         </section>
-        <section class="section5_newsletter_home">
+        <section class="section_newsletter_home">
             <div class="newsletter_img">
                 <img src="/images/deal-hero.png" alt="newsletter image">
             </div>
             <div class="newsletter_info">
-                <p class="suscribe_text">Suscríbete a nuestro newsletter y recibe las mejores ofertas en tu email</p>
+                <p class="suscribe_text">Suscríbete a nuestro newsletter y recibe ofertas exclusivas en tu email</p>
                 <input class="enterEmail" type="text" placeholder="Escribe tu email" required>
                 <p>
                     <button class="buttonNewsletter" type="submit">Enviar</button>
                 </p>
             </div>
         </section>
-        <section class="section6_blog_home">            
-            <div class="entradaBlog">
-                <a href="#"><img src="/images/shampoo.JPG" alt="producto"></a>
+        <section class="product_category">
+            <h2>PRODUCTOS DE GRANITO</h2>
+            <div class="productList_all">
+                <% for(i=0; i < graniteProducts.length; i++) {%>
+                <div class="product_individual">
+                    <a href="/productos/<%= graniteProducts[i].id %>" class="productLink">
+                        <img src="/images/productImages/<%= graniteProducts[i].image ? graniteProducts[i].image : 'default.jpg' %>" alt="producto">
+                        <p class="product_name"><%= graniteProducts[i].name%> </p>
+                    </a>
+                        <p class="price">$<%= graniteProducts[i].price%> </p>
+                    <button class="addCartButton" type="submit">Agregar al carrito</button>
+                </div>
+                <% } %>
+            </div>
+        </section>
+        <hr class="separator_dots"/>
+        <br>
+        <section class="section_blog_home">            
+            <h2>¡VISITA NUESTRO BLOG!</h2>
+            <div class="latest_blogposts">
+                <div class="entradaBlog">
+                    <a href="#"><img src="/images/blogimg_example.jpg" alt="producto"></a>
                 <h3>Entrada del blog</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#">[...]</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#" class="blogLink">[Leer más...]</a></p>
             </div>
             <div class="entradaBlog">
-                <a href="#"><img src="/images/shampoo.JPG" alt="producto"></a>
+                <a href="#"><img src="/images/blogimg_example.jpg" alt="producto"></a>
                 <h3>Entrada del blog</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#">[...]</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#" class="blogLink">[Leer más...]</a></p>
             </div>
+            <div class="entradaBlog">
+                <a href="#"><img src="/images/blogimg_example.jpg" alt="producto"></a>
+                <h3>Entrada del blog</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#" class="blogLink">[Leer más...]</a></p>
+            </div>
+        </div>
+        </div>
         </section>
     </main>
     <%- include('../partials/footer') %>

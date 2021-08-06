@@ -1,138 +1,176 @@
-* {
-    box-sizing: border-box;
-}
 .principalHome {
-    background-color: bisque;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 /* Estilos del body
    ======================================================================================================================================= */
-/* -------- Imagen Slider -------- */
-
-.section1_slider_home {
-    width: 100%;
+/* -------- Slider -------- */
+.section_slider_home {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/hojas-verdes-poderosas.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 450px;
 }
 
-.img_slider_home {
-    width: 100%;
-    height: 50%;
+.sliderText {
+    text-align: center;
+    color: white;
 }
-/* -------- Features blocks -------- */
-.section2_features_home {
+
+.sliderText h1, .sliderText h2 {
+    background-color: rgba(27, 41, 25, 0.7);
+    padding: 4px 12px;
+    margin: 8px;
+}
+
+.sliderText h1 {
+    font-size: 1.7rem;
+}
+.sliderText h2 {
+    font-size: 1.5rem;
+}
+
+/* -------- Features block -------- */
+.section_features_home {
     background-color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    padding: 7px 10px 7px 10px;
-    width: 100%;
+    padding: 7px 10px;
 }
 
 .featureHome {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px 0;
+    cursor: default;
 }
 
 .featureHome:hover {
-    color: rgba(16, 53, 16, 0.712);
+    color: #51834B;
 }
 
-.section2_features_home i {
+.section_features_home i {
     font-size: 32px;
     min-width: 32px;
     padding-bottom: 7px;
 }
 
-.section2_features_home p {
+.section_features_home p {
     font-size: 18px;
     font-weight: 500;
     padding-bottom: 7px;
 }
 
-/* -------- Offers block -------- */
-.section3_offers_home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 8px;
+/* -------- Category block -------- */
+.product_category {
+    text-align: center;
+    padding-top: 12px;
     padding-bottom: 4px;
-    background-color: #eaeaea;
+    background-color: white;
 }
 
-.products_show_home {
+/* -------- Link del producto (img, p) -------- */
+.productLink {
+    color: black;
+    text-decoration: none;
+}
+
+.product_name:hover {
+    text-decoration: underline #B0CCAD;
+}
+
+/* -------- Lista de productos -------- */
+.productList_all {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
+    padding-top: 8px;
+    padding-bottom: 4px;
 }
 
-.products_show_home h2 {
-    display: block;
-}
-
-.product_home {
-    display: flex;
-    flex-direction: column;
-    width: calc(100%/2); /* La división marca el número de productos por fila */
-    align-items: center;
+/* -------- Producto individual -------- */
+.product_individual {
     text-align: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px;
+    padding: 14px;
+    border: 1px solid transparent;
+    border-radius: 2.5%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 3px 0px, rgba(27, 31, 35, 0.04) 0px 0px 0px 1px;
+    transition: 300ms;
 }
 
-.product_home img {
-    width: calc(100% - 12px);
-    padding: 5px 10px 5px 10px;
+.product_individual:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.product-name {
+/* -------- Producto individual imágen -------- */
+.product_individual img {
+    width: 100%;
+}
+
+/* -------- Producto individual nombre -------- */
+.product_name {
     font-weight: 500;
 }
 
+/* -------- Producto individual precio -------- */
 .price {
+    margin-top: 4px;
     margin-bottom: 4px;
 }
 
+/* -------- Botón agregar al carrito -------- */
 .addCartButton {
     font-size: 0.85rem;
     padding: 0 1.2em;
     border: 1px solid transparent;
     border-radius: 99px;
-    min-height: 2.5rem;
-    max-width: 85%;
-    background-color: #4c8444;
+    min-height: 2.3rem;
+    max-width: 100%;
+    background-color: #52a046;
     color: white;
     font-weight: 500;
 }
 
 .addCartButton:hover {
-    border: 1px solid rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: #4bac3d;
     cursor: pointer;
 }
 
-/* -------- Categoría block -------- */
-.section4_category_home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 8px;
-    padding-bottom: 4px;
-    background-color: white;
-}
+/* -------- Separator -------- */
+.separator_dots {
+    border: 0;
+    border-bottom: 2px dotted #B0CCAD;
+    width: 0;
+    animation: separator_width 1.5s ease-out forwards;
+  }
+
+@keyframes separator_width {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 70%;
+    }
+  }
 
 /* -------- Newsletter block -------- */
-.section5_newsletter_home {
+.section_newsletter_home {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url(/images/newsl_background.jpg);
+    background-image: url('/images/newsl_background.jpg');
     background-position: top;
     background-size: cover;
     padding-top: 4px;
@@ -145,28 +183,28 @@
 }
 
 .newsletter_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     color: white;
 }
 
-.section5_newsletter_home p{
+.section_newsletter_home p{
     text-align: center;
+    font-size: 1.25rem;
     font-weight: 500;
     margin: 8px;
 }
 
 .enterEmail {
-    display: block;
+    margin-top: 4px;
     margin-bottom: 0.25rem;
-    font-size: 0.97rem;
     padding: 0 16px;
-    border-radius: 99px;
-    border: 1px solid #4c8444;
+    border-radius: 10px;
+    border: 2px solid #4bac3d;
     height: 2.5rem;
     width: 90%;
+    font-size: 0.97rem;
+    line-height: 1.5rem;
+    outline: 0;
 }
 
 .buttonNewsletter {
@@ -181,44 +219,71 @@
 }
 
 .buttonNewsletter:hover {
-    border: 1px solid rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: #4bac3d;
     cursor: pointer;
 }
 
 /* -------- Blog block -------- */
-.section6_blog_home {
-    display: flex;
-    flex-direction: column;
+.blogLink {
+    color: black;
+    text-decoration: none;
+}
+
+.blogLink:hover {
+    font-weight: 500;
+    text-decoration: underline #B0CCAD;
+}
+
+.section_blog_home h2 {
     text-align: center;
-    background-color: white;
-    width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
+}
+
+.latest_blogposts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px 0;
 }
 
 .entradaBlog {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* La división marca el número de productos por fila */
-    align-items: center;
     text-align: center;
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
 .entradaBlog img {
-    width: 85%;
-    padding: 5px 10px 5px 10px;
+    width: 100%;
+    padding: 5px 14px;
 }
 
 /* -------------------- MEDIA QUERY 768px -------------------- */
 @media (min-width: 768px) {
+/* -------- Área principal -------- */
+    main h2 {
+        font-size: 2rem;
+    }
+
+/* -------- Slider -------- */
+    .section_slider_home {
+        height: 650px;
+    }
+
+    .sliderText h1 {
+        font-size: 2.8rem;
+    }
+    .sliderText h2 {
+        font-size: 2.7rem;
+    }
+
+/* -------- Category block -------- */
+    .product_individual {
+        flex-basis: 47%;
+        max-width: 47%;
+    }
+
+    .product_name {
+        font-size: 1.05rem;
+    }
 
 /* -------- Newsletter block -------- */
-    .section5_newsletter_home {
-        display: flex;
-        flex-direction: row;
-    }
     .suscribe_text {
         text-align: center;
         font-size: 1.2rem;
@@ -227,9 +292,8 @@
     }
 
     .newsletter_img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
+        text-align: center;
         width: 50%;
     }
 
@@ -242,7 +306,7 @@
     }
     
     .enterEmail {
-        width: 60%;
+        width: 70%;
         height: 2.7rem;
     }
 
@@ -259,63 +323,83 @@
     }
 
 /* -------- Blog block -------- */
-    .section6_blog_home {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        text-align: center;
-        background-color: white;
-        padding: 8px 20px 8px 20px;
+    .latest_blogposts {
+        justify-content: space-evenly;
+    }
+
+    .entradaBlog {
+        flex-basis: 33%;
+        max-width: 33%;
     }
 }
 
 /* -------------------- MEDIA QUERY 1024px -------------------- */
 @media (min-width: 1024px) {
 /* -------- Features blocks -------- */
-    .section2_features_home {
+    .section_features_home {
         display: flex;
         flex-wrap: nowrap;
-        justify-content: center;
     }
 
     .featureHome {
-        padding-left: 4px;
-        padding-right: 4px;
+        padding: 0 8px;
         width: 85%;
     }
 
-/* -------- Categoría block -------- */
-    .product_home {
-        display: flex;
-        flex-direction: column;
-        width: calc(100%/4); /* La división marca el número de productos por fila */
-        align-items: center;
-        text-align: center;
-        margin-top: 8px;
-        margin-bottom: 8px;
+/* -------- Category block -------- */
+    .product_individual {
+        flex-basis: 23%;
+        max-width: 23%;
     }
 
 /* -------- Newsletter block -------- */
-    .section5_newsletter_home {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-evenly
-    }
-
-    .newsletter_info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .section_newsletter_home p{
+        font-size: 1.5rem;
     }
 
 /* -------- Blog block -------- */
-    .section6_blog_home {
-        justify-content: space-evenly
+    .latest_blogposts {
+        /* justify-content: center; */
     }
 
     .entradaBlog {
-        width: 30%;
+        flex-basis: 30%;
+    }
+}
+
+/* -------------------- MEDIA QUERY 1280px -------------------- */
+@media (min-width: 1280px) {
+/* -------- Slider -------- */
+    .sliderText h1 {
+        font-size: 3.7rem;
+    }
+
+    .sliderText h2 {
+        font-size: 2.8rem;
+    }
+
+/* -------- Newsletter block -------- */
+    .section_newsletter_home p{
+        font-size: 2rem;
+    }
+
+/* -------- Category block -------- */
+    .product_individual {
+        flex-basis: 15%;
+        max-width: 15%;
+    }
+
+    .product_name {
+        font-size: 1.1rem;
+    }
+
+/* -------- Blog block -------- */
+    .entradaBlog img {
+        width: 75%;
+        padding: 5px 40px;
+    }
+
+    .entradaBlog p {
+        padding: 0 40px;
     }
 }

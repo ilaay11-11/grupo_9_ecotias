@@ -16,7 +16,9 @@
                 </label>
             </div>
             <div>
-                <img class="logo_header" src="/images/logo.png" alt="logo">
+                <a href="/">
+                    <img class="logo_header" src="/images/logo.png" alt="logo">
+                </a>
             </div>
             <div class="cart_status">
                 <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
@@ -31,8 +33,8 @@
                     <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
                 </li>
                 <li type="none"><a href="/">INICIO</a></li>
-                <li type="none"><a href="#shop">TIENDA</a></li>
-                <li type="none"><a href="#Us">NOSOTROS</a></li>
+                <li type="none"><a href="/productos">TIENDA</a></li>
+                <li type="none"><a href="/productos/crear">CREAR</a></li>
                 <li type="none"><a href="#Blog">BLOG</a></li>
                 <li type="none"><a href="#Contact">CONTACTO</a></li>
             </ul>
@@ -41,19 +43,21 @@
     <div class="nav_normal">
         <nav class="menu_normal">
             <ul class="menu_items_normal">
-                <li type="none"><a href="/">INICIO</a></li>
-                <li type="none"><a href="#shop">TIENDA</a></li>
-                <li type="none"><a href="#Us">NOSOTROS</a></li>
-                <li type="none"><a href="#Blog">BLOG</a></li>
-                <li type="none"><a href="#Contact">CONTACTO</a></li>
+                <li type="none"><a class="linkEffect" href="/">INICIO</a></li>
+                <li type="none"><a class="linkEffect" href="/productos">TIENDA</a></li>
+                <li type="none"><a class="linkEffect" href="/productos/crear">CREAR</a></li>
+                <li type="none"><a class="linkEffect" href="#Blog">BLOG</a></li>
+                <li type="none"><a class="linkEffect" href="#Contact">CONTACTO</a></li>
             </ul>
         </nav>
 
         <div>
-            <img class="logo_header" src="/images/logo.png" alt="logo">
+            <a href="/">
+                <img class="logo_header" src="/images/logo.png" alt="logo">
+            </a>
         </div>
         <div class="login_search">
-            <a id="loging_option_normal" href="/login">Registrate / Inicia sesión <i class="fas fa-sign-in-alt"></i></a>
+            <a id="loging_option_normal" class="linkEffect" href="/login">Registrate / Inicia sesión <i class="fas fa-sign-in-alt"></i></a>
             <div class="searchBar">
                 <input type="text" placeholder="Buscar...">
                 <a class="botonBuscarNav" href="#"><i class="fas fa-search"></i></a>
