@@ -158,5 +158,13 @@
     "email": "modoohainej@businessinsider.com",
     "password": "7agwRbTxeA",
     "image": ""
+  },
+  {
+    "id": 21,
+    "first_name": "Alejandro",
+    "last_name": "Espindola",
+    "email": "aee95.123@gmail.com",
+    "password": "$2a$10$rwr29CfKOCtwVD/tm4HkQupX.3HbpxVOacI6FIEnKOIuIVkjlU562",
+    "image": "default.jpg"
   }
 ]

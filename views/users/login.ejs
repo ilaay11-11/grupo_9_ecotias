@@ -17,9 +17,14 @@
                     <h2>Ingresa a tu cuenta</h2>
                 </div>
                 <div class="login_forms">
-                    <form action="/" method="POST">
+                    <form action="/usuarios/login" method="POST">
                         <p class="login_email_p">Email: *
                             <input class="login_input" type="email" name="email" placeholder="Ingrese su e-mail" required>
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
                         </p>
                         <p class="login_password_p">
                             Password: *

@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const usersRoutes = require('./routes/usersRoutes');
@@ -8,9 +9,18 @@ const methodOverride =  require('method-override');
 
 // App
 const app = express();
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
+
 const PORT = process.env.PORT || 3000;
 
 // Middlewares
+app.use(session({
+    secret: 'Ecotias',
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(userLoggedMiddleware);
 app.use(express.static(__dirname + '/public')); // Static files
 app.use(express.urlencoded({ extended: false })); // URL Parser
 app.use(express.json()); // JSON Parser
