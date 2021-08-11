@@ -16,7 +16,7 @@ const usersController = {
             const userImage = req.file.filename;
             users.push({id: users.length +1, ...newUser, password: bcrypt.hashSync(req.body.password, 10), image: userImage});
         } else {
-            users.push({id: users.length +1, ...newUser, password: bcrypt.hashSync(req.body.password, 10), image: 'default.jpg'});
+            users.push({id: users.length +1, ...newUser, password: bcrypt.hashSync(req.body.password, 10), image: 'default.png'});
         }
         
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
@@ -41,6 +41,7 @@ const usersController = {
 
     },
     update: (req, res) => {
+        console.log(req.body);
         const userInfo = req.body;
         const userIndex = users.findIndex((usuario) => {
             return usuario.id === parseInt(req.params.id);

@@ -18,15 +18,13 @@
             </div>
             <div class="right">
                 <div class="info">
-                    <div><img class="imagen"src="/images/userImages/<%= userProfile.image %>"></div>
+                    <div><img class="imagen"src="/images/userImages/<%= userProfile.image ? userProfile.image : 'default.png' %>"></div>
                     <div>Nombre: <%= userProfile.first_name %></div>
                     <div>Apellido(s): <%= userProfile.last_name %></div>
                     <div>Email principal: <%= userProfile.email %></div>                    
                 </div>
                 <div>
-                    <a href="">Editar Usuario</a>
-                        
-                                        
+                    <a href="/usuarios/<%= userProfile.id %>/edit">Editar Usuario</a>
                 </div>                
             </div>
             

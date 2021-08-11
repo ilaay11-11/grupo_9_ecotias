@@ -28,7 +28,7 @@
         <input type="checkbox" id="show-nav" hidden>
             <ul class="menu_items">
                 <% if(locals.isLogged) {%>
-                <li type="none"> <a id="loging_option" class="linkEffect" href="/usuarios/<%= locals.userLogged.id%>/profile"> <img src="/images/<%= locals.userLogged.image%>" width="40"style="border-radius: 100%;"> !Bienvenido! <%= locals.userLogged.first_name%></a></li>
+                <li type="none"> <a id="loging_option" class="linkEffect" href="/usuarios/<%= locals.userLogged.id%>/profile"> <img src="/images/userImages/<%= locals.userLogged.image ? locals.userLogged.image : 'default.png' %>" width="25" style="border-radius: 100%;"> !Bienvenido! <%= locals.userLogged.first_name%></a></li>
                 <li type="none"> <a id="loging_option" class="linkEffect" href="/usuarios/logout">Salir<i class="fas fa-sign-in-alt"></i></a></li></li>
                     <%} else {%>
                 <li type="none"><a id="loging_option" href="/login"><i class="fas fa-sign-in-alt"></i> Registrate / Inicia sesión</a></li>
@@ -63,7 +63,7 @@
         </div>
         <div class="login_search">
             <% if(locals.isLogged) {%>
-            <a id="loging_option_normal" class="linkEffect" class="nueva" href="/usuarios/<%= locals.userLogged.id%>/profile"> <img src="/images/<%= locals.userLogged.image%>" width="40" style="border-radius: 100%;"> !Bienvenido! <%= locals.userLogged.first_name%></a>
+            <a id="loging_option_normal" class="linkEffect" class="nueva" href="/usuarios/<%= locals.userLogged.id%>/profile"> <img src="/images/userImages/<%= locals.userLogged.image ? locals.userLogged.image : 'default.png' %>" width="40" style="border-radius: 100%;"> !Bienvenido! <%= locals.userLogged.first_name%></a>
             <%} else {%>
             <a id="loging_option_normal" class="linkEffect" href="/login">Registrate / Inicia sesión <i class="fas fa-sign-in-alt"></i></a>
             <%}%>

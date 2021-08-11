@@ -80,10 +80,6 @@ img {
     .crear_producto label {
         font-size: 1.2rem;
     }
-
-    img {
-        width: 280px;
-    }
 }
 
 /* -------------------- MEDIA QUERY 1280px -------------------- */

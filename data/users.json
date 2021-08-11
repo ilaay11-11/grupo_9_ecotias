@@ -165,7 +165,7 @@
     "last_name": "Espindola",
     "email": "aee95.123@gmail.com",
     "password": "$2a$10$rwr29CfKOCtwVD/tm4HkQupX.3HbpxVOacI6FIEnKOIuIVkjlU562",
-    "image": "default.jpg"
+    "image": "default.png"
   },
   {
     "id": 22,
@@ -174,5 +174,21 @@
     "email": "tuururururu@gmail.com",
     "password": "$2a$10$.moETGMNXLxBPZt4fN/ah.iLgqMzAQXKuT9FQKkWW9NeR..VRdrPe",
     "image": "user-1628640045021.JPG"
+  },
+  {
+    "id": 23,
+    "first_name": "John",
+    "last_name": "Wayne",
+    "email": "i@gmail.com",
+    "password": "$2a$10$0cr1J/WdIIz.FjuWwDyKbeqEBcTnFrmvnS/cXMwExMcCJe0pVXVB.",
+    "image": "default.png"
+  },
+  {
+    "id": 24,
+    "first_name": "Komodo",
+    "last_name": "Tresmil",
+    "email": "id@gmail.com",
+    "password": "$2a$10$S.5lrE/xNniLQQChxrcdR.7p5XaENLe641Lr4chsxHKCobOvun86q",
+    "image": "user-1628709114305.jpg"
   }
 ]
