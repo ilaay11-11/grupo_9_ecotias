@@ -34,10 +34,10 @@ router.post('/login',usersController.loginProcces);
 router.get('/logout',usersController.logout);
 
 /*** GET ONE USER ***/
-router.get('/:id', usersController.detail); // MUESTRA PERFIL DE USUARIO
+router.get('/:id/profile', usersController.detail); // MUESTRA PERFIL DE USUARIO
 
 /*** EDIT ONE USER ***/
-router.get('/:id/profile', usersController.edit); // MUESTRA FORMULARIO DE EDICIÓN DE USUARIO
+router.get('/:id/edit', usersController.edit); // MUESTRA FORMULARIO DE EDICIÓN DE USUARIO
 router.put('/:id', uploadUserImage.single('newUserImage'), usersController.update); // RUTA POR LA QUE VIAJAN LOS DATOS DE EDICIÓN DE USUARIO
 
 /*** DELETE ONE USER***/
