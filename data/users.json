@@ -166,5 +166,13 @@
     "email": "aee95.123@gmail.com",
     "password": "$2a$10$rwr29CfKOCtwVD/tm4HkQupX.3HbpxVOacI6FIEnKOIuIVkjlU562",
     "image": "default.jpg"
+  },
+  {
+    "id": 22,
+    "first_name": "John",
+    "last_name": "Wayne",
+    "email": "i@gmail.com",
+    "password": "$2a$10$autiR81WPR02Uj3/NON7yOnUPhIXUK.5Z5DpaE1YeGRestjuqLUIW",
+    "image": "default.jpg"
   }
 ]
