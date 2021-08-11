@@ -166,5 +166,13 @@
     "email": "aee95.123@gmail.com",
     "password": "$2a$10$rwr29CfKOCtwVD/tm4HkQupX.3HbpxVOacI6FIEnKOIuIVkjlU562",
     "image": "default.jpg"
+  },
+  {
+    "id": 22,
+    "first_name": "Elisa",
+    "last_name": "Villeda Torres",
+    "email": "tuururururu@gmail.com",
+    "password": "$2a$10$.moETGMNXLxBPZt4fN/ah.iLgqMzAQXKuT9FQKkWW9NeR..VRdrPe",
+    "image": "user-1628640045021.JPG"
   }
 ]

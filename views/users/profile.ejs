@@ -8,9 +8,31 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        <form action="/usuarios/<%= userToEdit.id %>?_method=DELETE" method="POST">
-            <button type="submit">Eliminar usuario</button>
-        </form>
+        <div class="main-box">
+            <div class="left">
+                <img src="">
+                <h2>Hola, <%= userProfile.first_name %></h2>
+                <div><a href="#" class="link" id="mi-info">Mi información</a> </div>
+                <div ><a href="#" class="link">Mis pedidos</a></div>
+                <div><a href="#" class="link">Configuración</a></div>
+            </div>
+            <div class="right">
+                <div class="info">
+                    <div><img class="imagen"src="/images/userImages/<%= userProfile.image %>"></div>
+                    <div>Nombre: <%= userProfile.first_name %></div>
+                    <div>Apellido(s): <%= userProfile.last_name %></div>
+                    <div>Email principal: <%= userProfile.email %></div>                    
+                </div>
+                <div>
+                    <a href="">Editar Usuario</a>
+                        
+                                        
+                </div>                
+            </div>
+            
+            
+        </div>
+        
         
     </main>
 

@@ -29,7 +29,7 @@ const usersController = {
             return usuario.id === userId;
         });
         
-        userToEdit ? res.render('users/profile', {userToEdit}) : res.render("users/not-found");
+        userToEdit ? res.render('users/editUser', {userToEdit}) : res.render("users/not-found");
     },
     detail: (req, res) => {
         const userId = parseInt(req.params.id);
@@ -53,6 +53,8 @@ const usersController = {
             users[userIndex] = {...users[userIndex], ...userInfo};
 
         }
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
+        res.redirect('/');
 
     },
     destroy: (req, res) => {
