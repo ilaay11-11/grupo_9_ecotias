@@ -21,3 +21,9 @@ Como en la ocasión pasada, utilizamos la dinámica "Estrella de Mar" y a partir
 3. Continuar haciendo: Seguir apoyándonos como equipo, comunicarnos periódicamente, y continuar con la asignación de trabajo para seguir un flujo de trabajo. 
 4. Hacer menos: Procastinar.
 5. Dejar de hacer: Dejar todo el trabajo (por sencillo que sea) hasta al final. 
+
+# Retrospectiva S4-S5
+Los 3 concluimos que deberíamos organizarnos y comenzar con el sprint desde el día en el que éste comienza; de esta forma tendríamos tiempo para que el profesor pueda darnos retroalimentación de nuestros avances antes del día de entrega.
+Debemos dedicarle más tiempo a practicar y no dejar atrás la parte de diseño para las diferentes vistas.
+Seguiremos haciendo uso de Trello, como hasta la fecha y procurando mantener una comunicación clara entre los tres.
+No nos confiaremos más con los tiempos de entrega.
