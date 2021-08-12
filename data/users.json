@@ -189,22 +189,22 @@
     "last_name": "Tresmil",
     "email": "id@gmail.com",
     "password": "$2a$10$S.5lrE/xNniLQQChxrcdR.7p5XaENLe641Lr4chsxHKCobOvun86q",
-    "image": "user-1628709114305.jpg"
+    "image": "default.png"
   },
   {
     "id": 25,
-    "first_name": "Fouad",
-    "last_name": "Moussuali",
+    "first_name": "Miyagi",
+    "last_name": "San",
     "email": "xd@gmail.com",
     "password": "$2a$10$ydS9Pok0X8/fYTOnPRP2iuLSi.oc3XyOz7QfBtTa74cXoDIhrS5YW",
-    "image": "user-1628717584691.jpg"
+    "image": "default.png"
   },
   {
     "id": 26,
     "first_name": "Jack",
     "last_name": "Ripper",
     "email": "a@gmail.com",
-    "password": "$2a$10$F29DO12pFw6Yars7JH6QqeaXMNeTTkrHVcjBvk6KOZ/1dsBNi3Is6",
-    "image": "user-1628740422375.jpg"
+    "password": "$2a$10$L3HZ2RkZHqfvQOb9q2Rh9Od3SAfvBQWxWhOFg4LA03Vl2BGT65zy2",
+    "image": "user-1628740831088.gif"
   }
 ]
