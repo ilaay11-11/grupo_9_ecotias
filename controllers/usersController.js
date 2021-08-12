@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -9,6 +10,27 @@ const usersController = {
     // index: (req, res) => res.render('users/index'),
     create: (req, res) => res.render('users/register'),
     store: (req, res) => {
+
+        const resultValidation = validationResult(req);
+		if (resultValidation.errors.length > 0) {
+			return res.render('users/register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		};
+
+		const userInDB = User.findByField('email', req.body.email);
+		if (userInDB) {
+			return res.render('users/register', {
+				errors: {
+					email: {
+						msg: 'Este usuario ya está registrado'
+					}
+				},
+				oldData: req.body
+			});
+		}
+
         const newUser = req.body;
         
         console.log(req.file);
@@ -20,7 +42,7 @@ const usersController = {
         }
         
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        res.redirect('/');
+        res.redirect('/usuarios/login');
     },
     edit: (req, res) => {
         const userId = parseInt(req.params.id);
@@ -32,27 +54,22 @@ const usersController = {
         userToEdit ? res.render('users/editUser', {userToEdit}) : res.render("users/not-found");
     },
     detail: (req, res) => {
-        const userId = parseInt(req.params.id);
-        const userProfile = users.find((usuario) => {
-            return usuario.id === userId;
-        });
-
-        userProfile ? res.render('users/profile', {userProfile}) : res.render("users/not-found");
-
+        console.log(req.cookies.userActive);
+        return res.render('users/profile', {
+			userProfile: req.session.userLogged
+		});
     },
     update: (req, res) => {
-        console.log(req.body);
         const userInfo = req.body;
         const userIndex = users.findIndex((usuario) => {
             return usuario.id === parseInt(req.params.id);
         })
         
         if(req.file){
-            userImage = req.file.filename;
-            users[userIndex] = {...users[userIndex], image: userImage, ...userInfo};
+            newImage = req.file.filename;
+            users[userIndex] = {...users[userIndex], image: newImage, ...userInfo, password: bcrypt.hashSync(userInfo.password, 10)};
         } else {
-            users[userIndex] = {...users[userIndex], ...userInfo};
-
+            users[userIndex] = {...users[userIndex], ...userInfo, password: bcrypt.hashSync(userInfo.password, 10)};
         }
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
         res.redirect('/');
@@ -73,34 +90,41 @@ const usersController = {
         return res.render('users/login')
     },
     loginProcces: (req, res) => {
-        
         let userToLogin = User.findByField('email', req.body.email);
-
+        // console.log(req.body);
         if(userToLogin){
 			let isOk = bcrypt.compareSync(req.body.password, userToLogin.password);
 			if(isOk){
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
 
-				return res.redirect('/usuarios/'+ userToLogin.id+'/profile')
+                if(req.body.recuerdame) {
+                    res.cookie('userActive', req.body.email, { maxAge: (1000 * 60 * 60 * 24) })
+                }
+
+				return res.redirect('/usuarios/profile')
 			}
 			return res.render('users/login', {
 				errors: {
 					email: {
 						msg: 'Contraseña incorrecta'
 					}
-				}
+				},
+                oldData: req.body
 			});
 		}
+        
 		return res.render('users/login', {
 			errors: {
 				email: {
 					msg: 'Email no encontrado'
 				}
-			}
+			},
+            oldData: req.body
 		})
     },
     logout: (req,res) => {
+        res.clearCookie('userActive');
 		req.session.destroy();
 		return res.redirect('/');
 	}

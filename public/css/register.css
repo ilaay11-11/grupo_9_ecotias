@@ -8,6 +8,17 @@ body{
     display: none;
 }
 
+/* -------- Errores -------- */
+.text-danger {
+    color: red;
+    font-size: .9rem;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.is-invalid {
+    border: 1px solid #dc3545 !important;
+}
 
 /* IMAGEN USUARIO */
 #user_img{
@@ -70,21 +81,22 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 20%;
-    margin-bottom: 10%;
+    margin: 15px;
     outline:olivedrab;
     
     
 }
-.c{
-    margin-bottom: 24px;
-    
+
+.c {
+    margin-bottom: 16px;
 }
+
 .campos input{
-    width: 80vw;
+    width: 100%;
     height: 33px;
     border-radius: 30px;
     border: 1px solid #4c8444;
+    padding-left: 12px;
 }
 #password{
     display: flex;
@@ -212,7 +224,6 @@ a{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 60px;
         width: 550px;
     }
     #password{

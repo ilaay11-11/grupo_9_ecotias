@@ -42,11 +42,6 @@ input, select {
     border: 1px solid #4c8444;
 }
 
-img {
-    width: 250px;
-    margin-top: 4px;
-}
-
 /* -------- Button -------- */
 .buttonAction  {
     text-align: center;
