@@ -14,11 +14,11 @@ CREATE TABLE productos(
     name VARCHAR(60) NOT NULL,
     description VARCHAR(200) NOT NULL,
     category_id INT UNSIGNED NOT NULL,
-    FOREIGN KEY category_id REFERENCES category(id),
+    FOREIGN KEY (category_id) REFERENCES category(id),
     image VARCHAR(200),
     price DOUBLE DEFAULT 0 NOT NULL,
     maker_id INT UNSIGNED NOT NULL,
-    FOREIGN KEY maker_id REFERENCES maker(id)   
+    FOREIGN KEY (maker_id) REFERENCES maker(id)   
 );
 CREATE TABLE usuarios(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -32,7 +32,7 @@ CREATE TABLE usuarios(
 CREATE TABLE carrito(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT UNSIGNED NOT NULL,
-    FOREIGN KEY usuario_id REFERENCES usuarios(id),
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
     num_items INT UNSIGNED NOT NULL,
     precio_total DOUBLE DEFAULT 0 NOT NULL
 );
@@ -40,9 +40,9 @@ CREATE TABLE carrito(
 CREATE TABLE producto_carrito(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     carrito_id INT UNSIGNED NOT NULL,
-    FOREIGN KEY carrito_id REFERENCES carrito(id),
+    FOREIGN KEY (carrito_id) REFERENCES carrito(id),
     producto_id INT UNSIGNED NOT NULL,
-    FOREIGN KEY producto_id REFERENCES productos(id)
+    FOREIGN KEY (producto_id) REFERENCES productos(id)
 );
 
 
