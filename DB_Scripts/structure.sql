@@ -44,7 +44,3 @@ CREATE TABLE producto_carrito(
     producto_id INT UNSIGNED NOT NULL,
     FOREIGN KEY (producto_id) REFERENCES productos(id)
 );
-
-
-
-
