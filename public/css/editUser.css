@@ -1,35 +1,60 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(70deg, #F2FFD3, #B8FFDF);;
+    background: linear-gradient(60deg, rgba(144,238,144,0.4), #FFFFC7);
+	min-height: 100vh;
+	margin: 0;
 }
 
 #main-container{
-    background-color: none;
-    
-    width: 100vw;
-    display: flex;
-    margin:2% 0 2% 0;
-    flex-direction: column;
-    justify-content: center;    
-    align-items: center;    
-    gap: 20px;
-    padding: 2%;
-    border-radius: 4rem;
-}
-
-.m-info{
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;    
+    /*width: 380px;*/
+    max-width: 100%;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 2% 4%; 
-    
+    align-items: center;
+    margin: 5% 5% 5% 5%;
+}
+#editUser{
+    border-bottom: 1px solid #f0f0f0;
+	background-color:transparent;
+	padding: 20px 40px;
+}
+
+#editUser h2 {
+	margin: 0;
+}
+.m-info{
+    margin-bottom: 10px;
+	padding: 10px;
 }
 .m-info label{
-    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.m-info input{
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+.m-info input:focus {
+	outline: 0;
+	border-color: #c563e6;
+}
+.m-info span{
+    position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
 }
 
 
@@ -76,33 +101,16 @@ body{
 
 }
 
-input{
-    height: 35px;
-    font-size: medium;
-    border-radius: 5px;
-}
+
 #caract8{
     font-weight:lighter;
     color: #3B7596;
 }
 
-@media (min-width: 1024px){
-    #main-container{
-        background-color: #F6E9FB;
-        width: 40vw;
-        margin:2% 30% 2% 30%;
-    }
-    .m-info{
-        margin: 0;
-        
-    }
-}
-
 @media (min-width: 780px){
     #main-container{
-        background-color: #F6E9FB;
-        width: 60vw;
-        margin:2% 20% 2% 20%;
+        margin: 5% 25% 5% 25%;
+        
     }
     
 }

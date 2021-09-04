@@ -27,3 +27,14 @@ Los 3 concluimos que deberíamos organizarnos y comenzar con el sprint desde el 
 Debemos dedicarle más tiempo a practicar y no dejar atrás la parte de diseño para las diferentes vistas.
 Seguiremos haciendo uso de Trello, como hasta la fecha y procurando mantener una comunicación clara entre los tres.
 No nos confiaremos más con los tiempos de entrega.
+
+# Retrospectiva S5-S6
+1. Comenzar a hacer: Hacer un resumen de lo visto en el sprint anterior; así como anotar los pendientes que quedaron (si es que hay).
+
+2. Hacer más: Dedicarle más tiempo a practicar y experimentar. Ser más constantes con el trabajo. Externar nuestras dudas con tiempo.
+
+3. Continuar haciendo: Seguir trabajando con Trello.
+
+4. Hacer menos: Procastinar.
+
+5. Dejar de hacer: Entregar las tareas justo el día y hora límite de las mismas, sin oportunidad de retroalimentación antes de la entrega definitiva. 
