@@ -18,9 +18,17 @@ window.addEventListener('load', function(){
     }
     
     formulario.onsubmit = (event)=>{
-        event.preventDefault();
+
+        
 
         validateInputs();
+        if(errores.length >0){
+            event.preventDefault();
+            let ulErrores = document.querySelector(".errores ul");
+            errores.forEach(error => {
+                ulErrores.innerHTML += `<li>${error}</li>`
+            });
+        }
                 
 
         }
@@ -40,12 +48,7 @@ window.addEventListener('load', function(){
         if(password.value === ""){
             errores.push("No has especificado una contraseña nueva")
         }
-        if(errores.length >0){
-            let ulErrores = document.querySelector(".errores ul");
-            errores.forEach(error => {
-                ulErrores.innerHTML += `<li>${error}</li>`
-            });
-        }
+        
     }
     }
 

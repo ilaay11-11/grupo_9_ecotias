@@ -2,16 +2,15 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(60deg, rgba(144,238,144,0.4), #FFFFC7);
+    background-color: white;
 	min-height: 100vh;
 	margin: 0;
 }
 
 #main-container{
-    background-color: transparent;
+    background: linear-gradient(#C6EA8D,#FFBBBB);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;    
-    /*width: 380px;*/
     max-width: 100%;
     border-radius: 10px;
     display: flex;
