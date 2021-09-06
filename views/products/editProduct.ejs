@@ -11,7 +11,7 @@
     <%- include('../partials/header') %>
     <main>
         <h2>Editar producto: <%= product.name %></h2>
-        <form action="/productos/<%= product.id %>?_method=PUT" method="POST" >
+        <form action="/productos/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="crear_producto">
                 <div class="field order1">
                     <label for="name">Nombre</label>
@@ -77,7 +77,7 @@
                 <div class="field order7">
                     <label for="newProductImage">Subir nueva imágen</label>
                     <div class="control">
-                        <input type="text" name="newProductImage" id="newProductImage">
+                        <input type="file" name="newProductImage" id="newProductImage">
                     </div>
                 </div>
             </div>

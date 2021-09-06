@@ -9,7 +9,7 @@
     <%- include('../partials/header') %>
     <main>
         <h2>Crear producto</h2>
-        <form action="/productos/crear" method="POST">
+        <form action="/productos/crear" method="POST" enctype="multipart/form-data">
             <div class="crear_producto">
                 <div class="field">
                     <label for="name">Nombre</label>
@@ -41,12 +41,6 @@
                         </select>
                     </div>
                 </div>
-                <!-- <div class="field">
-                    <label for="maker">Fabricante</label>
-                    <div class="control">
-                        <input type="text" name="maker" class="input_info" placeholder="Ej: Rowe LLC" required>
-                    </div>
-                </div> -->
                 <div class="field">
                     <label for="price">Precio</label>
                     <div class="control">
@@ -62,7 +56,7 @@
                 <div class="field">
                     <label for="product_image">Imagen</label>
                     <div class="control">
-                        <input type="text" name="product_image" id="product_image">
+                        <input type="file" name="product_image" id="product_image">
                     </div>
                 </div>
             </div>

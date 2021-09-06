@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const validationRegisterMiddleware = require('../middlewares/validationMiddleware');
-const uploadUserImage = require('../middlewares/storageUsersMiddleware')
+const uploadUserImage = require('../middlewares/storageUsersMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 

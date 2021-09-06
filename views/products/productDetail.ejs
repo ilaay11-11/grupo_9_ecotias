@@ -8,9 +8,9 @@
 <body>
     <%- include('../partials/header') %>
     <div class = "descripcion">
-        <div class="imagenes">
-            <img src="<%= productSelected.image ? productSelected.image : '/images/productImages/default.jpg' %>" id="imagen-principal">
-            <img src="<%= productSelected.image ? productSelected.image : '/images/productImages/default.jpg' %>" id="imagen2"> 
+        <div class="imagenes">      
+            <img src="/images/productImages/<%= productSelected.image ? productSelected.image : 'default.jpg' %>" id="imagen-principal">
+            <img src="/images/productImages/<%= productSelected.image ? productSelected.image : 'default.jpg' %>" id="imagen2">
         </div>
         
         <div>
