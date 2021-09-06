@@ -5,12 +5,18 @@
 let db = require('../database/models');
 
 const productsController = {
+    index: (req, res) => {
+        db.Producto.findAll()
+        .then(function(products) {
+            res.render('products/products', {products: products})
+        });
+    },
     create: (req, res) => {
         let categories = db.Category.findAll();
         let makers = db.Maker.findAll()
         
         Promise.all([categories, makers])
-        .then(([categories, makers]) => {
+        .then( ([categories, makers]) => {
             return res.render('products/createProduct', {categories, makers})
         })
     },
@@ -37,7 +43,54 @@ const productsController = {
 
     // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
     // res.redirect('/productos');
+    },
+    detail: (req, res) => {
+        const productId = parseInt(req.params.id);
+        db.Producto.findByPk(productId, {
+            include: [{association: 'category'}, {association: 'maker'}]
+        })
+        .then(function(productSelected) {
+            productSelected ? res.render('products/productDetail', { productSelected }) : res.render("products/product-not-found");
+        });
+    },
+    edit: (req, res) => {
+        const productId = parseInt(req.params.id);
+
+        let product = db.Producto.findByPk(productId, {
+            include: [{association: 'category'}, {association: 'maker'}]
+        });
+        let categories = db.Category.findAll();
+        let makers = db.Maker.findAll()
+        
+        Promise.all([categories, makers, product])
+        .then( ([categories, makers, product]) => {
+            return res.render('products/editProduct', {categories, makers, product})
+        });
+    },
+    update: (req, res) => {
+        db.Producto.update({
+            name: req.body.name,
+            description: req.body.description,
+            category_id: req.body.category,
+            image: req.body.newProductImage,
+            price: req.body.price,
+            maker_id: req.body.maker
+        }, {
+            where: {
+                id: req.params.id
+            }
+        });
+        res.redirect('/productos/'+ req.params.id);
+    },
+    destroy: (req,res) => {
+        db.Producto.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect('/productos')
     }
+
 }
 // const productsController = {
 //     index: (req, res) => res.render('products/products', { products }),

@@ -49,13 +49,13 @@ module.exports = (sequelize, dataTypes) => {
         // })
         Producto.belongsTo(models.Category, {
             as: 'category',
-            foreignKey: 'id'
+            foreignKey: 'category_id'
             // constraints: false 
         });
 
         Producto.belongsTo(models.Maker, {
             as: 'maker',
-            foreignKey: 'id'
+            foreignKey: 'maker_id'
             // constraints: false 
         });
 

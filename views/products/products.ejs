@@ -15,7 +15,7 @@
                 <% for(i=0; i < products.length; i++) {%>
                 <div class="product_individual">
                     <a href="/productos/<%= products[i].id %>" class="productLink">
-                        <img src="/images/productImages/<%= products[i].image ? products[i].image : 'default.jpg' %> " alt="producto">
+                        <img src="<%= products[i].image ? products[i].image : 'images/productImages/default.jpg' %> " alt="producto">
                         <p class="product_name"><%= products[i].name%> </p>
                     </a>
                         <p class="price">$<%= products[i].price%> </p>
