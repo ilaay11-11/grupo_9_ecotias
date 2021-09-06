@@ -6,9 +6,12 @@ let db = require('../database/models');
 
 const productsController = {
     create: (req, res) => {
-        db.Category.findAll()
-        .then(function(categories) {
-            return res.render('products/createProduct', { categories: categories });
+        let categories = db.Category.findAll();
+        let makers = db.Maker.findAll()
+        
+        Promise.all([categories, makers])
+        .then(([categories, makers]) => {
+            return res.render('products/createProduct', {categories, makers})
         })
     },
     store: (req, res) => {

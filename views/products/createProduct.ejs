@@ -30,11 +30,23 @@
                     </div>
                 </div>
                 <div class="field">
+                    <label for="category">Fabricante</label>
+                    <div class="control">
+                        <select name="maker" id="maker" class="input_info" required>
+                            <% for( let i = 0; i < makers.length; i++ ) { %>
+                                <option value="<%= makers[i].id %> ">
+                                    <%= makers[i].name %>
+                                </option>
+                            <% } %>
+                        </select>
+                    </div>
+                </div>
+                <!-- <div class="field">
                     <label for="maker">Fabricante</label>
                     <div class="control">
                         <input type="text" name="maker" class="input_info" placeholder="Ej: Rowe LLC" required>
                     </div>
-                </div>
+                </div> -->
                 <div class="field">
                     <label for="price">Precio</label>
                     <div class="control">
