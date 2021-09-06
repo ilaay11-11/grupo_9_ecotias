@@ -1,4 +1,4 @@
-module.exports() = (sequelize, dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     let alias = "Carrito";
 
     let cols = {
@@ -23,7 +23,7 @@ module.exports() = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "carrito",
-        timetamps: false
+        timestamps: false
     }
     
     const Carrito = sequelize.define(alias, cols, config);

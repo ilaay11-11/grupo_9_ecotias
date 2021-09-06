@@ -1,12 +1,11 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "",
-    "database": "database_development",
+    "password": null,
+    "database": "ecotias",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false,
-    "port": ""
+    "port": "3306"
   },
   "test": {
     "username": "root",

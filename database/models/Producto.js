@@ -1,4 +1,4 @@
-module.exports() = (sequelize, dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     let alias = "Producto";
 
     let cols = {
@@ -23,32 +23,42 @@ module.exports() = (sequelize, dataTypes) => {
             type: dataTypes.DOUBLE,
             allowNull: true
         },
-        make_id:{
+        maker_id:{
             type: dataTypes.INTEGER(10),
             allowNull: true
         },
-        imagen: {
+        image: {
             type: dataTypes.STRING(200),
-            allowNull: false
+            allowNull: true
         }
     };
 
     let config = {
         tableName: "productos",
-        timetamps: false
+        timestamps: false
     }
-    
+
     const Producto = sequelize.define(alias, cols, config);
 
     Producto.associate = function(models) {
-        Producto.belongsTo(models.Producto_carrito, {
-            as: 'producto',
-            foreignKey: 'producto_id'
-        })
-        Producto.belongsTo(models.Producto_carrito, {
-            as: 'carrito',
-            foreignKey: 'carrito_id'
-        })
+        // Producto.belongsToMany(models.Producto_carrito, {
+        //     as: 'producto',
+        //     through: "Producto_carrito",
+        //     foreignKey: 'producto_id',
+        //     otherKey: 'carrito_id'
+        // })
+        Producto.belongsTo(models.Category, {
+            as: 'category',
+            foreignKey: 'category_id',
+            constraints: false 
+        });
+
+        Producto.belongsTo(models.Maker, {
+            as: 'maker',
+            foreignKey: 'maker_id',
+            constraints: false 
+        });
+
     }
     return Producto;
 }

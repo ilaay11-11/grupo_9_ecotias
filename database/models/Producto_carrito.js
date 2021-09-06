@@ -1,4 +1,4 @@
-mmodule.exports() = (sequelize, dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     let alias = "Producto_carrito";
 
     let cols = {
@@ -19,8 +19,10 @@ mmodule.exports() = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "producto_carrito",
-        timetamps: false
+        timestamps: false
     }
+
+    let Producto_carrito = sequelize.define(alias, cols, config);
     
     return Producto_carrito;
 }

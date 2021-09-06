@@ -20,22 +20,22 @@ const uploadProductImage = multer({ storage });
 
 
 /*** GET ALL PRODUCTS ***/
-router.get('/', productsController.index); // MUESTRA LISTA PRODUCTOS
+// router.get('/', productsController.index); // MUESTRA LISTA PRODUCTOS
 
 /*** CREATE ONE PRODUCT ***/
 router.get('/crear', productsController.create); // MUESTRA FORMULARIO DE CREACIÓN DE PRODUCTO
-router.post('/', uploadProductImage.single('product-image'), productsController.store); // ENVÍA INFO DE CREACIÓN DE PRODUCTO
+router.post('/crear',  productsController.store); // ENVÍA INFO DE CREACIÓN DE PRODUCTO
 
-/*** GET ONE PRODUCT ***/
-router.get('/:id', productsController.detail); // MUESTRA DETALLE DE PRODUCTO
+// /*** GET ONE PRODUCT ***/
+// router.get('/:id', productsController.detail); // MUESTRA DETALLE DE PRODUCTO
 
-/*** EDIT ONE PRODUCT ***/
-router.get('/:id/editar', productsController.edit); // MUESTRA FORMULARIO DE EDICIÓN DE PRODUCTO
-router.put('/:id', uploadProductImage.single('newProductImage'), productsController.update); // RUTA POR LA QUE VIAJAN LOS DATOS DE EDICIÓN DE PRODUCTO
+// /*** EDIT ONE PRODUCT ***/
+// router.get('/:id/editar', productsController.edit); // MUESTRA FORMULARIO DE EDICIÓN DE PRODUCTO
+// router.put('/:id', uploadProductImage.single('newProductImage'), productsController.update); // RUTA POR LA QUE VIAJAN LOS DATOS DE EDICIÓN DE PRODUCTO
 
 
-/*** DELETE ONE PRODUCT***/
-router.delete('/:id', productsController.destroy); // RUTA POR LA QUE VIAJAN LOS DATOS DE PRODUCTO A ELIMINAR
+// /*** DELETE ONE PRODUCT***/
+// router.delete('/:id', productsController.destroy); // RUTA POR LA QUE VIAJAN LOS DATOS DE PRODUCTO A ELIMINAR
 
 
 module.exports = router;

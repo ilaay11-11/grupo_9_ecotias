@@ -1,4 +1,4 @@
-module.exports() = (sequelize, dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     let alias = "Maker";
 
     let cols = {
@@ -15,7 +15,7 @@ module.exports() = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "maker",
-        timetamps: false
+        timestamps: false
     }
     
     const Maker= sequelize.define(alias, cols, config);

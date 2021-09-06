@@ -1,4 +1,4 @@
-module.exports() = (sequelize, dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     let alias = "Usuario";
 
     let cols = {
@@ -31,7 +31,7 @@ module.exports() = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "usuarios",
-        timetamps: false
+        timestamps: false
     }
     
     const Usuario = sequelize.define(alias, cols, config);
