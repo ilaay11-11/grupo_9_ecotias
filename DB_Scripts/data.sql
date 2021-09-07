@@ -13,14 +13,14 @@ insert into maker (id, name) values (10, 'Clinical Solutions Wholesale');
 /* POBLANDO TABLA category */
 insert into category (id, name) values (1, 'Granite');
 insert into category (id, name) values (2, 'Aluminum');
-insert into category (id, name) values (3, 'Plexiglass');
+insert into category (id, name) values (3, 'Plastic');
 insert into category (id, name) values (4, 'Brass');
-insert into category (id, name) values (5, 'Granite');
+insert into category (id, name) values (5, 'Gold');
 insert into category (id, name) values (6, 'Steel');
-insert into category (id, name) values (7, 'Granite');
+insert into category (id, name) values (7, 'Wood');
 insert into category (id, name) values (8, 'Vinyl');
 insert into category (id, name) values (9, 'Plexiglass');
-insert into category (id, name) values (10, 'Aluminum');
+insert into category (id, name) values (10, 'Adamantium');
 
 /* POBLANDO TABLA productos */
 insert into productos (id, name, description, category_id, price, maker_id, image) values (1, 'Severe Daytime', 'Resection of Right Tibia, Open Approach', 10, 857.46, 8, '');
