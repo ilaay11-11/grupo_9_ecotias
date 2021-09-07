@@ -1,47 +1,57 @@
 const { validationResult } = require('express-validator');
-const fs = require('fs');
-const path = require('path');
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const fs = require('fs');
+// const path = require('path');
+// const usersFilePath = path.join(__dirname, '../data/users.json');
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcrypt = require('bcryptjs');
-const User = require('../models/User');
+// const User = require('../models/User');
+let db = require('../database/models');
 
 const usersController = {
     // index: (req, res) => res.render('users/index'),
     create: (req, res) => res.render('users/register'),
-    store: (req, res) => {
+    store:  (req, res) => {
+        // const resultValidation = validationResult(req);
+		// if (resultValidation.errors.length > 0) {
+		// 	return res.render('users/register', {
+		// 		errors: resultValidation.mapped(),
+		// 		oldData: req.body
+		// 	});
+		// };
 
-        const resultValidation = validationResult(req);
-		if (resultValidation.errors.length > 0) {
-			return res.render('users/register', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		};
+        // let newUser = db.Usuario.findOne({
+        //     where: {
+        //         email: req.body.email
+        //     }
+        // })
+        // .then(usuario =>console.log(usuario));
+        //     if (req.body.email === usuario.email) {
+        //         return res.render('users/register', {
+        //             errors: {
+        //                 email: {
+        //                     msg: 'Este usuario ya está registrado'
+        //                 }
+        //             },
+        //             oldData: req.body
+        //         })
+        //     }
+            if(req.file) {
+                db.Usuario.create({
+                    name: req.body.first_name,
+                    last_name: req.body.last_name,
+                    image: req.file.filename,
+                    email: req.body.email,
+                    password: bcrypt.hashSync(req.body.password, 10)
+                });
+            } else {
+                db.Usuario.create({
+                    name: req.body.first_name,
+                    last_name: req.body.last_name,
+                    email: req.body.email,
+                    password: bcrypt.hashSync(req.body.password, 10)
+                });
+            };
 
-		const userInDB = User.findByField('email', req.body.email);
-		if (userInDB) {
-			return res.render('users/register', {
-				errors: {
-					email: {
-						msg: 'Este usuario ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		}
-
-        const newUser = req.body;
-        
-        console.log(req.file);
-        if(req.file) {
-            const userImage = req.file.filename;
-            users.push({id: users.length +1, ...newUser, password: bcrypt.hashSync(req.body.password, 10), image: userImage});
-        } else {
-            users.push({id: users.length +1, ...newUser, password: bcrypt.hashSync(req.body.password, 10), image: 'default.png'});
-        }
-        
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
         res.redirect('/usuarios/login');
     },
     edit: (req, res) => {
@@ -89,30 +99,36 @@ const usersController = {
     login: (req, res) => {
         return res.render('users/login')
     },
-    loginProcces: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.email);
-        // console.log(req.body);
-        if(userToLogin){
-			let isOk = bcrypt.compareSync(req.body.password, userToLogin.password);
-			if(isOk){
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-
-                if(req.body.recuerdame) {
-                    res.cookie('userActive', req.body.email, { maxAge: (1000 * 60 * 60 * 24) })
+    loginProcces: async (req, res) => {
+        let userToLogin = await db.Usuario.findOne({email: req.body.email})
+        .then(user => {
+            if(user){
+                let isOk = bcrypt.compareSync(req.body.password, user.password);
+                if(isOk){
+                    delete user.password;
+                    req.session.userLogged = user;
+    
+                    if(req.body.recuerdame) {
+                        res.cookie('userActive', req.body.email, { maxAge: (1000 * 60 * 60 * 24) })
+                    }
+    
+                    return res.redirect('/usuarios/profile')
                 }
+                return res.render('users/login', {
+                    errors: {
+                        email: {
+                            msg: 'Contraseña incorrecta'
+                        }
+                    },
+                    oldData: req.body
+                });
+            }
+        })
 
-				return res.redirect('/usuarios/profile')
-			}
-			return res.render('users/login', {
-				errors: {
-					email: {
-						msg: 'Contraseña incorrecta'
-					}
-				},
-                oldData: req.body
-			});
-		}
+
+        // let userToLogin = User.findByField('email', req.body.email);
+        // console.log(req.body);
+        
         
 		return res.render('users/login', {
 			errors: {

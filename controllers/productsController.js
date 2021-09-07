@@ -34,7 +34,7 @@ const productsController = {
                 price: req.body.price,
                 maker_id: req.body.maker
             });
-        }
+        };
     console.log(req.body);
     console.log(req.file);
 

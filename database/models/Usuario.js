@@ -23,9 +23,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(30),
             allowNull: true
         },
-        imagen: {
+        image: {
             type: dataTypes.STRING(200),
-            allowNull: false
+            allowNull: true
         }
     };
 
@@ -36,11 +36,11 @@ module.exports = (sequelize, dataTypes) => {
     
     const Usuario = sequelize.define(alias, cols, config);
 
-    Usuario.associate = function(models) {
-        Usuario.belongsTo(models.Carrito, {
-            as: 'carrito',
-            foreignKey: 'usuario_id'
-        })
-    }
+    // Usuario.associate = function(models) {
+    //     Usuario.belongsTo(models.Carrito, {
+    //         as: 'carrito',
+    //         foreignKey: 'usuario_id'
+    //     })
+    // }
     return Usuario;
 }
