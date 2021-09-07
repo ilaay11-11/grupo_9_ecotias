@@ -1,161 +1,210 @@
-[{
+[
+  {
     "id": 1,
     "first_name": "Berke",
     "last_name": "Meenehan",
     "email": "bmeenehan0@google.nl",
     "password": "ToiitPd",
-    "category": "user",
-    "image": "user_1.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 2,
     "first_name": "Neale",
     "last_name": "Perree",
     "email": "nperree1@i2i.jp",
     "password": "d5SZwvtxu1",
-    "category": "user",
-    "image": "user_2.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 3,
     "first_name": "Poppy",
     "last_name": "Hammill",
     "email": "phammill2@japanpost.jp",
     "password": "ylagRr6DtD",
-    "category": "user",
-    "image": "user_3.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 4,
     "first_name": "Lana",
     "last_name": "Locke",
     "email": "llocke3@t-online.de",
     "password": "SSTOjR",
-    "category": "user",
-    "image": "user_4.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 5,
     "first_name": "Jada",
     "last_name": "Corry",
     "email": "jcorry4@google.pl",
     "password": "nIawm01h",
-    "category": "user",
-    "image": "user_5.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 6,
     "first_name": "Lorenza",
     "last_name": "Andrieux",
     "email": "landrieux5@creativecommons.org",
     "password": "GTlHTJSz",
-    "category": "user",
-    "image": "user_6.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 7,
     "first_name": "Harman",
     "last_name": "Scholig",
     "email": "hscholig6@histats.com",
     "password": "WSgClIhc",
-    "category": "user",
-    "image": "user_7.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 8,
     "first_name": "Kleon",
     "last_name": "Eldershaw",
     "email": "keldershaw7@narod.ru",
     "password": "ZSB7N0i2TZ8I",
-    "category": "user",
-    "image": "user_8.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 9,
     "first_name": "Netty",
     "last_name": "Reaney",
     "email": "nreaney8@ox.ac.uk",
     "password": "DhePqeGorhUN",
-    "category": "user",
-    "image": "user_9.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 10,
     "first_name": "Brant",
     "last_name": "Irlam",
     "email": "birlam9@godaddy.com",
     "password": "qin1U0AV8h7P",
-    "category": "user",
-    "image": "user_10.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 11,
     "first_name": "Kelcie",
     "last_name": "Cater",
     "email": "kcatera@va.gov",
     "password": "uZOS3XFh2yxc",
-    "category": "user",
-    "image": "user_11.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 12,
     "first_name": "Camila",
     "last_name": "McNeil",
     "email": "cmcneilb@nifty.com",
     "password": "H4CuCRNBIc",
-    "category": "user",
-    "image": "user_12.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 13,
     "first_name": "Essa",
     "last_name": "Grolle",
     "email": "egrollec@weebly.com",
     "password": "LnEMah",
-    "category": "user",
-    "image": "user_13.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 14,
     "first_name": "Vanya",
     "last_name": "Verbrugghen",
     "email": "vverbrugghend@rediff.com",
     "password": "09KThqeipVQ",
-    "category": "user",
-    "image": "user_14.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 15,
     "first_name": "Say",
     "last_name": "Kemish",
     "email": "skemishe@indiatimes.com",
     "password": "dmV2uYd",
-    "category": "user",
-    "image": "user_15.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 16,
     "first_name": "Aldwin",
     "last_name": "Ligertwood",
     "email": "aligertwoodf@woothemes.com",
     "password": "0tWxUdcmDM0",
-    "category": "user",
-    "image": "user_16.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 17,
     "first_name": "Cristy",
     "last_name": "Mapplethorpe",
     "email": "cmapplethorpeg@networksolutions.com",
     "password": "Z0S9bYK6D",
-    "category": "user",
-    "image": "user_17.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 18,
     "first_name": "Annmarie",
     "last_name": "Truswell",
     "email": "atruswellh@slideshare.net",
     "password": "GfZu7GF6",
-    "category": "user",
-    "image": "user_18.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 19,
     "first_name": "Gael",
     "last_name": "Mobley",
     "email": "gmobleyi@livejournal.com",
     "password": "dh2FdMN3IjH",
-    "category": "user",
-    "image": "user_19.jpg"
-  }, {
+    "image": ""
+  },
+  {
     "id": 20,
     "first_name": "Marissa",
     "last_name": "O'Doohaine",
     "email": "modoohainej@businessinsider.com",
     "password": "7agwRbTxeA",
-    "category": "user",
-    "image": "user_20.jpg"
-  }]
+    "image": ""
+  },
+  {
+    "id": 21,
+    "first_name": "Alejandro",
+    "last_name": "Espindola",
+    "email": "aee95.123@gmail.com",
+    "password": "$2a$10$rwr29CfKOCtwVD/tm4HkQupX.3HbpxVOacI6FIEnKOIuIVkjlU562",
+    "image": "default.png"
+  },
+  {
+    "id": 22,
+    "first_name": "Elisa",
+    "last_name": "Villeda Torres",
+    "email": "tuururururu@gmail.com",
+    "password": "$2a$10$.moETGMNXLxBPZt4fN/ah.iLgqMzAQXKuT9FQKkWW9NeR..VRdrPe",
+    "image": "user-1628640045021.JPG"
+  },
+  {
+    "id": 23,
+    "first_name": "John",
+    "last_name": "Wayne",
+    "email": "i@gmail.com",
+    "password": "$2a$10$0cr1J/WdIIz.FjuWwDyKbeqEBcTnFrmvnS/cXMwExMcCJe0pVXVB.",
+    "image": "default.png"
+  },
+  {
+    "id": 24,
+    "first_name": "Komodo",
+    "last_name": "Tresmil",
+    "email": "id@gmail.com",
+    "password": "$2a$10$S.5lrE/xNniLQQChxrcdR.7p5XaENLe641Lr4chsxHKCobOvun86q",
+    "image": "default.png"
+  },
+  {
+    "id": 25,
+    "first_name": "Miyagi",
+    "last_name": "San",
+    "email": "xd@gmail.com",
+    "password": "$2a$10$ydS9Pok0X8/fYTOnPRP2iuLSi.oc3XyOz7QfBtTa74cXoDIhrS5YW",
+    "image": "default.png"
+  },
+  {
+    "id": 26,
+    "first_name": "Jack",
+    "last_name": "Ripper",
+    "email": "a@gmail.com",
+    "password": "$2a$10$L3HZ2RkZHqfvQOb9q2Rh9Od3SAfvBQWxWhOFg4LA03Vl2BGT65zy2",
+    "image": "user-1628740831088.gif"
+  }
+]

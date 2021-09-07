@@ -11,9 +11,7 @@ const mainController = {
         let graniteProducts = products.filter(producto => producto.category === 'Granite');
         res.render('users/index', { brassProducts, stoneProducts, graniteProducts })
     },
-    login: (req, res) => res.render('users/login'),
-    productCart: (req, res) => res.render('users/productCart'),
-    register: (req, res) => res.render('users/register')
+    productCart: (req, res) => res.render('users/productCart')
 }
 
 module.exports = mainController;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/editUser.css">
+    <title>Editar usuario</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <h2>Editar usuario</h2>
+        <form action="/usuarios/<%= userToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="m-info">
+                <label for="first_name">Nombre</label>
+                <input type="text" value="<%= userToEdit.first_name %>" name="first_name" >
+                <label for="last_name">Apellido</label>
+                <input type="text" value="<%= userToEdit.last_name %>" name="last_name">
+
+            </div>
+            <div class="m-info2">
+                <label for="email">Email</label>
+                <input type="email" value="<%= userToEdit.email %>" name="email">
+                <label for="password">Contraseña nueva</label>
+                <input type="password"  name="password" required>
+                <label for="newUserimage">Subir nueva imagen</label>
+                <input type="file" name="newUserimage" id="newUserImage">
+            </div>
+            <div class="botones">
+                <div class="buttonAction_save">
+                    <div class="control">
+                        <button type="submit">Guardar usuario</button>
+                    </div>
+                </div>
+            </div>
+        
+        </form>
+        <div class="buttonAction_delete">
+            <div class="control">
+                <form action="/usuarios/<%= userToEdit.id %>?_method=DELETE" method="POST">
+                <button type="submit">Eliminar usuario</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>

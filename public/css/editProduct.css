@@ -42,7 +42,7 @@ input, select {
     border: 1px solid #4c8444;
 }
 
-img {
+.control img {
     width: 150px;
     margin-top: 4px;
 }
@@ -132,7 +132,7 @@ img {
         margin: 0 110px;
     }
 
-    img {
+    .control img  {
         width: 200px;
     }
 }

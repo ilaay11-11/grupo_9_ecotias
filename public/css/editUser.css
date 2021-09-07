@@ -1,0 +1,72 @@
+main h2 {
+    text-align: center;
+    margin: 12px 0;
+}
+#img-actual{
+    width: 20%;
+}
+.m-info{
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin: 2% 0; 
+    
+}
+.m-info label{
+    font-weight: 500;
+}
+
+.m-info2{
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    margin: 5% 0;
+}
+.m-info2 label{
+    font-weight: 500;
+}
+
+.buttonAction_save, .buttonAction_delete {
+    margin: 0rem 5rem 1rem;
+}
+
+.buttonAction_save button, .buttonAction_delete  button {
+    padding: 0 1.2em;
+    border: 1px solid transparent;
+    border-radius: 99px;
+    min-height: 2.3rem;
+    max-width: 100%;
+    font-weight: 500;
+}
+
+.buttonAction_save button {
+    background-color: #52a046;
+    color: white;
+}
+
+.buttonAction_delete  button {
+    background-color: #ff0000;
+    color: white;
+}
+
+.buttonAction_save button:hover {
+    background-color: #5cb14f;
+}
+
+.buttonAction_delete button:hover {
+    background-color: rgb(210, 0, 0);
+}
+
+.buttonAction_save button:hover, .buttonAction_delete button:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+}
+.buttonAction_delete{
+    display: flex;
+    justify-content: center;
+}

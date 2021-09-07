@@ -17,9 +17,14 @@
                     <h2>Ingresa a tu cuenta</h2>
                 </div>
                 <div class="login_forms">
-                    <form action="/" method="POST">
+                    <form action="/usuarios/login" method="POST">
                         <p class="login_email_p">Email: *
-                            <input class="login_input" type="email" name="email" placeholder="Ingrese su e-mail" required>
+                            <input class="login_input" type="email" name="email" value="<%= locals.oldData ? oldData.email : null %>" placeholder="Ingrese su e-mail" required>
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
                         </p>
                         <p class="login_password_p">
                             Password: *
@@ -36,7 +41,7 @@
                             <i class="far fa-question-circle"></i> <a href="#">¿Olvidaste tu contraseña?</a>
                         </p>
                         <p class="login_noaccount">
-                            <i class="far fa-user-circle"></i> <a href="/registro">¿No tienes una cuenta? Regístrate</a>
+                            <i class="far fa-user-circle"></i> <a href="/usuarios/register">¿No tienes una cuenta? Regístrate</a>
                         </p>
                     </form>
                 </div>

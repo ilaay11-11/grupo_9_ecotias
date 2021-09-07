@@ -3,6 +3,11 @@
     display: none;
 }
 
+/* -------- Errores -------- */
+.text-danger{
+    color: red;
+}
+
 /* -------- Bloque login -------- */
 .login_content_essential {
     display: block;

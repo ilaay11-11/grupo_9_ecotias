@@ -15,12 +15,21 @@
 /* Estilos del header
    ======================================================================================================================================= */
    /* ---- Contenedores topbar y header principal ---- */
+
+.nueva{
+    padding-left: 10px;
+    align-items: flex-end;
+}
 .main_nav_mobile, .topbar_header {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-    
+ 
+.salir {
+    align-items: right;
+    color: black;
+}
 .nav_normal {
     display: none;
 }
