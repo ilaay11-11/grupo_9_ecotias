@@ -5,7 +5,7 @@ window.addEventListener('load', function(){
     let password = document.querySelector('input#password');
     let input = document.querySelectorAll('input');
     let formulario = document.querySelector('form');
-    let errores = [];
+    
     for (let i = 0; i < input.length; i++) {
         input[i].addEventListener('focus', ()=>{
             input[i].style.backgroundColor = "#FFFAD3"
@@ -18,6 +18,25 @@ window.addEventListener('load', function(){
     }
     
     formulario.onsubmit = (event)=>{
+        let errores = [];
+        function validateInputs(){
+            if(nombre.value ===""){
+                errores.push("¿Cuál es tu nombre?")
+            }
+            if (apellido.value === ""){
+                errores.push("¿Cuál es tu apellido?")
+            }
+            if(email.value === ""){
+                errores.push("¿Cuál es tu email?")
+            }
+            if(password.value.length <8){
+                errores.push("La contraseña debe tener mínimo 8 caracteres")
+            }
+            if(password.value === ""){
+                errores.push("No has especificado una contraseña nueva")
+            }
+            
+        }
 
         
 
@@ -25,6 +44,7 @@ window.addEventListener('load', function(){
         if(errores.length >0){
             event.preventDefault();
             let ulErrores = document.querySelector(".errores ul");
+            ulErrores.innerHTML = '';
             errores.forEach(error => {
                 ulErrores.innerHTML += `<li>${error}</li>`
             });
@@ -32,24 +52,7 @@ window.addEventListener('load', function(){
                 
 
         }
-    function validateInputs(){
-        if(nombre.value ===""){
-            errores.push("¿Cuál es tu nombre?")
-        }
-        if (apellido.value === ""){
-            errores.push("¿Cuál es tu apellido?")
-        }
-        if(email.value === ""){
-            errores.push("¿Cuál es tu email?")
-        }
-        if(password.value.length <8){
-            errores.push("La contraseña debe tener mínimo 8 caracteres")
-        }
-        if(password.value === ""){
-            errores.push("No has especificado una contraseña nueva")
-        }
-        
-    }
+    
     }
 
 )

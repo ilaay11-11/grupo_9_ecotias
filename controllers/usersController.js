@@ -10,7 +10,7 @@ let db = require('../database/models');
 const usersController = {
     // index: (req, res) => res.render('users/index'),
     create: (req, res) => res.render('users/register'),
-    store:  (req, res) => {
+    store:  async (req, res) => {
         // const resultValidation = validationResult(req);
 		// if (resultValidation.errors.length > 0) {
 		// 	return res.render('users/register', {
@@ -19,13 +19,14 @@ const usersController = {
 		// 	});
 		// };
 
-        // let newUser = db.Usuario.findOne({
+        // let newUser = await db.Usuario.findOne({
         //     where: {
         //         email: req.body.email
         //     }
         // })
-        // .then(usuario =>console.log(usuario));
-        //     if (req.body.email === usuario.email) {
+        // // .then(usuario =>console.log(usuario));
+
+        // if (newUser.email == req.body.email) {
         //         return res.render('users/register', {
         //             errors: {
         //                 email: {
@@ -35,79 +36,91 @@ const usersController = {
         //             oldData: req.body
         //         })
         //     }
+
             if(req.file) {
-                db.Usuario.create({
+                await db.Usuario.create({
                     name: req.body.first_name,
                     last_name: req.body.last_name,
                     image: req.file.filename,
                     email: req.body.email,
-                    password: bcrypt.hashSync(req.body.password, 10)
+                    password: req.body.password
+                    // password: bcrypt.hashSync(req.body.password, 10)
                 });
             } else {
-                db.Usuario.create({
+                await db.Usuario.create({
                     name: req.body.first_name,
                     last_name: req.body.last_name,
                     email: req.body.email,
-                    password: bcrypt.hashSync(req.body.password, 10)
+                    password: req.body.password
+                    // password: bcrypt.hashSync(req.body.password, 10)
                 });
             };
 
         res.redirect('/usuarios/login');
     },
-    edit: (req, res) => {
+    edit: async (req, res) => {
         const userId = parseInt(req.params.id);
 
-        const userToEdit = users.find((usuario) => {
-            return usuario.id === userId;
-        });
-        
-        userToEdit ? res.render('users/editUser', {userToEdit}) : res.render("users/not-found");
+        await db.Usuario.findByPk(userId)
+        .then(userToEdit => {
+            userToEdit ? res.render('users/editUser', {userToEdit}) : res.render("users/not-found");
+        })
     },
     detail: (req, res) => {
-        console.log(req.cookies.userActive);
+        // console.log(req.cookies.userActive);
         return res.render('users/profile', {
 			userProfile: req.session.userLogged
 		});
     },
-    update: (req, res) => {
-        const userInfo = req.body;
-        const userIndex = users.findIndex((usuario) => {
-            return usuario.id === parseInt(req.params.id);
-        })
-        
-        if(req.file){
-            newImage = req.file.filename;
-            users[userIndex] = {...users[userIndex], image: newImage, ...userInfo, password: bcrypt.hashSync(userInfo.password, 10)};
+    update: async (req, res) => {
+        if(req.file) {
+            await db.Usuario.update({
+                name: req.body.first_name,
+                last_name: req.body.last_name,
+                image: req.file.filename,
+                email: req.body.email,
+                password: req.body.password
+                // password: bcrypt.hashSync(req.body.password, 10)
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
         } else {
-            users[userIndex] = {...users[userIndex], ...userInfo, password: bcrypt.hashSync(userInfo.password, 10)};
-        }
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        res.redirect('/');
+            await db.Usuario.update({
+                name: req.body.first_name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                password: req.body.password
+                // password: bcrypt.hashSync(req.body.password, 10)
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+        };
+        res.redirect('profile');
 
     },
     destroy: (req, res) => {
-        const userIndex = users.findIndex ((usuario) => {
-			return usuario.id === parseInt(req.params.id);
-		});
-
-        users.splice(userIndex, 1);
-
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
+        db.Usuario.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
         res.redirect('/');
-        
-    } ,
+
+    },
     login: (req, res) => {
         return res.render('users/login')
     },
     loginProcces: async (req, res) => {
-        let userToLogin = await db.Usuario.findOne({email: req.body.email})
-        .then(user => {
+        function validateLogin(user) {
             if(user){
-                let isOk = bcrypt.compareSync(req.body.password, user.password);
-                if(isOk){
+                if(req.body.password === user.password){
                     delete user.password;
                     req.session.userLogged = user;
-    
+                    
                     if(req.body.recuerdame) {
                         res.cookie('userActive', req.body.email, { maxAge: (1000 * 60 * 60 * 24) })
                     }
@@ -123,21 +136,22 @@ const usersController = {
                     oldData: req.body
                 });
             }
+
+            return res.render('users/login', {
+                errors: {
+                    email: {
+                        msg: 'Email no encontrado'
+                    }
+                },
+                oldData: req.body
+            })
+        }
+
+        db.Usuario.findOne({where: {email: req.body.email}})
+        .then(user => {
+            validateLogin(user);
         })
-
-
-        // let userToLogin = User.findByField('email', req.body.email);
-        // console.log(req.body);
         
-        
-		return res.render('users/login', {
-			errors: {
-				email: {
-					msg: 'Email no encontrado'
-				}
-			},
-            oldData: req.body
-		})
     },
     logout: (req,res) => {
         res.clearCookie('userActive');

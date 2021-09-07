@@ -25,7 +25,7 @@ router.get('/logout',usersController.logout);
 router.get('/profile', authMiddleware, usersController.detail); // MUESTRA PERFIL DE USUARIO
 
 /*** EDIT ONE USER ***/
-router.get('/:id/edit', usersController.edit); // MUESTRA FORMULARIO DE EDICIÓN DE USUARIO
+router.get('/:id/edit', authMiddleware, usersController.edit); // MUESTRA FORMULARIO DE EDICIÓN DE USUARIO
 router.put('/:id', uploadUserImage.single('newUserimage'), usersController.update); // RUTA POR LA QUE VIAJAN LOS DATOS DE EDICIÓN DE USUARIO
 
 /*** DELETE ONE USER***/
