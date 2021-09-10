@@ -1,15 +1,16 @@
-const fs = require('fs');
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+let db = require('../database/models');
 
 const mainController = {
-    home: (req, res) => {
-        let brassProducts = products.filter(producto => producto.category === 'Brass');
-        let stoneProducts = products.filter(producto => producto.category === 'Stone');
-        let graniteProducts = products.filter(producto => producto.category === 'Granite');
-        res.render('users/index', { brassProducts, stoneProducts, graniteProducts })
+    home: async (req, res) => {
+        await db.Producto.findAll({
+            include: [{association: 'category'}]
+        })
+        .then(function(products) {
+            let brassProducts = products.filter(producto => producto.category.name === 'Brass');
+            let steelProducts = products.filter(producto => producto.category.name === 'Steel');
+            let graniteProducts = products.filter(producto => producto.category.name === 'Granite');
+            res.render('users/index', { brassProducts, steelProducts, graniteProducts })
+        });
     },
     productCart: (req, res) => res.render('users/productCart')
 }

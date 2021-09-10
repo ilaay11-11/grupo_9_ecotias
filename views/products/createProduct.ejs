@@ -9,7 +9,7 @@
     <%- include('../partials/header') %>
     <main>
         <h2>Crear producto</h2>
-        <form action="/productos" method="POST" enctype="multipart/form-data">
+        <form action="/productos/crear" method="POST" enctype="multipart/form-data">
             <div class="crear_producto">
                 <div class="field">
                     <label for="name">Nombre</label>
@@ -21,25 +21,24 @@
                     <label for="category">Categoría</label>
                     <div class="control">
                         <select name="category" id="category" class="input_info" required>
-                            <option value="">Seleccionar</option>
-                            <option value="Stone">Stone</option>
-                            <option value="Vinyl">Vinyl</option>
-                            <option value="Brass">Brass</option>
-                            <option value="Plexiglass">Plexiglass</option>
-                            <option value="Rubber">Rubber</option>
-                            <option value="Plastic">Plastic</option>
-                            <option value="Granite">Granite</option>
-                            <option value="Aluminum">Aluminum</option>
-                            <option value="Wood">Wood</option>
-                            <option value="Glass">Glass</option>
-                            <option value="Steel">Steel</option>
+                            <% for( let i = 0; i < categories.length; i++ ) { %>
+                                <option value="<%= categories[i].id %> ">
+                                    <%= categories[i].name %>
+                                </option>
+                            <% } %>
                         </select>
                     </div>
                 </div>
                 <div class="field">
-                    <label for="maker">Fabricante</label>
+                    <label for="category">Fabricante</label>
                     <div class="control">
-                        <input type="text" name="maker" class="input_info" placeholder="Ej: Rowe LLC" required>
+                        <select name="maker" id="maker" class="input_info" required>
+                            <% for( let i = 0; i < makers.length; i++ ) { %>
+                                <option value="<%= makers[i].id %> ">
+                                    <%= makers[i].name %>
+                                </option>
+                            <% } %>
+                        </select>
                     </div>
                 </div>
                 <div class="field">
@@ -55,9 +54,9 @@
                     </div>
                 </div>
                 <div class="field">
-                    <label for="product-image">Imagen</label>
+                    <label for="product_image">Imagen</label>
                     <div class="control">
-                        <input type="file" name="product-image" id="product-image">
+                        <input type="file" name="product_image" id="product_image">
                     </div>
                 </div>
             </div>

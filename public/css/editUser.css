@@ -1,30 +1,61 @@
-main h2 {
-    text-align: center;
-    margin: 12px 0;
+*{
+    box-sizing: border-box;
 }
-#img-actual{
-    width: 20%;
-}
-.m-info{
-    display: flex;
-    justify-content: center;
-    gap: 2%;
-    margin: 2% 0; 
-    
-}
-.m-info label{
-    font-weight: 500;
+body{
+    background-color: white;
+	min-height: 100vh;
+	margin: 0;
 }
 
-.m-info2{
+#main-container{
+    background: linear-gradient(#C6EA8D,#FFBBBB);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;    
+    max-width: 100%;
+    border-radius: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 1%;
-    margin: 5% 0;
+    align-items: center;
+    margin: 5% 5% 5% 5%;
 }
-.m-info2 label{
-    font-weight: 500;
+#editUser{
+    border-bottom: 1px solid #f0f0f0;
+	background-color:transparent;
+	padding: 20px 40px;
 }
+
+#editUser h2 {
+	margin: 0;
+}
+.m-info{
+    margin-bottom: 10px;
+	padding: 10px;
+}
+.m-info label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.m-info input{
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+.m-info input:focus {
+	outline: 0;
+	border-color: #c563e6;
+}
+.m-info span{
+    position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
 
 .buttonAction_save, .buttonAction_delete {
     margin: 0rem 5rem 1rem;
@@ -62,11 +93,23 @@ main h2 {
     cursor: pointer;
 }
 
-.botones {
+
+.buttonAction_delete, .buttonAction_save{
     display: flex;
     justify-content: center;
+
 }
-.buttonAction_delete{
-    display: flex;
-    justify-content: center;
+
+
+#caract8{
+    font-weight:lighter;
+    color: #3B7596;
+}
+
+@media (min-width: 780px){
+    #main-container{
+        margin: 5% 25% 5% 25%;
+        
+    }
+    
 }

@@ -8,9 +8,9 @@
 <body>
     <%- include('../partials/header') %>
     <div class = "descripcion">
-        <div class="imagenes">
+        <div class="imagenes">      
             <img src="/images/productImages/<%= productSelected.image ? productSelected.image : 'default.jpg' %>" id="imagen-principal">
-            <img src="/images/productImages/<%= productSelected.image ? productSelected.image : 'default.jpg' %>" id="imagen2"> 
+            <img src="/images/productImages/<%= productSelected.image ? productSelected.image : 'default.jpg' %>" id="imagen2">
         </div>
         
         <div>
@@ -27,6 +27,14 @@
             </div>
               
 
+        <h3 class="descripcion-producto">Categoria:</h3>
+            <p class="descripcion-producto">
+                <%= productSelected.category.name %>
+            </p>
+        <h3 class="descripcion-producto">Fabricante:</h3>
+            <p class="descripcion-producto">
+                <%= productSelected.maker.name %>
+            </p>
         <h3 class="descripcion-producto">Descripción:</h3>
             <p class="descripcion-producto">
                 <%= productSelected.description %>

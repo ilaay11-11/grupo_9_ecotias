@@ -52,15 +52,15 @@
         <br>
         <hr class="separator_dots"/>
         <section class="product_category">
-            <h2>PRODUCTOS DE PIEDRA</h2>
+            <h2>PRODUCTOS DE ACERO</h2>
             <div class="productList_all">
-                <% for(i=0; i < stoneProducts.length; i++) {%>
+                <% for(i=0; i < steelProducts.length; i++) {%>
                 <div class="product_individual">
-                    <a href="/productos/<%= stoneProducts[i].id %>" class="productLink">
-                        <img src="/images/productImages/<%= stoneProducts[i].image ? stoneProducts[i].image : 'default.jpg' %>" alt="producto">
-                        <p class="product_name"><%= stoneProducts[i].name%> </p>
+                    <a href="/productos/<%= steelProducts[i].id %>" class="productLink">
+                        <img src="/images/productImages/<%= steelProducts[i].image ? steelProducts[i].image : 'default.jpg' %>" alt="producto">
+                        <p class="product_name"><%= steelProducts[i].name%> </p>
                     </a>
-                        <p class="price">$<%= stoneProducts[i].price%> </p>
+                        <p class="price">$<%= steelProducts[i].price%> </p>
                     <button class="addCartButton" type="submit">Agregar al carrito</button>
                 </div>
                 <% } %>
