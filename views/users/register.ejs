@@ -7,13 +7,18 @@
 </head>
 <body>
     <%- include('../partials/header') %>
+    
 
     <div class="signup_banner">
         <img src="/images/banner_login.jpg" alt="banner">
     </div>
         <div class="register_essential">
+            <section class="errores">
+                <ul></ul>
+        
+            </section>
             
-            <form action="/usuarios" method="POST" class="campos" enctype="multipart/form-data">
+            <form action="/usuarios" method="POST" class="campos" enctype="multipart/form-data" id="form">
                 
                 <div id="user_img">
                     <img id="photo" src="https://i.pinimg.com/564x/74/88/22/7488228009d153e94a00427f674d54bb.jpg">
@@ -27,7 +32,7 @@
                     <% } %>
                 <p class="c">
                     <input class="<%= locals.errors && errors.first_name ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.first_name : null %>"
-                    type="text" name="first_name" placeholder="Nombre(s)*">
+                    type="text" name="first_name" placeholder="Nombre(s)*" id="nombre" required>
                 </p>
                 <% if (locals.errors && errors.last_name) { %>
                     <div class="text-danger">
@@ -36,7 +41,7 @@
                     <% } %>
                 <p class="c">
                     <input class="<%= locals.errors && errors.last_name ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.last_name : null %>"
-                    type="text" name="last_name" placeholder="Apellidos*">
+                    type="text" name="last_name" placeholder="Apellidos*" id="apellido" required>
                 </p>
                 <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
@@ -45,7 +50,7 @@
                     <% } %>
                 <p class="c">
                     <input class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"
-                    type="email" name="email" placeholder="Ingrese su e-mail*">
+                    type="email" name="email" placeholder="Ingrese su e-mail*" id="email" required>
                     </p>
                     <% if (locals.errors && errors.password) { %>
                         <div class="text-danger">
@@ -54,11 +59,11 @@
                         <% } %>
                 <p class="c">
                     <input class="<%= locals.errors && errors.password ? 'is-invalid' : null %>"
-                    type="password" name="password" placeholder="Contraseña*" id="psswrd">
+                    type="password" name="password" placeholder="Contraseña*" id="psswrd" required>
                     
                 </p>
                 <div id="p-caract">
-                <p>Mínimo 5 caracteres</p>
+                <p>Mínimo 8 caracteres</p>
                 </div>
                 <div class="aceptar">
                     <input type="checkbox" >
@@ -80,5 +85,6 @@
         
 
     <%- include('../partials/footer') %>
+    <script src="/js/register.js"> </script>
 </body>
 </html>
