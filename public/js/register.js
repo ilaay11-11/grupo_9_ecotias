@@ -53,8 +53,7 @@ window.addEventListener('load', function(){
                 ulErrores.innerHTML += `<li>${error}</li>`
             });
         }
-
-    });
+    })
 })
 
 

@@ -8,13 +8,17 @@
 <body>
     <%- include('../partials/header') %>
     <main>
+        <section class="errores">
+            <ul></ul>
+
+        </section>
         <h2>Crear producto</h2>
         <form action="/productos/crear" method="POST" enctype="multipart/form-data">
             <div class="crear_producto">
                 <div class="field">
                     <label for="name">Nombre</label>
                     <div class="control">
-                        <input type="text" name="name" class="input_info"placeholder="Ej: Omeprazole" required>
+                        <input type="text" name="name" class="input_info"placeholder="Ej: Omeprazole" id="nombre"required>
                     </div>
                 </div>
                 <div class="field">
@@ -50,7 +54,7 @@
                 <div class="field">
                     <label for="description">Descripción</label>
                     <div class="control">
-                        <textarea name="description" id="" class="input_info" required></textarea>
+                        <textarea name="description" id="description" class="input_info" required></textarea>
                     </div>
                 </div>
                 <div class="field">
@@ -68,5 +72,6 @@
         </form>
     </main>
     <%- include('../partials/footer') %>
+    <script src="/js/createProduct.js"></script>
 </body>
 </html>
