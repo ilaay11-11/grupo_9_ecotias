@@ -20,6 +20,10 @@ body{
     border: 1px solid #dc3545 !important;
 }
 
+.errores {
+    color: white;
+}
+
 /* IMAGEN USUARIO */
 #user_img{
     position:relative;

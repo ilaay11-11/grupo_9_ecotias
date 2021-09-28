@@ -7,7 +7,11 @@
 </head>
 <body>
     <%- include('../partials/header') %>
-
+    <main>
+    <div class="errores">
+        <ul></ul>
+    </div>
+    <div id="imagePreview"></div>
     <div class="signup_banner">
         <img src="/images/banner_login.jpg" alt="banner">
     </div>
@@ -17,7 +21,7 @@
                 
                 <div id="user_img">
                     <img id="photo" src="https://i.pinimg.com/564x/74/88/22/7488228009d153e94a00427f674d54bb.jpg">
-                    <input type="file" name="user-image" id="user-image">
+                    <input type="file" name="user-image" id="user-image" accept="image/gif,image/jpeg,image/jpg,image/png" onchange="return fileValidation()">
                     <label for="user-image" id="choose">Elige una foto</label>
                 </div>
                 <% if (locals.errors && errors.first_name) { %>
@@ -26,7 +30,7 @@
                     </p>
                     <% } %>
                 <p class="c">
-                    <input class="<%= locals.errors && errors.first_name ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.first_name : null %>"
+                    <input class="<%= locals.errors && errors.first_name ? 'is-invalid' : 'nombre' %>" value="<%= locals.oldData ? oldData.first_name : null %>"
                     type="text" name="first_name" placeholder="Nombre(s)*">
                 </p>
                 <% if (locals.errors && errors.last_name) { %>
@@ -35,7 +39,7 @@
                     </div>
                     <% } %>
                 <p class="c">
-                    <input class="<%= locals.errors && errors.last_name ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.last_name : null %>"
+                    <input class="<%= locals.errors && errors.last_name ? 'is-invalid' : 'apellido' %>" value="<%= locals.oldData ? oldData.last_name : null %>"
                     type="text" name="last_name" placeholder="Apellidos*">
                 </p>
                 <% if (locals.errors && errors.email) { %>
@@ -44,7 +48,7 @@
                     </div>
                     <% } %>
                 <p class="c">
-                    <input class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"
+                    <input class="<%= locals.errors && errors.email ? 'is-invalid' : 'email' %>" value="<%= locals.oldData ? oldData.email : null %>"
                     type="email" name="email" placeholder="Ingrese su e-mail*">
                     </p>
                     <% if (locals.errors && errors.password) { %>
@@ -53,7 +57,7 @@
                         </div>
                         <% } %>
                 <p class="c">
-                    <input class="<%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                    <input class="<%= locals.errors && errors.password ? 'is-invalid' : 'password' %>"
                     type="password" name="password" placeholder="Contraseña*" id="psswrd">
                     
                 </p>
@@ -78,7 +82,8 @@
             
         </div>
         
-
+    </main>
     <%- include('../partials/footer') %>
+    <script src="/js/register.js"> </script>
 </body>
 </html>
