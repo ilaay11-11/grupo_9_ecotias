@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 let db = require('../database/models');
 
 const productsController = {
@@ -17,6 +18,26 @@ const productsController = {
         });
     },
     store: async (req, res) => {
+
+        const resultValidation = validationResult(req);
+        // console.log(resultValidation);
+		if (resultValidation.errors.length > 0) {
+
+            // let categories = await db.Category.findAll();
+            // let makers = await db.Maker.findAll();
+            
+            // Promise.all([categories, makers])
+            // .then( ([categories, makers]) => {
+            //     return res.render('products/createProduct', {categories, makers, errors: resultValidation.mapped(),
+            //         oldData: req.body});
+            // })
+            // .catch(err => console.log(err));
+            return res.render('products/createProduct', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		};
+
         if(req.file) {
             await db.Producto.create({
                 name: req.body.name,
@@ -35,8 +56,8 @@ const productsController = {
                 maker_id: req.body.maker
             });
         };
-    console.log(req.body);
-    console.log(req.file);
+    // console.log(req.body);
+    // console.log(req.file);
 
         res.redirect('/productos');
     },

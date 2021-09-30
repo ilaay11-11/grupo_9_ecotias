@@ -55,6 +55,11 @@
                     <label for="description">Descripción</label>
                     <div class="control">
                         <textarea name="description" id="description" class="input_info" required></textarea>
+                        <% if (locals.errors && errors.description) { %>
+                            <p class="text-danger">
+                                <%= errors.description.msg %>
+                            </p>
+                        <% } %>
                     </div>
                 </div>
                 <div class="field">
@@ -62,6 +67,11 @@
                     <div class="control">
                         <input type="file" name="product_image" id="product_image">
                     </div>
+                    <% if (locals.errors && errors.product_image) { %>
+                        <p class="text-danger">
+                            <%= errors.product_image.msg %>
+                        </p>
+                    <% } %>
                 </div>
             </div>
             <div class="buttonAction">
