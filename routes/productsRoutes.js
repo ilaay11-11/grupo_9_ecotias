@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const uploadUserImage = require('../middlewares/storageProductsMiddleware');
 const validationProductsMiddleware = require('../middlewares/validationProductsMiddleware');
+const validationEditProductsMiddleware = require('../middlewares/validationEditProductsMiddleware');
 
 const productsController = require('../controllers/productsController');
 
@@ -18,7 +19,7 @@ router.get('/:id', productsController.detail); // MUESTRA DETALLE DE PRODUCTO
 
 // /*** EDIT ONE PRODUCT ***/
 router.get('/:id/editar', productsController.edit); // MUESTRA FORMULARIO DE EDICIÓN DE PRODUCTO
-router.put('/:id', uploadUserImage.single('newProductImage'), productsController.update); // RUTA POR LA QUE VIAJAN LOS DATOS DE EDICIÓN DE PRODUCTO
+router.put('/:id', uploadUserImage.single('newProductImage'), validationEditProductsMiddleware, productsController.update); // RUTA POR LA QUE VIAJAN LOS DATOS DE EDICIÓN DE PRODUCTO
 
 
 // /*** DELETE ONE PRODUCT***/

@@ -7,7 +7,7 @@ const validations = [
     body('price').notEmpty().withMessage('EL producto debe tener un precio'),
     body('description').notEmpty().withMessage('El producto debe tener una descripción').bail()
     .isLength({min: 20}).withMessage('La descripción debe tener al menos 20 caracteres'),
-    body('product_image').custom((value, { req }) => {
+    body('newProductImage').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.jpeg','.png', '.gif'];
         
