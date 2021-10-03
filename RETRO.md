@@ -38,3 +38,10 @@ No nos confiaremos más con los tiempos de entrega.
 4. Hacer menos: Procastinar.
 
 5. Dejar de hacer: Entregar las tareas justo el día y hora límite de las mismas, sin oportunidad de retroalimentación antes de la entrega definitiva. 
+
+# Retrospectiva S6-S7
+1. Comenzar a hacer: Trabajar desde el primer día en el Sprint y en las reuniones empezar a comentar el código para entenderlo mejor, y darle más prioridad al proyecto.
+2. Hacer más: Usar Trello más seguido. 
+3. Continuar haciendo: Apoyo como equipo, mejorar tiempos de entrega y continuar con la asignación de trabajo.
+4. Hacer menos: Procastinar y quedarse con dudas.
+5. Dejar de hacer: Trabajar en el sprint una semana antes de la fecha de entrega.
