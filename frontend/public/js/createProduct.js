@@ -32,15 +32,15 @@ window.addEventListener('load', function(){
             
         }
         validateInputs();
-        let valid = errores.length == errores1.length && errores.every(function (v, i){
+        let valid = errores.length === errores1.length && errores.every(function (v, i){
             return v === errores1[i]
         } );
         if(errores.length > 0 && valid === false){
             event.preventDefault();
-            let ulErrores = document.querySelector(".errores ul");
-            let ulErrores1 = document.querySelector(".errores1 ul");
-            let ulErrores2 = document.querySelector(".errores2 ul");
-            let ulErrores3 = document.querySelector(".errores3 ul");
+            let ulErrores = document.querySelector("#errores ul");
+            let ulErrores1 = document.querySelector("#errores1 ul");
+            let ulErrores2 = document.querySelector("#errores2 ul");
+            let ulErrores3 = document.querySelector("#errores3 ul");
             ulErrores.innerHTML = errores[0]; 
             ulErrores1.innerHTML = errores[1];   
             ulErrores2.innerHTML = errores[2];  

@@ -1,0 +1,190 @@
+/*----------BODY---------*/
+
+
+.imagenes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imagenprincipal{
+  width: 85vw;
+  margin-top: 5%;
+
+}
+.imagen2{
+  width: 15%;
+  margin-top: 1%;
+}
+.imagen2:hover{
+  opacity: 0.5;
+}
+.descripcionproducto{
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+/*BOTÓN DE CANTIDAD PARA AÑADIR PRODUCTOS*/
+.agregar, .inputgroup input {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+}
+
+.inputgroup input[type="button"], .agregar {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+.inputgroup input::-webkit-outer-spin-button,
+.inputgroup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.inputgroup {
+  clear: both;
+  margin: 15px 0;
+  position: relative;
+}
+
+.inputgroup input[type='button'] {
+  background-color: #eeeeee;
+  min-width: 38px;
+  width: auto;
+  transition: all 300ms ease;
+}
+
+.inputgroup .buttonminus,
+.inputgroup .buttonplus {
+  font-weight: bold;
+  height: 38px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.inputgroup .quantity_field {
+  position: relative;
+  height: 38px;
+  left: -6px;
+  text-align: center;
+  width: 62px;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0 5px;
+  resize: vertical;
+  margin-top: 10px;
+}
+
+.buttonplus {
+  left: -13px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+.inputgroup{
+  margin-left: 10%;
+}
+
+/*BOTÓN AGREGAR AL CARRITO*/
+
+.agregar{
+  margin: 0 10%;
+  width: 80%;
+  background-color: white;
+  border-color: yellowgreen;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
+/*DESCRIPCIÓN ARTICULO*/
+.descripcion p{
+  text-align: left;
+  margin-right: 10%;
+}
+
+/*RESEÑAS*/
+.reviews{
+  margin: 8% 10%;
+}
+.t_reviews{
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-style: italic;
+}
+
+.reviews input{
+  background-color: white;
+  border-color: yellowgreen;
+  border-radius: 10px;
+  font-size:x-small;
+  position: relative;
+  left: 30%;
+  margin-top: 3%;
+
+}
+
+/*SECCIÓN TAMBIÉN TE PUEDE INTERESAR*/
+.ttpi{
+  text-align: center;
+  font-size: small;
+  margin-bottom: 3%;
+}
+
+
+.img_slider_pd{
+  width: 80%;
+  height: 20%;
+  margin: 5% 10%;
+}
+
+/*BOTÓN REGRESAR*/
+.b_regresar input{
+  width: 50%;
+  background-color: white;
+  border-color: yellowgreen;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-left: 25%;
+  margin-bottom: 8%;
+}
+
+/*------PANTALLA 761 px------*/
+
+@media (min-width:768px){
+  .agregar{
+    height: 50px;
+  }
+  
+}
+
+/*-----PANTALLA 1024px-------*/
+
+@media(min-width:1024px){
+  .descripcion{
+    display: flex;
+    font-size:20px;
+    flex-grow: inherit;
+
+  }
+  .imagenprincipal{
+    width: 45vw;
+    margin-left: 10%;
+  }
+  .agregar{
+    font-size: large;
+  }
+  
+
+}
+
+
+
+
+

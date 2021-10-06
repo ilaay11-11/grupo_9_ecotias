@@ -1,0 +1,142 @@
+/* -------- Título -------- */
+.mainEditProduct h2 {
+    text-align: center;
+    margin: 12px 0;
+}
+.textdanger{
+    color: red;
+    font-size: small;
+}
+
+/* -------- Área principal -------- */
+.crear_producto {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* -------- Textos label -------- */
+.crear_producto label, .crear_producto p {
+    font-weight: 500;
+}
+
+/* -------- Campos -------- */
+.field {
+    padding: 0 10px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+textarea {
+    height: 100px;
+}
+
+input, select {
+    height: 2.5rem;
+}
+
+.input_info {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 4px;
+    padding: 0 .55rem;
+    line-height: 1.5rem;
+    outline: 0;
+    border-radius: 10px;
+    border: 1px solid #4c8444;
+}
+
+.control img {
+    width: 150px;
+    margin-top: 4px;
+}
+
+/* -------- Button -------- */
+.buttonAction_save, .buttonAction_delete {
+    margin: 0rem 5rem 1rem;
+}
+
+.buttonAction_save button, .buttonAction_delete  button {
+    padding: 0 1.2em;
+    border: 1px solid transparent;
+    border-radius: 99px;
+    min-height: 2.3rem;
+    max-width: 100%;
+    font-weight: 500;
+}
+
+.buttonAction_save button {
+    background-color: #52a046;
+    color: white;
+}
+
+.buttonAction_delete  button {
+    background-color: #ff0000;
+    color: white;
+}
+
+.buttonAction_save button:hover {
+    background-color: #5cb14f;
+}
+
+.buttonAction_delete button:hover {
+    background-color: rgb(210, 0, 0);
+}
+
+.buttonAction_save button:hover, .buttonAction_delete button:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* -------------------- MEDIA QUERY 768px -------------------- */
+@media (min-width: 768px) {
+/* -------- Campos -------- */
+    .field {
+        width: 50%;
+    }
+
+    .crear_producto label, .crear_producto p {
+        font-size: 1.2rem;
+    }
+
+    .order1 {
+        order: 1;
+    }
+    .order2 {
+        order: 2;
+    }
+    .order3 {
+        order: 3;
+    }
+    .order4 {
+        order: 4;
+    }
+    .order5 {
+        order: 5;
+    }
+    .order6 {
+        order: 6;
+    }
+    .order7 {
+        order: 7;
+    }
+}
+
+/* -------------------- MEDIA QUERY 1280px -------------------- */
+@media (min-width: 1280px) {
+    /* -------- Área principal -------- */
+    .crear_producto {
+        margin: 0 110px;
+    }
+
+    .control img  {
+        width: 200px;
+    }
+}
