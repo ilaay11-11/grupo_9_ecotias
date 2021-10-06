@@ -1,23 +1,23 @@
-import './Register.css'
+import styles from './Register.module.css'
 
 function Register() {
     return (
-        <main className="mainRegister">
-    <div className="errores">
+        <main className={styles.mainRegister}>
+    <div className={styles.errores}>
         <ul></ul>
     </div>
 
-        <div className="register_essential">
-            <section className="errores">
+        <div className={styles.register_essential}>
+            <section className={styles.errores}>
                 <ul></ul>
             </section>
             
-            <form action="/usuarios" method="POST" className="campos" enctype="multipart/form-data" id="form">
+            <form action="/usuarios" method="POST" className={styles.campos} enctype="multipart/form-data" id={styles.form}>
                 
-                <div id="user_img">
-                    <img id="photo" alt="User avatar" src="https://i.pinimg.com/564x/74/88/22/7488228009d153e94a00427f674d54bb.jpg"/>
-                    <input type="file" name="userImage" id="user-image" accept="image/gif,image/jpeg,image/jpg,image/png" onchange="return fileValidation()"/>
-                    <label for="user-image" id="choose">Elige una foto</label>
+                <div id={styles.user_img}>
+                    <img id={styles.photo} alt="User avatar" src="https://i.pinimg.com/564x/74/88/22/7488228009d153e94a00427f674d54bb.jpg"/>
+                    <input type="file" name="userImage" id={styles.user_image} accept="image/gif,image/jpeg,image/jpg,image/png" onchange="return fileValidation()"/>
+                    <label for="user-image" id={styles.choose}>Elige una foto</label>
                 </div>
                 {/* <% if (locals.errors && errors.userImage) { %>
                     <p className="text-danger">
@@ -29,11 +29,11 @@ function Register() {
                         <%= errors.first_name.msg %>
                     </p>
                     <% } %> */}
-                <p className="c">
-                    <input className="nombre" type="text" name="first_name" placeholder="Nombre(s)*"/>
+                <p className={styles.c}>
+                    <input className={styles.nombre} type="text" name="first_name" placeholder="Nombre(s)*"/>
                 </p>
                 {/* <p className="c">
-                    <input className="<%= locals.errors && errors.first_name ? 'is-invalid' : 'nombre' %>" value="<%= locals.oldData ? oldData.first_name : null %>"
+                    <input className="<%= locals.errors && errors.first_name ? 'is_invalid' : 'nombre' %>" value="<%= locals.oldData ? oldData.first_name : null %>"
                     type="text" name="first_name" placeholder="Nombre(s)*">
                 </p> */}
                 {/* <% if (locals.errors && errors.last_name) { %>
@@ -41,11 +41,11 @@ function Register() {
                         <%= errors.last_name.msg %>
                     </div>
                     <% } %> */}
-                <p className="c">
-                    <input className="apellido" type="text" name="last_name" placeholder="Apellidos*"/>
+                <p className={styles.c}>
+                    <input className={styles.apellido} type="text" name="last_name" placeholder="Apellidos*"/>
                 </p>
                 {/* <p className="c">
-                    <input className="<%= locals.errors && errors.last_name ? 'is-invalid' : 'apellido' %>" value="<%= locals.oldData ? oldData.last_name : null %>"
+                    <input className="<%= locals.errors && errors.last_name ? 'is_invalid' : 'apellido' %>" value="<%= locals.oldData ? oldData.last_name : null %>"
                     type="text" name="last_name" placeholder="Apellidos*">
                 </p> */}
                 {/* <% if (locals.errors && errors.email) { %>
@@ -53,11 +53,11 @@ function Register() {
                         <%= errors.email.msg %>
                     </div>
                     <% } %> */}
-                <p className="c">
-                    <input className="email" type="email" name="email" placeholder="Ingrese su e-mail*"/>
+                <p className={styles.c}>
+                    <input className={styles.email} type="email" name="email" placeholder="Ingrese su e-mail*"/>
                 </p>
                 {/* <p className="c">
-                    <input className="<%= locals.errors && errors.email ? 'is-invalid' : 'email' %>" value="<%= locals.oldData ? oldData.email : null %>"
+                    <input className="<%= locals.errors && errors.email ? 'is_invalid' : 'email' %>" value="<%= locals.oldData ? oldData.email : null %>"
                     type="email" name="email" placeholder="Ingrese su e-mail*">
                     </p> */}
                     {/* <% if (locals.errors && errors.password) { %>
@@ -65,29 +65,29 @@ function Register() {
                             <%= errors.password.msg %>
                         </div>
                         <% } %> */}
-                <p className="c">
-                    <input className="password" type="password" name="password" placeholder="Contraseña*" id="psswrd"/>
+                <p className={styles.c}>
+                    <input className={styles.password} type="password" name="password" placeholder="Contraseña*" id={styles.psswrd}/>
                 </p>
                 {/* <p className="c">
-                    <input className="<%= locals.errors && errors.password ? 'is-invalid' : 'password' %>"
-                    type="password" name="password" placeholder="Contraseña*" id="psswrd">
+                    <input className="<%= locals.errors && errors.password ? 'is_invalid' : 'password' %>"
+                    type="password" name="password" placeholder="Contraseña*" id="{styles.psswrd}">
                 </p> */}
-                <div id="p-caract">
+                <div id={styles.p_caract}>
                 <p>Mínimo 8 caracteres</p>
                 </div>
-                <div className="aceptar">
+                <div className={styles.aceptar}>
                     <input type="checkbox" />
-                    <p>He leído y acepto los <a href="#Terminos">Términos y condiciones</a> y el <a href="#Aviso">Aviso de privacidad</a></p>
+                    <p>He leído y acepto los <a className={styles.registerLink} href="#Terminos">Términos y condiciones</a> y el <a className={styles.registerLink} href="#Aviso">Aviso de privacidad</a></p>
                 </div>
-                <div className="aceptar">
+                <div className={styles.aceptar}>
                     <input type="checkbox"/>
                     <p>Quiero recibir ofertas y promociones en mi correo electrónico</p>
                 </div>
-                <div id="button-registrar">
-                    <button type="submit" id="b-r">REGISTRAR</button>
+                <div id={styles.button_registrar}>
+                    <button type="submit" id={styles.b_r}>REGISTRAR</button>
                 </div>
-                <div id="IS">
-                    <p><a href="./login">¿Ya tienes cuenta? Inicia Sesión</a></p>
+                <div id={styles.IS}>
+                    <p><a className={styles.registerLink} href="./login">¿Ya tienes cuenta? Inicia Sesión</a></p>
                 </div>
             </form>
             

@@ -25,7 +25,7 @@ function EditProduct() {
                 <div className={`${styles.field} ${styles.order2}`}>
                     <label for="category">Categoría</label>
                     <div className={styles.control}>
-                        <select name="category">
+                        <select className={styles.input_info} name="category">
                             <option value="categoria">Categoría uno</option>
                             {/* <% for( let i = 0; i < categories.length; i++ ) { %>
                                 <% if (categories[i].id == product.category_id) { %>
@@ -44,7 +44,7 @@ function EditProduct() {
                 <div className={`${styles.field} ${styles.order3}`}>
                     <label for="maker">Fabricante</label>
                     <div className={styles.control}>
-                        <select name="maker">
+                        <select className={styles.input_info} name="maker">
                         <option value="Facbricantee">Fabricante uno</option>
                             {/* <% for( let i = 0; i < makers.length; i++ ) { %>
                                 <% if (makers[i].id == product.maker_id) { %>
@@ -78,8 +78,8 @@ function EditProduct() {
                 <div className={`${styles.field} ${styles.order6}`}>
                     <label for="description">Descripción</label>
                     <div className={styles.control}>
-                        <textarea name="description" id="descripcion" className={styles.input_info} value="Product description"></textarea>
-                        {/* <textarea name="description" id="descripcion" className="input_info" value="<%= product.description %>"></textarea> */}
+                        <textarea name="description" id="descripcion" className={styles.editTextarea} value="Product description"></textarea>
+                        {/* <textarea name="description" id="descripcion" className="{styles.input_info}" value="<%= product.description %>"></textarea> */}
                         <div className={`${styles.errores2} ${styles.textdanger}`}>
                             <ul></ul>
                         </div>

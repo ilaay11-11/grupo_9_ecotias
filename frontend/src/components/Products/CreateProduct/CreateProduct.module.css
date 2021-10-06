@@ -1,5 +1,5 @@
 /* -------- Título -------- */
-main h2 {
+.mainCreateProduct h2 {
     text-align: center;
     margin: 12px 0;
 }
@@ -27,15 +27,20 @@ main h2 {
     width: 100%;
 }
 
-textarea {
+.createTextarea {
     height: 100px;
-}
-
-input, select {
-    height: 2.5rem;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 4px;
+    padding: 0 .55rem;
+    line-height: 1.5rem;
+    outline: 0;
+    border-radius: 10px;
+    border: 1px solid #4c8444;
 }
 
 .input_info {
+    height: 2.5rem;
     width: 100%;
     max-width: 600px;
     margin-top: 4px;

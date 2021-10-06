@@ -2,7 +2,7 @@ import styles from './CreateProduct.module.css';
 
 function CreateProduct() {
     return (
-        <main>
+        <main className={styles.mainCreateProduct}>
         <h2>Crear producto</h2>
         <form action="/productos/crear" method="POST" enctype="multipart/form-data">
             <div className={styles.crear_producto}>
@@ -60,7 +60,7 @@ function CreateProduct() {
                 <div className={styles.field}>
                     <label for="description">Descripción</label>
                     <div className={styles.control}>
-                        <textarea name="description" id="description" className={styles.input_info} required></textarea>
+                        <textarea name="description" id={styles.description} className={`${styles.createTextarea}`} required></textarea>
                         <div className={styles.textdanger} id="errores1">
                             <ul></ul>
                         </div>
