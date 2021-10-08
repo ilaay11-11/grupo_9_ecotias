@@ -1,17 +1,20 @@
 const express = require('express');
 const session = require('express-session');
+// Views routes
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const usersRoutes = require('./routes/usersRoutes');
+// API routes
+const productsRoutesAPI = require('./routes/API/productsRoutesAPI');
+const usersRoutesAPI = require('./routes/API/usersRoutesAPI');
+
 const methodOverride =  require('method-override');
 const cookies = require('cookie-parser');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
-
 // const logger = require('morgan');
 
 // App
 const app = express();
-
 
 const PORT = process.env.PORT || 5000;
 
@@ -33,10 +36,14 @@ app.use(methodOverride('_method')); // PUT & DELETE methods
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-// Routes
+// Views routes
 app.use('/', mainRoutes); // Main
 app.use('/usuarios', usersRoutes); // Users
 app.use('/productos', productsRoutes); // Products
+
+// API routes
+app.use('/api/usuarios', usersRoutesAPI); // Users
+app.use('/api/productos', productsRoutesAPI); // Products
 
 app.use((req, res, next) => res.render('users/not-found')); // Error view
 
