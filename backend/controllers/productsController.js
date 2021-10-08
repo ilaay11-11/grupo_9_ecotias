@@ -4,9 +4,17 @@ let db = require('../database/models');
 const productsController = {
     index: async (req, res) => {
         await db.Producto.findAll()
-        .then(function(products) {
-            res.render('products/products', {products: products});
-        });
+        .then(productos => {
+            let respuesta = {
+                meta: {
+                    status : 200,
+                    total: productos.length,
+                    url: 'productos'
+                },
+                data: productos
+            }
+                res.json(respuesta);
+            });
     },
     create: async (req, res) => {
         let categories = await db.Category.findAll();

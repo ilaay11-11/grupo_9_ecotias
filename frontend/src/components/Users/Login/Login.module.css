@@ -23,12 +23,12 @@
 /* -------- Bloque forms -------- */
 .login_forms a {
     text-decoration: none;
+    font-weight: 500;
     color:black;
 }
 
 .login_forms a:hover {
     text-decoration: underline;
-    font-weight: 500;
 }
 
 /* -------- Campos email y password -------- */

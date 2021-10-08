@@ -34,11 +34,11 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 // Routes
-app.use('/', mainRoutes); // Main
-app.use('/usuarios', usersRoutes); // Users
+// app.use('/', mainRoutes); // Main
+// app.use('/usuarios', usersRoutes); // Users
 app.use('/productos', productsRoutes); // Products
 
-app.use((req, res, next) => res.render('users/not-found')); // Error view
+// app.use((req, res, next) => res.render('users/not-found')); // Error view
 
 // Server
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));

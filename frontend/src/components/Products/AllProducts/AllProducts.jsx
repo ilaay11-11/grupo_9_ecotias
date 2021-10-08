@@ -1,24 +1,49 @@
 import styles from './ProductList.module.css';
+import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react'
 
 function AllProducts() {
+    const [ productos, setProductos ] = useState([]);
+
+    useEffect( () => {
+        console.log('%cSe montó el componente', 'color: green');
+        
+        fetch('http://localhost:5000/productos')
+        .then(res => res.json())
+        .then(data => {
+            setProductos(data.data)
+        })
+        .catch(err => console.log(err))
+    }, []);
+
+    useEffect( () => {
+        console.log('%cSe acutalizó el componente', 'color: yellow');
+    }, [productos]);
+
+    useEffect( () => {
+        return () => console.log('%cSe desmontó el componente', ' color: red');
+    }, []);
+
     return (
         <main className={styles.mainArea}>
         <h2>TODOS LOS PRODUCTOS</h2>
         <div className={styles.productList_all}>
-            {/* <% for(i=0; i < products.length; i++) {%> */}
-            <div className={styles.product_individual}>
-                {/* <a href="/productos/<%= products[i].id %>" className={styles.productLink}> */}
-                <a href="/productos/" className={styles.productLink}>
-                    <img src="/images/productImages/default.jpg" alt="producto"/>
-                    {/* <img src="/images/productImages/<%= products[i].image ? products[i].image : 'default.jpg' %>" alt="producto"> */}
-                    <p className={styles.product_name}>Nombre del producto</p>
-                    {/* <p className={styles.product_name}><%= products[i].name%> </p> */}
-                </a>
-                    <p className={styles.price}>$123.12</p>
-                    {/* <p className={styles.price}>$<%= products[i].price%> </p> */}
-                <button className={styles.addCartButton} type="submit">Agregar al carrito</button>
-            </div>
-            {/* <% } %> */}
+            { productos.length === 0 && <p><i class={`fas fa-spinner`}></i><br/>Cargando productos... </p> }
+            {
+                productos.map(producto => {
+                    return (
+                        <div className={styles.product_individual}>
+                            <Link to={"/productos/" + producto.id} className={styles.productLink}>
+                                {producto.image ==='' && <img src="/images/productImages/default.jpg" alt="avatar" width="150" />}
+                                {producto.image !=='' && <img src={"/images/productImages/"+producto.image} alt="avatar" width="150" />}
+                                <p className={styles.product_name}>{producto.name}</p>
+                            </Link>
+                            <p className={styles.price}>$ {producto.price}</p>
+                            <button className={styles.addCartButton} type="submit">Agregar al carrito</button>
+                        </div>
+                    )
+                })
+            }
         </div>
     </main>
     );

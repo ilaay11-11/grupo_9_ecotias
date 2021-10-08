@@ -1,11 +1,12 @@
 import styles from './ProductCart2.module.css'
+import { Link } from 'react-router-dom';
 
 function ProductCart() {
     return (
     <main>
             <div className={styles.titulopagina}>
                 <h1>CARRITO DE COMPRA</h1>
-                <a href="/productos">SEGUIR COMPRANDO</a>
+                <Link to="/productos">SEGUIR COMPRANDO</Link>
             </div>
             <div className={styles.titulotabla}>
                 <h4>PRODUCTO</h4>

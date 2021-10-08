@@ -1,4 +1,6 @@
-import styles from './Login.module.css'
+import styles from './Login.module.css';
+import { Link } from 'react-router-dom';
+
 function Login() {
     return (
         <main>
@@ -33,10 +35,10 @@ function Login() {
                             <input type="submit" value="Ingresar"/>
                         </p>
                         <p className={styles.login_forgotpwd}>
-                            <i className="far fa-question-circle"></i> <a href="#">¿Olvidaste tu contraseña?</a>
+                            <i className="far fa-question-circle"></i> <Link to="#">¿Olvidaste tu contraseña?</Link>
                         </p>
                         <p className={styles.login_noaccount}>
-                            <i className={`far fa-user-circle`}></i> <a href="/usuarios/register">¿No tienes una cuenta? Regístrate</a>
+                            <i className={`far fa-user-circle`}></i> <Link to="/usuarios/register">¿No tienes una cuenta? Regístrate</Link>
                         </p>
                     </form>
                 </div>

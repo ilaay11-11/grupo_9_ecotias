@@ -1,4 +1,5 @@
 import styles from './Register.module.css'
+import { Link } from 'react-router-dom';
 
 function Register() {
     return (
@@ -77,7 +78,7 @@ function Register() {
                 </div>
                 <div className={styles.aceptar}>
                     <input type="checkbox" />
-                    <p>He leído y acepto los <a className={styles.registerLink} href="#Terminos">Términos y condiciones</a> y el <a className={styles.registerLink} href="#Aviso">Aviso de privacidad</a></p>
+                    <p>He leído y acepto los <Link className={styles.registerLink} to="#Terminos">Términos y condiciones</Link> y el <Link className={styles.registerLink} to="#Aviso">Aviso de privacidad</Link></p>
                 </div>
                 <div className={styles.aceptar}>
                     <input type="checkbox"/>
@@ -87,7 +88,7 @@ function Register() {
                     <button type="submit" id={styles.b_r}>REGISTRAR</button>
                 </div>
                 <div id={styles.IS}>
-                    <p><a className={styles.registerLink} href="./login">¿Ya tienes cuenta? Inicia Sesión</a></p>
+                    <p><Link className={styles.registerLink} to="./login">¿Ya tienes cuenta? Inicia Sesión</Link></p>
                 </div>
             </form>
             

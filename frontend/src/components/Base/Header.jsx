@@ -1,7 +1,6 @@
 import styles from './BaseStyles.module.css';
 import {Link} from "react-router-dom";
 
-
 function Header() {
     return (
         <header>
@@ -34,8 +33,8 @@ function Header() {
             <input className={styles.checkboxNav} type="checkbox" id="show-nav" hidden />
                 <ul className={styles.menu_items}>
                     {/* <% if(locals.isLogged) {%>
-                    <li type="none"> <a id="loging_option" className="{styles.linkEffect}" href="/usuarios/profile"> <img src="/images/userImages/<%= locals.userLogged.image ? locals.userLogged.image : 'default.png' %>" width="25" height="25" style="border-radius: 100%;"> ¡Bienvenidx!, <%= locals.userLogged.first_name%></Link></li />
-                    <li type="none"> <a id="loging_option" className="{styles.linkEffect}" href="/usuarios/logout">Salir<i className="fas fa-sign-in-alt"></i></Link></li></li>
+                    <li type="none"> <Link id="loging_option" className="{styles.linkEffect}" to="/usuarios/profile"> <img src="/images/userImages/<%= locals.userLogged.image ? locals.userLogged.image : 'default.png' %>" width="25" height="25" style="border-radius: 100%;"> ¡Bienvenidx!, <%= locals.userLogged.first_name%></Link></li />
+                    <li type="none"> <Link id="loging_option" className="{styles.linkEffect}" to="/usuarios/logout">Salir<i className="fas fa-sign-in-alt"></i></Link></li></li>
                         <%} else {%>
                         <%}%> */}
                     <li type="none"><Link id={styles.loging_option} to="/usuarios/login"><i className={`fas fa-sign-in-alt`}></i> Registrate / Inicia sesión</Link></li>
@@ -57,8 +56,8 @@ function Header() {
                         <li type="none"><Link className={styles.linkEffect} to="/">INICIO</Link></li>
                         <li type="none"><Link className={styles.linkEffect} to="/productos">TIENDA</Link></li>
                         <li type="none"><Link className={styles.linkEffect} to="/productos/crear">CREAR</Link></li>
-                        <li type="none"><Link className={styles.linkEffect} to="#Blog">BLOG</Link></li>
-                        <li type="none"><Link className={styles.linkEffect} to="#Contact">CONTACTO</Link></li>
+                        <li type="none"><Link className={styles.linkEffect} to="/usuarios/edituser">BLOG</Link></li>
+                        <li type="none"><Link className={styles.linkEffect} to="/usuarios/profile">CONTACTO</Link></li>
                     </ul>
                 </nav>
                 <div>

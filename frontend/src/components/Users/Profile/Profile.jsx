@@ -1,4 +1,5 @@
 import styles from './Profile.module.css'
+import { Link } from 'react-router-dom';
 
 function Profile() {
     return(
@@ -24,7 +25,7 @@ function Profile() {
                 {/* <p><%= userProfile.email %></p> */}
             </div>
             <div className={styles.editar}>
-                <a href="/usuarios/edit">Editar Perfil</a>
+                <Link to="/usuarios/edit">Editar Perfil</Link>
             </div>
         </section>
     </main>

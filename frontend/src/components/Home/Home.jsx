@@ -1,4 +1,7 @@
 import styles from './Home.module.css';
+import { Link } from "react-router-dom";
+// import { useState, useEffect } from 'react'
+import IndividualProductbyCategory from '../Products/IndividualProductbyCategory/IndividualProductbyCategory';
 
 function Home() {
     return (
@@ -29,75 +32,13 @@ function Home() {
         <hr className={styles.separator_dots}/>
         <section className={styles.product_category}>
             <h2 className={styles.section_title}>PRODUCTOS DE LATÓN</h2>
-            <div className={styles.productList_all}>
-            <div className={styles.product_individual}>
-                    <a href="/productos/<%= brassProducts[i].id %>" className={styles.productLink}>
-                        <img src="/images/productImages/default.jpg" alt="producto"/>
-                        <p className={styles.product_name}>Nombre del producto </p>
-                    </a>
-                        <p className={styles.price}>$123.12</p>
-                    <button className={styles.addCartButton} type="submit">Agregar al carrito</button>
-                </div>
-            <div className={styles.product_individual}>
-                    <a href="/productos/<%= brassProducts[i].id %>" className={styles.productLink}>
-                        <img src="/images/productImages/default.jpg" alt="producto"/>
-                        <p className={styles.product_name}>Nombre del producto </p>
-                    </a>
-                        <p className={styles.price}>$123.12</p>
-                    <button className={styles.addCartButton} type="submit">Agregar al carrito</button>
-                </div>
-            <div className={styles.product_individual}>
-                    <a href="/productos/<%= brassProducts[i].id %>" className={styles.productLink}>
-                        <img src="/images/productImages/default.jpg" alt="producto"/>
-                        <p className={styles.product_name}>Nombre del producto </p>
-                    </a>
-                        <p className={styles.price}>$123.12</p>
-                    <button className={styles.addCartButton} type="submit">Agregar al carrito</button>
-                </div>
-            <div className={styles.product_individual}>
-                    <a href="/productos/<%= brassProducts[i].id %>" className={styles.productLink}>
-                        <img src="/images/productImages/default.jpg" alt="producto"/>
-                        <p className={styles.product_name}>Nombre del producto </p>
-                    </a>
-                        <p className={styles.price}>$123.12</p>
-                    <button className={styles.addCartButton} type="submit">Agregar al carrito</button>
-                </div>
-            <div className={styles.product_individual}>
-                    <a href="/productos/<%= brassProducts[i].id %>" className={styles.productLink}>
-                        <img src="/images/productImages/default.jpg" alt="producto"/>
-                        <p className={styles.product_name}>Nombre del producto </p>
-                    </a>
-                        <p className={styles.price}>$123.12</p>
-                    <button className={styles.addCartButton} type="submit">Agregar al carrito</button>
-                </div>
-                {/* <% for(i=0; i < brassProducts.length; i++) {%>
-                <div className="product_individual">
-                    <a href="/productos/<%= brassProducts[i].id %>" className="productLink">
-                        <img src="/images/productImages/<%= brassProducts[i].image ? brassProducts[i].image : 'default.jpg' %> " alt="producto">
-                        <p className="product_name"><%= brassProducts[i].name%> </p>
-                    </a>
-                        <p className="price">$<%= brassProducts[i].price%> </p>
-                    <button className="addCartButton" type="submit">Agregar al carrito</button>
-                </div>
-                <% } %> */}
-            </div>
+            <IndividualProductbyCategory id='4' />
         </section>
         <br/>
         <hr className={styles.separator_dots}/>
         <section className={styles.product_category}>
             <h2 className={styles.section_title}>PRODUCTOS DE ACERO</h2>
-            <div className={styles.productList_all}>
-                {/* <% for(i=0; i < steelProducts.length; i++) {%>
-                <div className="product_individual">
-                    <a href="/productos/<%= steelProducts[i].id %>" className="productLink">
-                        <img src="/images/productImages/<%= steelProducts[i].image ? steelProducts[i].image : 'default.jpg' %>" alt="producto">
-                        <p className="product_name"><%= steelProducts[i].name%> </p>
-                    </a>
-                        <p className="price">$<%= steelProducts[i].price%> </p>
-                    <button className="addCartButton" type="submit">Agregar al carrito</button>
-                </div>
-                <% } %> */}
-            </div>
+            <IndividualProductbyCategory id='6' />
         </section>
         <section className={styles.section_newsletter_home}>
             <div className={styles.newsletter_img}>
@@ -113,18 +54,7 @@ function Home() {
         </section>
         <section className={styles.product_category}>
             <h2 className={styles.section_title}>PRODUCTOS DE GRANITO</h2>
-            <div className={styles.productList_all}>
-                {/* <% for(i=0; i < graniteProducts.length; i++) {%>
-                <div className="product_individual">
-                    <a href="/productos/<%= graniteProducts[i].id %>" className="productLink">
-                        <img src="/images/productImages/<%= graniteProducts[i].image ? graniteProducts[i].image : 'default.jpg' %>" alt="producto">
-                        <p className="product_name"><%= graniteProducts[i].name%> </p>
-                    </a>
-                        <p className="price">$<%= graniteProducts[i].price%> </p>
-                    <button className="addCartButton" type="submit">Agregar al carrito</button>
-                </div>
-                <% } %> */}
-            </div>
+            <IndividualProductbyCategory id='1' />
         </section>
         <hr className={styles.separator_dots}/>
         <br/>
@@ -132,19 +62,19 @@ function Home() {
             <h2 className={styles.section_title}>¡VISITA NUESTRO BLOG!</h2>
             <div className={styles.latest_blogposts}>
                 <div className={styles.entradaBlog}>
-                    <a href="#"><img src="/images/blogimg_example.jpg" alt="producto"/></a>
+                    <Link to="#"><img src="/images/blogimg_example.jpg" alt="producto"/></Link>
                     <h3>Entrada del blog</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#" className={styles.blogLink}>[Leer más...]</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <Link to="#" className={styles.blogLink}>[Leer más...]</Link></p>
                 </div>
                 <div className={styles.entradaBlog}>
-                    <a href="#"><img src="/images/blogimg_example.jpg" alt="producto"/></a>
+                    <Link to="#"><img src="/images/blogimg_example.jpg" alt="producto"/></Link>
                     <h3>Entrada del blog</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#" className={styles.blogLink}>[Leer más...]</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <Link to="#" className={styles.blogLink}>[Leer más...]</Link></p>
                 </div>
                 <div className={styles.entradaBlog}>
-                    <a href="#"><img src="/images/blogimg_example.jpg" alt="producto"/></a>
+                    <Link to="#"><img src="/images/blogimg_example.jpg" alt="producto"/></Link>
                     <h3>Entrada del blog</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#" className={styles.blogLink}>[Leer más...]</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <Link to="#" className={styles.blogLink}>[Leer más...]</Link></p>
                 </div>
             </div>
         </section>

@@ -29,10 +29,10 @@ function App() {
         <Route exact path="/usuarios/edituser" component={EditUser} />
         <Route exact path="/usuarios/profile" component={Profile} />
         
-        <Route exact path="/productos/products" component={AllProducts} />
-        <Route exact path="/productos/create" component={createProduct} />
-        <Route exact path="/productos/editProduct" component={EditProduct} />
-        <Route exact path="/productos/productDetail" component={ProductDetail} />
+        <Route exact path="/productos" component={AllProducts} />
+        <Route exact path="/productos/crear" component={createProduct} />
+        <Route exact path="/productos/editar/:id" component={EditProduct} />
+        <Route exact path="/productos/:id" component={ProductDetail} />
         {/* <Route exact path="/usuarios/productCart" component={ProductCart} /> */}
         <Route component={NotFound} />
       </Switch>

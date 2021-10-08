@@ -1,4 +1,5 @@
 import styles from './BaseStyles.module.css';
+import {Link} from "react-router-dom";
 
 function Footer() {
     return (
@@ -6,46 +7,46 @@ function Footer() {
             <div className={styles.section1}>
                 <h3 className={styles.headH3}>Síguenos</h3>
                 <div className={styles.content__footer_follow_icons}>
-                    <a href="#"><i className={`${styles.foot_icon_follow} ${styles.footerFacebookicon} fab fa-facebook-f`}></i></a>
-                    <a href="#"><i className={`${styles.foot_icon_follow} ${styles.footerInstagramicon} fab fa-instagram`}></i></a>
-                    <a href="#"><i className={`${styles.foot_icon_follow} ${styles.footerTwittericon} fab fa-twitter`}></i></a>
+                    <Link to="#"><i className={`${styles.foot_icon_follow} ${styles.footerFacebookicon} fab fa-facebook-f`}></i></Link>
+                    <Link to="#"><i className={`${styles.foot_icon_follow} ${styles.footerInstagramicon} fab fa-instagram`}></i></Link>
+                    <Link to="#"><i className={`${styles.foot_icon_follow} ${styles.footerTwittericon} fab fa-twitter`}></i></Link>
                 </div>
             </div>
             <div className={styles.section2}>
                 <h3 className={styles.headH3}>Formas de pago</h3>
                 <div className={styles.content__footer_payment_icons}>
-                    <a href="#"><i className={`${styles.foot_icon_payment} fab fa-cc-paypal`}></i></a>
-                    <a href="#"><i className={`${styles.foot_icon_payment} fab fa-cc-visa`}></i></a>
-                    <a href="#"><i className={`${styles.foot_icon_payment} fab fa-cc-mastercard`}></i></a>
-                    <a href="#"><i className={`${styles.foot_icon_payment} fab fa-cc-stripe`}></i></a>
-                    <a href="#"><i className={`${styles.foot_icon_payment} fab fa-cc-amex`}></i></a>
+                    <Link to="#"><i className={`${styles.foot_icon_payment} fab fa-cc-paypal`}></i></Link>
+                    <Link to="#"><i className={`${styles.foot_icon_payment} fab fa-cc-visa`}></i></Link>
+                    <Link to="#"><i className={`${styles.foot_icon_payment} fab fa-cc-mastercard`}></i></Link>
+                    <Link to="#"><i className={`${styles.foot_icon_payment} fab fa-cc-stripe`}></i></Link>
+                    <Link to="#"><i className={`${styles.foot_icon_payment} fab fa-cc-amex`}></i></Link>
                 </div>
             </div>
             <div className={styles.section2a}>
-                <a href="#">Home</a>
-                <a href="#">Tienda</a>
-                <a href="#">Nosotros</a>
-                <a href="#">Blog</a>
-                <a href="#">Contacto</a>
+                <Link to="/">Home</Link>
+                <Link to="/productos">Tienda</Link>
+                <Link to="#AboutUs">Nosotros</Link>
+                <Link to="#Blog">Blog</Link>
+                <Link to="#Contacto">Contacto</Link>
             </div>
             <div className={styles.section3}>
-                <a href="#"><img className={styles.logoFooter} src="/images/logo.png" alt="logo"/></a>
+                <Link to="/"><img className={styles.logoFooter} src="/images/logo.png" alt="logo"/></Link>
                 <p>© Eco-tías 2021 🌱</p>
             </div>
             <div className={styles.section4}>
                 <h3 className={styles.headH3}>Enlaces rápidos</h3>
                 <div className={styles.content__footer_links}>
-                    <a href="#" className={styles.linkEffect}>Categoría uno</a>
-                    <a href="#" className={styles.linkEffect}>Categoría dos</a>
-                    <a href="#" className={styles.linkEffect}>Categoría tres</a>
+                    <Link to="/productos" className={styles.linkEffect}>Tienda</Link>
+                    <Link to="/productos/crear" className={styles.linkEffect}>Crear producto</Link>
+                    <Link to="/usuarios/register" className={styles.linkEffect}>Regístrate</Link>
                 </div>
             </div>
             <div className={styles.section5}>
                 <h3 className={styles.headH3}>Información</h3>
                 <div className={styles.content__footer_links}>
-                    <a href="#" className={styles.linkEffect}>Aviso de privacidad</a>
-                    <a href="#" className={styles.linkEffect}>Formas de envío</a>
-                    <a href="#" className={styles.linkEffect}>Políticas de compra</a>
+                    <Link to="#" className={styles.linkEffect}>Aviso de privacidad</Link>
+                    <Link to="#" className={styles.linkEffect}>Formas de envío</Link>
+                    <Link to="#" className={styles.linkEffect}>Políticas de compra</Link>
                 </div>
             </div>
         </footer>
