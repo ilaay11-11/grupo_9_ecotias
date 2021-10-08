@@ -1,0 +1,126 @@
+/* -------- Oculta img banner (vista completa) -------- */
+.login_banner {
+    display: none;
+}
+
+/* -------- Errores -------- */
+.text-danger{
+    color: red;
+}
+
+/* -------- Bloque login -------- */
+.login_content_essential {
+    display: block;
+    padding: 12px;
+}
+
+/* -------- Titulo h2 -------- */
+.login_tittle h2 {
+    text-align: center;
+    padding: 8px 0;
+}
+
+/* -------- Bloque forms -------- */
+.login_forms a {
+    text-decoration: none;
+    color:black;
+}
+
+.login_forms a:hover {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* -------- Campos email y password -------- */
+.login_email_p, .login_password_p {
+    padding-top: 8px;
+}
+
+.login_input {
+    display: block;
+    margin: 0.25rem 0;
+    font-size: 0.97rem;
+    /* padding: 0 16px; */
+    padding: 0.75rem;
+    border-radius: 99px;
+    border: 1px solid #4c8444;
+    height: 2.5rem;
+    width: 100%;
+}
+
+/* -------- Checkbox recuerdame -------- */
+.login_recuerdame {
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+
+/* -------- Botón ingresar -------- */
+.login_ingresar_boton {
+    margin: 8px 0;
+    text-align: center;
+}
+
+.login_ingresar_boton input {
+    padding: 0 1.2em;
+    border: 1px solid transparent;
+    border-radius: 99px;
+    min-height: 2.3rem;
+    max-width: 100%;
+    background-color: #52a046;
+    color: white;
+    font-weight: 500;
+}
+
+.login_ingresar_boton input:hover {
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* -------- Password perdida y registrar -------- */
+
+.login_forgotpwd{
+    margin-top: 16px; 
+}
+
+.login_noaccount {
+    margin: 12px 0; 
+}
+
+/* -------------------- MEDIA QUERY 768px -------------------- */
+@media (min-width: 768px) {
+/* -------- Bloque login -------- */
+    .login_content_essential {
+        padding: 0 100px;
+    }
+
+/* -------- Botón ingresar -------- */
+    .login_ingresar_boton input {
+        font-size: 16px;
+        min-height: 2.8rem;
+        width: 24%;
+    }
+}
+
+/* -------------------- MEDIA QUERY 1024px -------------------- */
+@media (min-width: 1024px) {
+/* -------- Bloque general -------- */
+    .login_content_full {
+        display: flex;
+        justify-content: center;
+    }
+
+/* -------- Bloque img banner -------- */
+    .login_banner {
+        padding: 20px 5%;
+        display: block;
+    }
+
+/* -------- Bloque login -------- */
+    .login_content_essential {
+        padding: 20px 5%;
+    }
+/* -------- Botón ingresar -------- */
+    .login_ingresar_boton input {
+        width: 40%;
+    }
+}

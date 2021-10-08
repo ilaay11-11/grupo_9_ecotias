@@ -1,0 +1,282 @@
+/*BACKGROUND EXCLUSIVO PARA REGISTER*/
+body{
+    background-image: url('https://i.pinimg.com/564x/8e/e1/dd/8ee1dd5c57373a4d3c131077a4505e93.jpg');
+    background-repeat: round;
+}
+/*BANNER*/
+.signup_banner{
+    display: none;
+}
+
+/* -------- Errores -------- */
+.text-danger {
+    color: red;
+    font-size: .9rem;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.is-invalid {
+    border: 1px solid #dc3545 !important;
+}
+
+.errores {
+    color: white;
+}
+
+/* IMAGEN USUARIO */
+#user_img{
+    position:relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+#photo{
+    filter: opacity(60%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#user-image{
+    display: none;
+       
+}
+#choose{
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    line-height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    
+}
+/*CAMPOS A LLENAR DEL FORMULARIO*/
+.register_essential{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background:  rgba(255,255,255, 0.3);
+    border-radius: 1rem;
+    /*z-index: 2;*/
+    backdrop-filter: blur(11px) saturate(100%) contrast(48%) brightness(120%);;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+    
+    
+    margin: 8% 8%;
+    
+    
+    
+
+}
+.campos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    outline:olivedrab;
+    
+    
+}
+
+.c {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.campos input{
+    width: 100%;
+    height: 33px;
+    border-radius: 30px;
+    border: 1px solid #4c8444;
+    padding-left: 12px;
+}
+#password{
+    display: flex;
+}
+#password button{
+    border: 1px solid #4c8444;
+    border-radius: 99px;
+    background-color: white;
+    width: 33px;
+    
+
+}
+#password input{
+
+    
+    width: 71vw;
+    height: 33px;
+    
+}
+
+.campos input:focus{
+    border-width:medium;
+    border-radius: 99px;
+    border: solid #4c8444;
+
+}
+/*REQUERIMIENTOS PARA LA CONTRASEÑA*/
+#p-caract p{
+    font-size: 9px;
+    transform: translateX(-23vw);
+}
+/*ENLACES*/
+a{
+    text-decoration: none;
+    color: rgba(rgb(27, 150, 48));
+}
+/*APARTADO ACEPTAR TÉRMINOS Y CONDICIONES*/
+.aceptar{
+    display: flex;
+    font-size: 10px;
+    gap: 4px;
+    margin-top: 18px;
+    align-items: center;
+    
+    
+}
+.aceptar input{
+    width: 18px;
+}
+/*BOTÓN REGISTRAR*/
+#button-registrar{
+    display: flex;
+    justify-content: center;
+    
+    padding: 8px;
+    
+    
+    color: black;
+}
+#b-r{
+    padding: 0 1.2em;
+    border: 1px solid transparent;
+    border-radius: 99px;
+    min-height: 2.3rem;
+    max-width: 100%;
+    background-color: #52a046;
+    color: white;
+    font-weight: 500;
+}
+
+#b-r:hover {
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/*APARTADO PARA INICIAR SESIÓN*/
+#IS{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    text-align: center;
+    font-size: 14px;
+}
+
+#IS p a {
+    color: white;
+}
+
+#IS p a:hover {
+    text-decoration: underline;
+}
+.errores{
+    background-color:#5cb14f;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*PANTALLA 768px*/
+@media (min-width: 768px){
+    .aceptar{
+        justify-content: center;
+        font-size: 14px;
+
+    }
+    #password input{
+        width:75vw;
+    }
+
+
+    #IS{
+        font-size: 16px;
+    }
+
+    #p-caract{
+        position: relative;
+        right: 50px;
+        font-size: 10px;
+    }
+    #user_img{
+        position:relative;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        overflow: hidden;
+                
+    }
+    
+}
+
+
+/*PANTALLA 1024px*/
+@media (min-width: 1024px){
+    .register_essential{
+        width: 57vw;
+        left: 15%;
+    }
+    
+    .c{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 550px;
+    }
+    #password{
+        width: 543px;
+    }
+    #password button{
+        width: 50px;
+    }
+    #p-caract{
+        position: relative;
+        right: -3vw;
+        font-size: 10px;
+    }
+    #user_img{
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+    }
+    
+}
+
+@media (min-width: 1280px){
+    #p-caract{
+        right: -7vw;
+    }
+
+    #p-caract p{
+        font-size: 9px;
+        transform: translateX(-17vw);
+    }
+    #user_img{
+        width: 225px;
+        height: 225px;
+        border-radius: 50%; 
+        
+    }
+}

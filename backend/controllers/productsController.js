@@ -19,7 +19,7 @@ const productsController = {
     },
     store: async (req, res) => {
         const resultValidation = validationResult(req);
-        // console.log(resultValidation);
+        console.log(resultValidation);
 		if (resultValidation.errors.length > 0) {
 
             let categories = await db.Category.findAll();

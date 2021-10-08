@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>Profile</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <section class="glass">
+            <div>
+                <img src="/images/userImages/<%= userProfile.image ? userProfile.image : 'default.png' %>" class="user-image">
+            </div>
+            <div>
+                <h2>Mi perfil</h2>
+            </div>
+            <div class="datos">
+                <h4>Nombre</h4>
+                <p><%= userProfile.name %></p>
+
+                <h4>Apellido(s)</h4>
+                <p><%= userProfile.last_name %></p>
+
+                <h4>Email:</h4>
+                <p><%= userProfile.email %></p>
+            </div>
+            <div class="editar">
+                <a href="/usuarios/<%= userProfile.id %>/edit">Editar Perfil</a>
+            </div>
+            <!--<div class="left">
+                <div class="user">
+                
+                    <h2>Hola, <%= userProfile.first_name %></h2>
+                    
+                </div>
+                <div class="sections">
+                    <div><a href="#" class="link" id="mi-info">Mi información</a> </div>
+                    <div ><a href="#" class="link">Mis pedidos</a></div>
+                    <div><a href="#" class="link">Configuración</a></div>
+                </div>  
+            </div>
+            <div class="right">
+                <div class="info">
+                    <div><img class="imagen"src="/images/userImages/<%= userProfile.image ? userProfile.image : 'default.png' %>"></div>
+                    <div>Nombre: <%= userProfile.first_name %></div>
+                    <div>Apellido(s): <%= userProfile.last_name %></div>
+                    <div>Email principal: <%= userProfile.email %></div>                    
+                </div>
+                <div>
+                    <a href="/usuarios/<%= userProfile.id %>/edit">Editar Usuario</a>
+                </div>                
+            </div>-->
+            
+            
+        </section>
+        
+        
+    </main>
+
+
+
+
+    <%- include('../partials/footer') %>
+</body>
