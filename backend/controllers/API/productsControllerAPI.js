@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const { QueryInterface } = require('sequelize/types');
+// const { QueryInterface } = require('sequelize/types');
 const { sequelize, Sequelize } = require('../../database/models/');
 let db = require('../../database/models/');
 
@@ -99,7 +99,7 @@ const productsControllerAPI = {
                     name: req.body.name,
                     description: req.body.description,
                     image: req.file.filename,
-
+                    category_id: req.body.category,
                     price: req.body.price,
                     maker_id: req.body.maker
                 });

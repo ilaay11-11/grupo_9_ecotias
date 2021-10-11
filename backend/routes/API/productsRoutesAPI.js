@@ -12,7 +12,7 @@ router.get('/', productsControllerAPI.index); // MUESTRA LISTA PRODUCTOS
 
 /*** CREATE ONE PRODUCT ***/
 //router.get('/crear', productsControllerAPI.create); // MUESTRA FORMULARIO DE CREACIÓN DE PRODUCTO
-//router.post('/crear', uploadUserImage.single('product_image'), validationProductsMiddleware, productsControllerAPI.store); // ENVÍA INFO DE CREACIÓN DE PRODUCTO
+router.post('/crear', uploadUserImage.single('product_image'), validationProductsMiddleware, productsControllerAPI.store); // ENVÍA INFO DE CREACIÓN DE PRODUCTO
 
 // /*** GET ONE PRODUCT ***/
 //router.get('/:id', productsControllerAPI.detail); // MUESTRA DETALLE DE PRODUCTO
