@@ -42,8 +42,8 @@ app.set('views', './views');
 app.use('/productos', productsRoutes); // Products */
 
 // API routes
-app.use('/api/usuarios', usersRoutesAPI); // Users
-//app.use('/api/productos', productsRoutesAPI); // Products
+//app.use('/api/usuarios', usersRoutesAPI); // Users
+app.use('/api/productos', productsRoutesAPI); // Products
 
 //app.use((req, res, next) => res.render('users/not-found')); // Error view
 
