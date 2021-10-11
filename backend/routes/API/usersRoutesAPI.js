@@ -13,19 +13,21 @@ const usersControllerAPI = require('../../controllers/API/usersControllerAPI');
 // router.get('/', usersControllerAPI.index); // MUESTRA LISTA DE USUARIOS
 
 /*** CREATE ONE USER ***/
-router.get('/register',guestMiddleware, usersControllerAPI.create); // MUESTRA FORMULARIO DE REGISTRO
-router.post('/', uploadUserImage.single('userImage'), validationRegisterMiddleware, usersControllerAPI.store); // ENVÍA INFO DE FORMULARIO DE REGISTRO
+router.get("/", usersControllerAPI.listado);
+router.get("/:id", usersControllerAPI.detaile);
+//router.get('/register',guestMiddleware, usersControllerAPI.create); // MUESTRA FORMULARIO DE REGISTRO
+router.post('/register', uploadUserImage.single('userImage'), validationRegisterMiddleware, usersControllerAPI.store); // ENVÍA INFO DE FORMULARIO DE REGISTRO
 
 // Formulario de login
-router.get('/login', guestMiddleware, usersControllerAPI.login);
+/* router.get('/login', guestMiddleware, usersControllerAPI.login);
 router.post('/login',usersControllerAPI.loginProcces);
-router.get('/logout',usersControllerAPI.logout);
+router.get('/logout',usersControllerAPI.logout); */
 
 /*** GET ONE USER ***/
-router.get('/profile', authMiddleware, usersControllerAPI.detail); // MUESTRA PERFIL DE USUARIO
+//router.get('/profile', authMiddleware, usersControllerAPI.detail); // MUESTRA PERFIL DE USUARIO
 
 /*** EDIT ONE USER ***/
-router.get('/:id/edit', authMiddleware, usersControllerAPI.edit); // MUESTRA FORMULARIO DE EDICIÓN DE USUARIO
+//router.get('/:id/edit', authMiddleware, usersControllerAPI.edit); // MUESTRA FORMULARIO DE EDICIÓN DE USUARIO
 router.put('/:id', uploadUserImage.single('newUserimage'), usersControllerAPI.update); // RUTA POR LA QUE VIAJAN LOS DATOS DE EDICIÓN DE USUARIO
 
 /*** DELETE ONE USER***/

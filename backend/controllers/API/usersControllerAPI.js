@@ -3,39 +3,45 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 // const User = require('../models/User');
 let db = require('../../database/models/');
+const Usuario = require('../../database/models/Usuario');
 
 const usersControllerAPI = {
     // index: (req, res) => res.render('users/index'),
-    create: (req, res) => res.render('users/register'),
+    //create: (req, res) => res.render('users/register'),
     store:  async (req, res) => {
-        const resultValidation = validationResult(req);
-        console.log(resultValidation);
-		if (resultValidation.errors.length > 0) {
-			return res.render('users/register', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		};
-            if(req.file) {
-                await db.Usuario.create({
-                    name: req.body.first_name,
-                    last_name: req.body.last_name,
-                    image: req.file.filename,
-                    email: req.body.email,
-                    password: req.body.password
-                    // password: bcrypt.hashSync(req.body.password, 10)
-                });
-            } else {
-                await db.Usuario.create({
-                    name: req.body.first_name,
+        db.Usuario.create(
+            {
+                    name: req.body.name,
                     last_name: req.body.last_name,
                     email: req.body.email,
-                    password: req.body.password
-                    // password: bcrypt.hashSync(req.body.password, 10)
-                });
-            };
-
-        res.redirect('/usuarios/login');
+                    password: bcrypt.hashSync(req.body.password,5),
+                    image: req.body.image
+            }
+        )
+        .then(confirm => {
+            let respuesta;
+            if(confirm){
+                respuesta ={
+                    meta: {
+                        status: 200,
+                        total: confirm.length,
+                        url: '/api/usuarios/register'
+                    },
+                    data:confirm
+                }
+            }else{
+                respuesta ={
+                    meta: {
+                        status: 200,
+                        total: confirm.length,
+                        url: '/api/usuarios/register'
+                    },
+                    data:confirm
+                }
+            }
+            res.json(respuesta);
+        })
+        .catch(error => res.send(error))
     },
     edit: async (req, res) => {
         const userId = parseInt(req.params.id);
@@ -52,43 +58,64 @@ const usersControllerAPI = {
 		});
     },
     update: async (req, res) => {
-        if(req.file) {
-            await db.Usuario.update({
-                name: req.body.first_name,
-                last_name: req.body.last_name,
-                image: req.file.filename,
-                email: req.body.email,
-                password: req.body.password
-                // password: bcrypt.hashSync(req.body.password, 10)
-            }, {
-                where: {
-                    id: req.params.id
-                }
-            });
-        } else {
-            await db.Usuario.update({
-                name: req.body.first_name,
+        let usuarioId = req.params.id;
+        db.Usuario.update(
+            {
+                name: req.body.name,
                 last_name: req.body.last_name,
                 email: req.body.email,
-                password: req.body.password
-                // password: bcrypt.hashSync(req.body.password, 10)
-            }, {
-                where: {
-                    id: req.params.id
+                password: bcrypt.hashSync(req.body.password,5),
+                image: req.body.image
+            },
+            {
+                where: {id: usuarioId}
+        })
+        .then(confirm => {
+            let respuesta;
+            if(confirm){
+                respuesta ={
+                    status: 200,
+                    total: confirm.length,
+                    url: '/api/usuarios',
+                    data:confirm
                 }
-            });
-        };
-        res.redirect('profile');
+            }else{
+                respuesta ={
+                    status: 204,
+                    total: confirm.length,
+                    url: '/api/usuarios',
+                    data:confirm
+                }
+            }
+            res.json(respuesta);
+        })    
+        .catch(error => res.send(error))
 
     },
     destroy: (req, res) => {
-        db.Usuario.destroy({
-            where: {
-                id: req.params.id
+        let usuarioId = req.params.id;
+        
+        db.Usuario.destroy({where: {id: usuarioId}, force: true}) 
+        .then(confirm => {
+            let respuesta;
+            if(confirm){
+                respuesta ={
+                        status: 200,
+                        total: confirm.length,
+                        url: '/api/usuarios' ,
+                        data:confirm
+                }
+            }else{
+                respuesta ={
+                        status: 204,
+                        total: confirm.length,
+                        url: '/api/usuarios',
+                        data:confirm
+                }
             }
-        });
-        res.redirect('/');
-
+            res.json(respuesta);
+        })    
+        .catch(error => res.send(error))
     },
     login: (req, res) => {
         return res.render('users/login')
@@ -136,7 +163,49 @@ const usersControllerAPI = {
         res.clearCookie('userActive');
 		req.session.destroy();
 		return res.redirect('/');
-	}
+	},
+    'listado': (req, res) => {
+        db.Usuario.findAll()
+        .then(usuario => {
+            let datas= [];
+            for(let i=0; i<usuario.length; i++){
+            let respuesta = {
+                id: usuario[i].id,
+                name: usuario[i].name,
+                last_name: usuario[i].last_name,
+                email: usuario[i].email,
+                detail: '/api/usuarios/' + usuario[i].id
+            };
+            datas.push(respuesta)
+            }
+            let adata = {
+                
+                count: usuario.length,
+                url: '/api/usuarios',
+                status: 200,
+                users: datas
+            }
+                res.json(adata);
+            })
+    },
+    'detaile': (req, res) => {
+        db.Usuario.findByPk(req.params.id)
+            .then(usuario => {
+                let respuesta = {
+                    url: '/api/usuarios/' + req.params.id,
+                    data: {
+                        id: usuario.id,
+                        name: usuario.name,
+                        last_name: usuario.last_name,
+                        email: usuario.email,
+                        //password: bcrypt.hashSync(usuario.password,10),
+                        imagen: usuario.image,
+                        result: usuario.length 
+                    }
+                }
+                res.json(respuesta)
+        })
+    }
 }
 
 module.exports = usersControllerAPI;
