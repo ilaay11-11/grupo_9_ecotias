@@ -48,13 +48,14 @@ const usersController = {
             userToEdit ? res.render('users/editUser', {userToEdit}) : res.render("users/not-found");
         })
     },
-    detail: (req, res) => {
+    detail: async (req, res) => {
         // console.log(req.cookies.userActive);
         return res.render('users/profile', {
 			userProfile: req.session.userLogged
 		});
     },
     update: async (req, res) => {
+        console.log(req.file);
         if(req.file) {
             await db.Usuario.update({
                 name: req.body.first_name,
@@ -129,7 +130,7 @@ const usersController = {
             })
         }
 
-        db.Usuario.findOne({where: {email: req.body.email}})
+        await db.Usuario.findOne({where: {email: req.body.email}})
         .then(user => {
             validateLogin(user);
         })
