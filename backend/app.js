@@ -37,7 +37,7 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 // Views routes
-//app.use('/', mainRoutes); // Main
+app.use('/', mainRoutes); // Main
 /* app.use('/usuarios', usersRoutes); // Users
 app.use('/productos', productsRoutes); // Products */
 
