@@ -37,12 +37,12 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 // Views routes
-//app.use('/', mainRoutes); // Main
+app.use('/', mainRoutes); // Main
 /* app.use('/usuarios', usersRoutes); // Users
 app.use('/productos', productsRoutes); // Products */
 
 // API routes
-//app.use('/api/usuarios', usersRoutesAPI); // Users
+app.use('/api/usuarios', usersRoutesAPI); // Users
 app.use('/api/productos', productsRoutesAPI); // Products
 
 //app.use((req, res, next) => res.render('users/not-found')); // Error view
