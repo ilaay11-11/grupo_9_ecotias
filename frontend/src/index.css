@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+.Pdisp{
+  display: flex;
+  flex-direction: column;
+  background-color: #CFE378;
+  border-radius: 10px;
+}
+.Pdisp h3{
+  text-align: center;
+}
+.Pdisp h4{
+  text-align: center;
+}
+.categories{
+  background-color: #FADE91;
+  border-radius: 10px;
+}
+.lastProduct{
+  background-color: #F59D71;
+  border-radius: 10px;
+}
+.TotalC{
+  background-color: #D1387D;
+  border-radius: 10px;
+}
+.TotalP{
+  background-color: #2B6339;
+  border-radius: 10px;
+}
+.TotalU{
+  background-color: #D6BBF2;
+}
+.LastU{
+  background-color: #D5DCF2;
+
+}
+.nav{
+  display: flex;
+  background-color: #A5F2B0;
+}
+.nav h2{
+  font-style:oblique;
 }
