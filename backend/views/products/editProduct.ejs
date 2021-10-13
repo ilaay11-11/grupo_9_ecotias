@@ -17,7 +17,7 @@
                     <label for="name">Nombre</label>
                     <div class="control">
                         <input type="text" name="name" class="input_info nombre" placeholder="Ej: Omeprazole"
-                            value="<%= product.name %>">
+                            value="<%= product.name %>" required>
                             <div class="errores text-danger">
                                 <ul></ul>
                             </div>
@@ -31,7 +31,7 @@
                 <div class="field order2">
                     <label for="category">Categoría</label>
                     <div class="control">
-                        <select name="category">
+                        <select name="category" class="select_info">
                             <% for( let i = 0; i < categories.length; i++ ) { %>
                                 <% if (categories[i].id == product.category_id) { %>
                                     <option value="<%= categories[i].id %>" selected>
@@ -49,7 +49,7 @@
                 <div class="field order3">
                     <label for="maker">Fabricante</label>
                     <div class="control">
-                        <select name="maker">
+                        <select name="maker" class="select_info">
                             <% for( let i = 0; i < makers.length; i++ ) { %>
                                 <% if (makers[i].id == product.maker_id) { %>
                                     <option value="<%= makers[i].id %>" selected>
@@ -67,7 +67,7 @@
                 <div class="field order4">
                     <label for="price">Precio</label>
                     <div class="control">
-                        <input type="number" name="price" class="input_info precio" placeholder="Ej: 750" value="<%= product.price %>">
+                        <input type="number" name="price" class="input_info precio" placeholder="Ej: 750" step=".01" value="<%= product.price %>" required>
                         <div class="errores1 text-danger">
                             <ul></ul>
                         </div>
@@ -81,7 +81,7 @@
                 <div class="field order6">
                     <label for="description">Descripción</label>
                     <div class="control">
-                        <textarea name="description" id="descripcion" class="input_info" value="<%= product.description %>"></textarea>
+                        <textarea name="description" id="descripcion" class="input_info" required><%= product.description %></textarea>
                         <div class="errores2 text-danger">
                             <ul></ul>
                         </div>

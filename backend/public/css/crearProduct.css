@@ -6,6 +6,7 @@ main h2 {
 .text-danger{
     color: red;
     font-size: small;
+    font-weight: 500;
 }
 
 /* -------- Área principal -------- */

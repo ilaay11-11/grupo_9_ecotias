@@ -1,8 +1,8 @@
-window.addEventListener('load', function(){
-    let nombre = document.querySelector('#nombre');
-    let descripcion = document.querySelector('#description');
-    let img = document.querySelector('#product_image');
-    let formulario = document.querySelector('form');
+window.addEventListener('load', function() {
+    const nombre = document.querySelector('#nombre');
+    const descripcion = document.querySelector('#description');
+    const img = document.querySelector('#product_image');
+    const formulario = document.querySelector('form');
     
 
     formulario.onsubmit = (event)=>{
@@ -41,11 +41,9 @@ window.addEventListener('load', function(){
             let ulErrores = document.querySelector(".errores ul");
             let ulErrores1 = document.querySelector(".errores1 ul");
             let ulErrores2 = document.querySelector(".errores2 ul");
-            // let ulErrores3 = document.querySelector(".errores3 ul");
             ulErrores.innerHTML = errores[0]; 
             ulErrores1.innerHTML = errores[1];   
-            ulErrores2.innerHTML = errores[2];  
-            // ulErrores3.innerHTML = errores[3];
+            ulErrores2.innerHTML = errores[2];
             
         }
         function getFileExtension3(filename) {
