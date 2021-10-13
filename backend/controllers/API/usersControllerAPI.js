@@ -1,37 +1,53 @@
 let db = require("../../database/models/");
 
 const usersControllerAPI = {
-  listado: (req, res) => {
-    db.Usuario.findAll().then((usuario) => {
-      let datas = [];
-      for (let i = 0; i < usuario.length; i++) {
-        let respuesta = {
-          id: usuario[i].id,
-          name: usuario[i].name,
-          last_name: usuario[i].last_name,
-          email: usuario[i].email,
-          detail: "/api/usuarios/" + usuario[i].id,
-        };
-        datas.push(respuesta);
-      }
-      let adata = {
+  listado: async (req, res) => {
+    await db.Usuario.findAll().then((usuario) => {
+      let respuesta = {
         count: usuario.length,
-        url: "/api/usuarios",
+        url: req.originalUrl,
         status: 200,
-        users: datas,
+        users: usuario.map((user) => {
+          return {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            detail: req.originalUrl + user.id,
+          };
+        }),
       };
-      res.json(adata);
+      res.json(respuesta);
     });
+
+    // await db.Usuario.findAll().then((usuario) => {
+    //   let datas = [];
+    //   for (let i = 0; i < usuario.length; i++) {
+    //     let respuesta = {
+    //       id: usuario[i].id,
+    //       name: usuario[i].name,
+    //       last_name: usuario[i].last_name,
+    //       email: usuario[i].email,
+    //       detail: "/api/usuarios/" + usuario[i].id,
+    //     };
+    //     datas.push(respuesta);
+    //   }
+    //   let adata = {
+    //     count: usuario.length,
+    //     url: "/api/usuarios",
+    //     status: 200,
+    //     users: datas,
+    //   };
+    //   res.json(adata);
+    // });
   },
-  detalle: (req, res) => {
-    db.Usuario.findByPk(req.params.id).then((usuario) => {
-      // console.log(usuario);
+  detalle: async (req, res) => {
+    await db.Usuario.findByPk(req.params.id).then((usuario) => {
       let respuesta;
       if (usuario.image === "" || usuario.image === null) {
         respuesta = {
           meta: {
             status: 200,
-            url: req.originalUrl
+            url: req.originalUrl,
           },
           data: {
             id: usuario.id,
@@ -47,7 +63,7 @@ const usersControllerAPI = {
         respuesta = {
           meta: {
             status: 200,
-            url: req.originalUrl
+            url: req.originalUrl,
           },
           data: {
             id: usuario.id,

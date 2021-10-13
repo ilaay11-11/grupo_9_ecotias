@@ -4,29 +4,58 @@ let db = require("../../database/models/");
 
 const productsControllerAPI = {
   listado: async (req, res) => {
-    await db.Producto.findAll({
+    const countByCategory = await db.Producto.findAll({
       include: [
-        { association: "category", attributes: ["name"] },
-        { association: "maker", attributes: ["name"] },
+        { association: "category", as: "category_name", attributes: ["name"] },
       ],
-
-      // include: [{ association: category, attributes: ["name"] }, { association: maker, attributes: ["name"] }]
-
-      // attributes: ['itemId', [sequelize.fn('count', sequelize.col('itemId')), 'count']],
-      // group : ['SaleItem.itemId'],
-      // raw: true,
-      // order: sequelize.literal('count DESC')
-
-      // include: [{ association: "category" }, { association: "maker" }]
-    }).then((productos) => {
-      let respuesta = {
-        count: productos.length,
-        countByCategory: "hi",
-        data: productos,
-        random: productos.data,
-      };
-      res.json(respuesta);
+      attributes: [
+        [sequelize.fn("COUNT", sequelize.col("category.name")), "id"],
+      ],
+      order: sequelize.literal("category_id DESC"),
+      group: ["category.name"],
     });
+
+    const countByMaker = await db.Producto.findAll({
+      include: [{ association: "maker", attributes: ["name"] }],
+      attributes: [[sequelize.fn("COUNT", sequelize.col("maker.name")), "id"]],
+      order: sequelize.literal("maker_id DESC"),
+      group: ["maker.name"],
+    });
+
+    const getAllProducts = await db.Producto.findAll();
+
+    Promise.all([countByCategory, countByMaker, getAllProducts])
+      .then((resp) => {
+        let respuesta = {
+          count: resp[2].length,
+          countByCategory: {
+            totalCategories: resp[0].length,
+            data: resp[0].map((info) => {
+              return {
+                total_products: info.id,
+                category_name: info.category.name,
+              };
+            }),
+          },
+          countByMaker: {
+            totalMakers: resp[1].length,
+            data: resp[1].map((info) => {
+              return { total_products: info.id, maker_name: info.maker.name };
+            }),
+          },
+          products: resp[2].map((info) => {
+            return {
+              id: info.id,
+              name: info.name,
+              description: info.description,
+              price: info.price,
+              detail: req.originalUrl + info.id,
+            };
+          }),
+        };
+        res.json(respuesta);
+      })
+      .catch((err) => console.log(err));
   },
   detalle: async (req, res) => {
     await db.Producto.findByPk(req.params.id, {
