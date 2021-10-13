@@ -38,7 +38,7 @@ app.set('views', './views');
 
 // Views routes
 app.use('/', mainRoutes); // Main
-/* app.use('/usuarios', usersRoutes); // Users
+app.use('/usuarios', usersRoutes); // Users
 app.use('/productos', productsRoutes); // Products */
 
 // API routes
