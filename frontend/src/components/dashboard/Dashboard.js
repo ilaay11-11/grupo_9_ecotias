@@ -1,32 +1,37 @@
 import {useState,useEffect} from "react";
 
 function Dashboard(){
-    const [usuarios,setUsuarios] = useState([]);
-    const [usuarioslist,setUsuarioslist] = useState([]);
+    const [productos,setProductos] = useState([]);
+    const [productoslist,setProductoslist] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/api/usuarios")
+        fetch("http://localhost:5000/api/productos")
         .then(res=>res.json())
         .then(data=>{
-            console.log(data.users)
-            setUsuarios(data)
-            setUsuarioslist(data.users)
+            console.log(data.countByCategory)
+            setProductos(data)
+            setProductoslist(data.countByCategory.data)
         })
         
     },[]);
 
     useEffect(()=>{
         console.log("Se actualizó el componente")
-    },[usuarios,usuarioslist])
+    },[productos,productoslist])
 
     return (
         <main>
-            <h1>USUARIOS</h1>
-            <p>Total de usuarios: {usuarios.count}</p>
+            <h1>PRODUCTOS</h1>
+            <p>Total de productos: {productos.count}</p>
             <ul>
-                {usuarioslist.map((usuario,i)=>{
-                    return (<li key={i}>{usuario.name} {usuario.last_name}</li>)
-                })}
+                {productoslist.map((product,i)=>{
+                    return (
+                    <li key={i}>
+                        Cantidad: {product.total_products}, Categoría: {product.category_name}
+                    </li>
+                    )
+                })
+                }
             </ul>
         </main>
     )
