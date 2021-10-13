@@ -1,4 +1,5 @@
-import {useState,useEffect} from "react";
+import {useState,useEffect, useLayoutEffect} from "react";
+
 
 function Dashboard(){
     const [productos,setProductos] = useState([]);
@@ -19,20 +20,23 @@ function Dashboard(){
         console.log("Se actualizó el componente")
     },[productos,productoslist])
 
+    
+
     return (
         <main>
-            <h1>PRODUCTOS</h1>
-            <p>Total de productos: {productos.count}</p>
-            <ul>
-                {productoslist.map((product,i)=>{
-                    return (
-                    <li key={i}>
-                        Cantidad: {product.total_products}, Categoría: {product.category_name}
-                    </li>
-                    )
-                })
-                }
-            </ul>
+            <div className="TotalU">
+                <h3>Total de usuarios</h3>
+                <p>{usuarios.count}</p>
+
+            </div>
+            <div className="LastU">
+                <h3>Último usuario creado</h3>
+                <p>{}</p>
+                
+
+            </div>
+
+            
         </main>
     )
 }

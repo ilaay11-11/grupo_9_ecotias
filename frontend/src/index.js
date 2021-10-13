@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Dashboard from './components/dashboard/Dashboard';
+import Dashboard from './components/dashboard/Users';
 import reportWebVitals from './reportWebVitals';
+import DashboardProducts from './components/dashboard/Products';
+import Nav from './components/dashboard/Nav';
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <Nav/>
     <Dashboard />
+    <DashboardProducts/>
   </React.StrictMode>,
   document.getElementById('root')
 );
