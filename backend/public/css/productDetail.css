@@ -146,14 +146,17 @@ input[type="number"] {
 }
 
 /*BOTÓN REGRESAR*/
+#b-regresar {
+  text-align: center;
+}
+
 #b-regresar input{
   width: 50%;
   background-color: white;
   border-color: yellowgreen;
   border-radius: 10px;
   font-weight: bold;
-  margin-left: 25%;
-  margin-bottom: 8%;
+  margin: 8%;
 }
 
 /*------PANTALLA 761 px------*/
