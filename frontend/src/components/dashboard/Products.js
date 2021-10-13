@@ -3,16 +3,22 @@ import {useState,useEffect, useLayoutEffect} from "react";
 function DashboardProducts (){
     const[products, setProducts] = useState([]);
     const[productsList, setProductsList] = useState([]);
+    const[countCategory, setCountByCategory] = useState([]);
     useEffect(()=>{
         fetch("http://localhost:5000/api/productos")
         .then (res => res.json())
         .then (data => {
             console.log(data)            
             setProducts(data)
-            setProductsList(data.data)
+            setProductsList(data.products)
+            setCountByCategory(data.countByCategory)
         })
 
     }, []);
+
+    useEffect(()=>{
+        console.log("Se actualizó el componente")
+    },[products,productsList,countCategory])
 
     
     
@@ -25,6 +31,7 @@ function DashboardProducts (){
             </div>
             <div className="TotalC">
                 <h3>Total de categorías</h3>
+                <p>{}</p>
             </div>
             <div className="lastProduct"> 
                 <h3>Último producto creado</h3>
@@ -35,6 +42,7 @@ function DashboardProducts (){
             
             <div className="categories">
                 <h3>Categorías</h3>
+                <p>{}</p>
             </div>
             
             <div className="Pdisp">
