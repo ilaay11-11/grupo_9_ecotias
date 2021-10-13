@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/productList.css">
+    <title>Todos los productos</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <main class="mainArea">
+
+        <% if (!resultados.length) { %>
+            <h2>No existen resultados relacionados con su búsqueda: <%=keywords %></h2>
+        <% } else {%>
+            <h2>Resultados de la búsqueda: <%=keywords %></h2>
+            <div class="productList_all">
+                <% for(i=0; i < resultados.length; i++) {%>
+                <div class="product_individual">
+                    <a href="/productos/<%= resultados[i].id %>" class="productLink">
+                        <img src="/images/productImages/<%= resultados[i].image ? resultados[i].image : 'default.jpg' %>" alt="producto">
+                        <p class="product_name"><%= resultados[i].name%> </p>
+                    </a>
+                        <p class="price">$<%= resultados[i].price%> </p>
+                    <button class="addCartButton" type="submit">Agregar al carrito</button>
+                </div>
+                <% } %>
+
+            <% }%>
+
+            </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

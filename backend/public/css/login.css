@@ -24,11 +24,11 @@
 .login_forms a {
     text-decoration: none;
     color:black;
+    font-weight: 500;
 }
 
 .login_forms a:hover {
     text-decoration: underline;
-    font-weight: 500;
 }
 
 /* -------- Campos email y password -------- */

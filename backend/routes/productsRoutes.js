@@ -24,8 +24,7 @@ router.post(
 router.get("/:id", productsController.detail); // MUESTRA DETALLE DE PRODUCTO
 
 // /*** EDIT ONE PRODUCT ***/
-router.get("/:id/editar", productsController.edit); // MUESTRA FORMULARIO DE EDICIÓN DE PRODUCTO
-// router.get("/:id/editar", authMiddleware, productsController.edit); // MUESTRA FORMULARIO DE EDICIÓN DE PRODUCTO
+router.get("/:id/editar", authMiddleware, productsController.edit); // MUESTRA FORMULARIO DE EDICIÓN DE PRODUCTO
 router.put(
   "/:id",
   uploadUserImage.single("newProductImage"),

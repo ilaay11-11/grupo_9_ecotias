@@ -9,128 +9,133 @@
 
 <body>
     <%- include('../partials/header') %>
-    <main>
-        <h2>Editar producto: <%= product.name %></h2>
-        <form action="/productos/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <div class="crear_producto">
-                <div class="field order1">
-                    <label for="name">Nombre</label>
-                    <div class="control">
-                        <input type="text" name="name" class="input_info nombre" placeholder="Ej: Omeprazole"
-                            value="<%= product.name %>" required>
+        <main>
+            <h2>Editar producto: <%= product.name %>
+            </h2>
+            <form action="/productos/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="crear_producto">
+                    <div class="field order1">
+                        <label for="name">Nombre</label>
+                        <div class="control">
+                            <input type="text" name="name" class="input_info nombre" placeholder="Ej: Omeprazole"
+                                value="<%= product.name %>" required>
                             <div class="errores text-danger">
                                 <ul></ul>
                             </div>
-                    </div>
-                    <% if (locals.errors && errors.name) { %>
-                        <p class="text-danger">
-                            <%= errors.name.msg %>
-                        </p>
-                        <% } %>
-                </div>
-                <div class="field order2">
-                    <label for="category">Categoría</label>
-                    <div class="control">
-                        <select name="category" class="select_info">
-                            <% for( let i = 0; i < categories.length; i++ ) { %>
-                                <% if (categories[i].id == product.category_id) { %>
-                                    <option value="<%= categories[i].id %>" selected>
-                                        <%= categories[i].name %>
-                                    </option>
-                                <% } else { %>
-                                    <option value="<%= categories[i].id %>">
-                                        <%= categories[i].name %>
-                                    </option>
-                                <% } %>
+                        </div>
+                        <% if (locals.errors && errors.name) { %>
+                            <p class="text-danger">
+                                <%= errors.name.msg %>
+                            </p>
                             <% } %>
-                        </select>
                     </div>
-                </div>
-                <div class="field order3">
-                    <label for="maker">Fabricante</label>
-                    <div class="control">
-                        <select name="maker" class="select_info">
-                            <% for( let i = 0; i < makers.length; i++ ) { %>
-                                <% if (makers[i].id == product.maker_id) { %>
-                                    <option value="<%= makers[i].id %>" selected>
-                                        <%= makers[i].name %> 
-                                    </option>
-                                <% } else { %>
-                                    <option value="<%= makers[i].id %>">
-                                        <%= makers[i].name %> 
-                                    </option>
-                                <% } %>
+                    <div class="field order2">
+                        <label for="category">Categoría</label>
+                        <div class="control">
+                            <select name="category" class="select_info">
+                                <% for( let i=0; i < categories.length; i++ ) { %>
+                                    <% if (categories[i].id==product.category_id) { %>
+                                        <option value="<%= categories[i].id %>" selected>
+                                            <%= categories[i].name %>
+                                        </option>
+                                        <% } else { %>
+                                            <option value="<%= categories[i].id %>">
+                                                <%= categories[i].name %>
+                                            </option>
+                                            <% } %>
+                                                <% } %>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field order3">
+                        <label for="maker">Fabricante</label>
+                        <div class="control">
+                            <select name="maker" class="select_info">
+                                <% for( let i=0; i < makers.length; i++ ) { %>
+                                    <% if (makers[i].id==product.maker_id) { %>
+                                        <option value="<%= makers[i].id %>" selected>
+                                            <%= makers[i].name %>
+                                        </option>
+                                        <% } else { %>
+                                            <option value="<%= makers[i].id %>">
+                                                <%= makers[i].name %>
+                                            </option>
+                                            <% } %>
+                                                <% } %>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field order4">
+                        <label for="price">Precio</label>
+                        <div class="control">
+                            <input type="number" name="price" class="input_info precio" placeholder="Ej: 750" step=".01"
+                                value="<%= product.price %>" required>
+                            <div class="errores1 text-danger">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <% if (locals.errors && errors.price) { %>
+                            <p class="text-danger">
+                                <%= errors.price.msg %>
+                            </p>
                             <% } %>
-                        </select>
                     </div>
-                </div>
-                <div class="field order4">
-                    <label for="price">Precio</label>
-                    <div class="control">
-                        <input type="number" name="price" class="input_info precio" placeholder="Ej: 750" step=".01" value="<%= product.price %>" required>
-                        <div class="errores1 text-danger">
-                            <ul></ul>
+                    <div class="field order6">
+                        <label for="description">Descripción</label>
+                        <div class="control">
+                            <textarea name="description" id="descripcion" class="input_info"
+                                required><%= product.description %></textarea>
+                            <div class="errores2 text-danger">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <% if (locals.errors && errors.description) { %>
+                            <p class="text-danger">
+                                <%= errors.description.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                    <div class="field order5">
+                        <p>Imágen actual</p>
+                        <div class="control">
+                            <img src="/images/productImages/<%= product.image ? product.image : 'default.jpg'%>"
+                                alt="producto">
                         </div>
                     </div>
-                    <% if (locals.errors && errors.price) { %>
-                        <p class="text-danger">
-                            <%= errors.price.msg %>
-                        </p>
-                        <% } %>
+                    <div class="field order7">
+                        <label for="newProductImage">Subir nueva imágen</label>
+                        <div class="control">
+                            <input type="file" name="newProductImage" id="newProductImage"
+                                accept="image/gif,image/jpeg,image/jpg,image/png">
+                            <div class="errores3 text-danger">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <% if (locals.errors && errors.newProductImage) { %>
+                            <p class="text-danger">
+                                <%= errors.newProductImage.msg %>
+                            </p>
+                            <% } %>
+                    </div>
                 </div>
-                <div class="field order6">
-                    <label for="description">Descripción</label>
-                    <div class="control">
-                        <textarea name="description" id="descripcion" class="input_info" required><%= product.description %></textarea>
-                        <div class="errores2 text-danger">
-                            <ul></ul>
+                <div class="botones">
+                    <div class="buttonAction_save">
+                        <div class="control">
+                            <button type="submit">Guardar producto</button>
                         </div>
                     </div>
-                    <% if (locals.errors && errors.description) { %>
-                        <p class="text-danger">
-                            <%= errors.description.msg %>
-                        </p>
-                        <% } %>
-                </div>
-                <div class="field order5">
-                    <p>Imágen actual</p>
-                    <div class="control">
-                        <img src="/images/productImages/<%= product.image ? product.image : 'default.jpg'%>" alt="producto">
-                    </div>
-                </div>
-                <div class="field order7">
-                    <label for="newProductImage">Subir nueva imágen</label>
-                    <div class="control">
-                        <input type="file" name="newProductImage" id="newProductImage"  accept="image/gif,image/jpeg,image/jpg,image/png">
-                        <div class="errores3 text-danger">
-                            <ul></ul>
-                        </div>
-                    </div>
-                    <% if (locals.errors && errors.newProductImage) { %>
-                        <p class="text-danger">
-                            <%= errors.newProductImage.msg %>
-                        </p>
-                        <% } %>
-                </div>
-            </div>
-            <div class="botones">
-                <div class="buttonAction_save">
-                    <div class="control">
-                        <button type="submit">Guardar producto</button>
-                    </div>
-                </div>
-        </form>
-                <div class="buttonAction_delete">
-                    <div class="control">
-                        <form action="/productos/<%= product.id %>?_method=DELETE" method="POST">
+            </form>
+            <div class="buttonAction_delete">
+                <div class="control">
+                    <form action="/productos/<%= product.id %>?_method=DELETE" method="POST">
                         <button type="submit">Eliminar producto</button>
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
-    </main>
-    <%- include('../partials/footer') %>
-    <script src="/js/editProduct.js"> </script>
+            </div>
+        </main>
+        <%- include('../partials/footer') %>
+            <script src="/js/editProduct.js"> </script>
 </body>
 
 </html>

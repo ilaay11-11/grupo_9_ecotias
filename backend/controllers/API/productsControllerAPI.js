@@ -1,4 +1,3 @@
-const { validationResult } = require("express-validator");
 const { sequelize, Sequelize } = require("../../database/models/");
 let db = require("../../database/models/");
 
@@ -63,61 +62,71 @@ const productsControllerAPI = {
         { association: "category", attributes: ["name"] },
         { association: "maker", attributes: ["name"] },
       ],
-    }).then((producto) => {
-      let respuesta;
-      if (producto.image === "" || producto.image === null) {
-        respuesta = {
-          meta: {
-            status: 200,
-            url: req.originalUrl,
-          },
-          data: {
-            id: producto.id,
-            name: producto.name,
-            description: producto.description,
-            price: producto.price,
-            image:
-              "https://ecotias.herokuapp.com/images/productImages/default.jpg",
-            additionalInfo: [
-              {
-                category: {
-                  id: producto.category_id,
-                  name: producto.category.name,
-                },
-                maker: { id: producto.maker_id, name: producto.maker.name },
+    })
+      .then((producto) => {
+        let respuesta;
+        if (producto) {
+          if (producto.image === "" || producto.image === null) {
+            respuesta = {
+              meta: {
+                status: 200,
+                url: req.originalUrl,
               },
-            ],
-          },
-        };
-        res.json(respuesta);
-      } else {
-        respuesta = {
-          meta: {
-            status: 200,
-            url: req.originalUrl,
-          },
-          data: {
-            id: producto.id,
-            name: producto.name,
-            description: producto.description,
-            price: producto.price,
-            image:
-              "https://ecotias.herokuapp.com/images/productImages/" +
-              producto.image,
-            additionalInfo: [
-              {
-                category: {
-                  id: producto.category_id,
-                  name: producto.category.name,
-                },
-                maker: { id: producto.maker_id, name: producto.maker.name },
+              data: {
+                id: producto.id,
+                name: producto.name,
+                description: producto.description,
+                price: producto.price,
+                image:
+                  "https://ecotias.herokuapp.com/images/productImages/default.jpg",
+                additionalInfo: [
+                  {
+                    category: {
+                      id: producto.category_id,
+                      name: producto.category.name,
+                    },
+                    maker: { id: producto.maker_id, name: producto.maker.name },
+                  },
+                ],
               },
-            ],
-          },
-        };
-        res.json(respuesta);
-      }
-    });
+            };
+            res.json(respuesta);
+          } else {
+            respuesta = {
+              meta: {
+                status: 200,
+                url: req.originalUrl,
+              },
+              data: {
+                id: producto.id,
+                name: producto.name,
+                description: producto.description,
+                price: producto.price,
+                image:
+                  "https://ecotias.herokuapp.com/images/productImages/" +
+                  producto.image,
+                additionalInfo: [
+                  {
+                    category: {
+                      id: producto.category_id,
+                      name: producto.category.name,
+                    },
+                    maker: { id: producto.maker_id, name: producto.maker.name },
+                  },
+                ],
+              },
+            };
+            res.json(respuesta);
+          }
+        } else {
+          respuesta = {
+            status: 404,
+            msg: "El producto no existe",
+          };
+          res.json(respuesta);
+        }
+      })
+      .catch((err) => console.log(err));
   },
 };
 
