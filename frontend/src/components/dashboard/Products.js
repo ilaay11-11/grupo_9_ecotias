@@ -31,7 +31,7 @@ function DashboardProducts (){
             </div>
             <div className="TotalC">
                 <h3>Total de categorías</h3>
-                <p>{}</p>
+                <p>{countCategory.totalCategories}</p>
             </div>
             <div className="lastProduct"> 
                 <h3>Último producto creado</h3>
@@ -42,7 +42,7 @@ function DashboardProducts (){
             
             <div className="categories">
                 <h3>Categorías</h3>
-                <p>{}</p>
+                <p>{countCategory.data}</p>
             </div>
             
             <div className="Pdisp">
