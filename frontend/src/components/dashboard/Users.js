@@ -29,9 +29,9 @@ function Dashboard(){
             </div>
             <div className="LastU">
                 <h3>Último usuario creado</h3>
-                <p><div className="white">{ultimousuario.name}    </div>
-                <div className="white">{ultimousuario.email}</div>
-                <div className="white">{ultimousuario.detail}</div></p>
+                <div className="white"><p><strong>Nombre:</strong> {ultimousuario.name}</p></div>
+                <div className="white"><p><strong>Email:</strong> {ultimousuario.email}</p></div>
+                <div className="white"><p><strong>Detalle:</strong> <a href={ultimousuario.detail}>{ultimousuario.detail}</a></p></div>
             </div>
         </main>
     )

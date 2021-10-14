@@ -40,9 +40,9 @@ function DashboardProducts (){
             </div>
             <div className="lastProduct"> 
                 <h3>Último producto creado</h3>
-                <div className="white">{ultimoproducto.name}    ${ultimoproducto.price}</div>
-                <div className="white">{ultimoproducto.description}</div>
-                <div className="white">{ultimoproducto.detail}</div>
+                <div className="white"><p><strong>Nombre:</strong> {ultimoproducto.name}</p></div>
+                <div className="white"><p><strong>Precio:</strong> ${ultimoproducto.price} MXN</p></div>
+                <div className="white"><p><strong>Detalle:</strong> <a href={ultimoproducto.detail}>{ultimoproducto.detail}</a></p></div>
                 
 
             </div>
@@ -55,9 +55,9 @@ function DashboardProducts (){
                             
                             <tr>
                                 <th>Categorías</th>
-                                {categoryBoard.map((category)=>{
+                                {categoryBoard.map((category, i)=>{
                                 return(
-                                    <td>{category.category_name}</td>
+                                    <td key={i}>{category.category_name}</td>
                                     
                                 )
                             })}
@@ -67,9 +67,9 @@ function DashboardProducts (){
                             <div className="line"></div>
                             <tr>
                                 <th>Número de productos</th>
-                                {categoryBoard.map((category)=>{
+                                {categoryBoard.map((category, i)=>{
                                     return(
-                                        <td>{category.total_products}</td>                                        
+                                        <td key={i}>{category.total_products}</td>                                        
                                     )
                                 })}
                             </tr>
@@ -85,15 +85,15 @@ function DashboardProducts (){
             <div className="Pdisp">
                 <h3>Productos disponibles</h3>
                 <div className="line"></div>
-                <ul>
-                    {productsList.map((producto,i)=>{
-                        return (<div key={i}>
+                <table>
+                    {productsList.map((producto, i)=>{
+                        return (<tr key={i}>
                             <h4>{producto.name} </h4>
                             <div className="line"></div>
-                        </div>
+                        </tr>
                         )
                     })}
-                </ul>
+                </table>
 
             </div>
             
