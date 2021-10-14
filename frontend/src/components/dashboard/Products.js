@@ -8,7 +8,7 @@ function DashboardProducts() {
   const [ultimoproducto, setUltimoProducto] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/productos")
+    fetch("https://ecotias.herokuapp.com/api/productos/")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
