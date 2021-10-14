@@ -13,7 +13,7 @@ const usersControllerAPI = {
               id: user.id,
               name: user.name,
               email: user.email,
-              detail: req.originalUrl + user.id,
+              detail: `https://ecotias.herokuapp.com${req.originalUrl}/${user.id}`,
             };
           }),
         };

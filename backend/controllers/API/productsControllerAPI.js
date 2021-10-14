@@ -48,7 +48,7 @@ const productsControllerAPI = {
               name: info.name,
               description: info.description,
               price: info.price,
-              detail: req.originalUrl + info.id,
+              detail: `https://ecotias.herokuapp.com${req.originalUrl}/${info.id}`,
             };
           }),
         };
