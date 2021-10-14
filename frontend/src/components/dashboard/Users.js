@@ -20,7 +20,7 @@ function Dashboard(){
         console.log("Se actualizó el componente")
     },[usuarios,usuarioslist])
 
-    
+    let lastUser = usuarioslist.pop();
 
     return (
         <main>
@@ -31,7 +31,9 @@ function Dashboard(){
             </div>
             <div className="LastU">
                 <h3>Último usuario creado</h3>
-                <p>{}</p>
+                <p><div className="white">{lastUser.name}    </div>
+                <div className="white">{lastUser.email}</div>
+                <div className="white">{lastUser.detail}</div></p>
                 
 
             </div>
