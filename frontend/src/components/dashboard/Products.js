@@ -28,13 +28,15 @@ function DashboardProducts (){
 
     return(
         <main>
-            <div className="TotalP">
-                <h3>Total de productos</h3>
-                <p>{products.count}</p>
-            </div>
-            <div className="TotalC">
-                <h3>Total de categorías</h3>
-                <p>{countCategory.totalCategories}</p>
+            <div className="together">
+                <div className="TotalP">
+                    <h3>Total de productos</h3>
+                    <p>{products.count}</p>
+                </div>
+                <div className="TotalC">
+                    <h3>Total de categorías</h3>
+                    <p>{countCategory.totalCategories}</p>
+                </div>
             </div>
             <div className="lastProduct"> 
                 <h3>Último producto creado</h3>
