@@ -40,7 +40,7 @@
                 <% for(i=0; i < vinylProducts.length; i++) {%>
                 <div class="product_individual">
                     <a href="/productos/<%= vinylProducts[i].id %>" class="productLink">
-                        <img src="/images/productImages/<%= vinylProducts[i].image ? vinylProducts[i].image : 'default.jpg' %> " alt="producto">
+                        <img src="<%= vinylProducts[i].image ? vinylProducts[i].image : '/images/productImages/default.jpg' %>" alt="producto">
                         <p class="product_name"><%= vinylProducts[i].name%> </p>
                     </a>
                         <p class="price">$<%= vinylProducts[i].price%> </p>
@@ -57,7 +57,7 @@
                 <% for(i=0; i < woodProducts.length; i++) {%>
                 <div class="product_individual">
                     <a href="/productos/<%= woodProducts[i].id %>" class="productLink">
-                        <img src="/images/productImages/<%= woodProducts[i].image ? woodProducts[i].image : 'default.jpg' %>" alt="producto">
+                        <img src="<%= woodProducts[i].image ? woodProducts[i].image : '/images/productImages/default.jpg' %>" alt="producto">
                         <p class="product_name"><%= woodProducts[i].name%> </p>
                     </a>
                         <p class="price">$<%= woodProducts[i].price%> </p>
@@ -84,7 +84,7 @@
                 <% for(i=0; i < graniteProducts.length; i++) {%>
                 <div class="product_individual">
                     <a href="/productos/<%= graniteProducts[i].id %>" class="productLink">
-                        <img src="/images/productImages/<%= graniteProducts[i].image ? graniteProducts[i].image : 'default.jpg' %>" alt="producto">
+                        <img src="<%= graniteProducts[i].image ? graniteProducts[i].image : '/images/productImages/default.jpg' %>" alt="producto">
                         <p class="product_name"><%= graniteProducts[i].name%> </p>
                     </a>
                         <p class="price">$<%= graniteProducts[i].price%> </p>

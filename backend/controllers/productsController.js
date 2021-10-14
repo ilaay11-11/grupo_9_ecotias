@@ -37,7 +37,7 @@ const productsController = {
                 await db.Producto.create({
                     name: req.body.name,
                     description: req.body.description,
-                    image: req.file.path,
+                    image: '/images/productImages/'+req.file.filename,
                     category_id: req.body.category,
                     price: req.body.price,
                     maker_id: req.body.maker
@@ -46,7 +46,7 @@ const productsController = {
                 await db.Producto.create({
                     name: req.body.name,
                     description: req.body.description,
-                    image: '',
+                    image: '/images/productImages/default.jpg',
                     category_id: req.body.category,
                     price: req.body.price,
                     maker_id: req.body.maker

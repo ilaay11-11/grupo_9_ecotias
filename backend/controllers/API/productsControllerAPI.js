@@ -91,6 +91,30 @@ const productsControllerAPI = {
               },
             };
             res.json(respuesta);
+          } else if (producto.image.includes('http://dummyimage.com')) {
+            respuesta = {
+              meta: {
+                status: 200,
+                url: req.originalUrl,
+              },
+              data: {
+                id: producto.id,
+                name: producto.name,
+                description: producto.description,
+                price: producto.price,
+                image:producto.image,
+                additionalInfo: [
+                  {
+                    category: {
+                      id: producto.category_id,
+                      name: producto.category.name,
+                    },
+                    maker: { id: producto.maker_id, name: producto.maker.name },
+                  },
+                ],
+              },
+            };
+            res.json(respuesta);
           } else {
             respuesta = {
               meta: {
@@ -103,7 +127,7 @@ const productsControllerAPI = {
                 description: producto.description,
                 price: producto.price,
                 image:
-                  "https://ecotias.herokuapp.com/images/productImages/" +
+                  "https://ecotias.herokuapp.com" +
                   producto.image,
                 additionalInfo: [
                   {
