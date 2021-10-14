@@ -2,23 +2,23 @@ import {useState,useEffect, useLayoutEffect} from "react";
 
 
 function Dashboard(){
-    const [usuarios,setUsuarios] = useState([]);
-    const [usuarioslist,setUsuarioslist] = useState([]);
+    const [productos,setProductos] = useState([]);
+    const [productoslist,setProductoslist] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/api/usuarios")
+        fetch("http://localhost:5000/api/productos")
         .then(res=>res.json())
         .then(data=>{
-            console.log(data.users)
-            setUsuarios(data)
-            setUsuarioslist(data.users)
+            console.log(data.countByCategory)
+            setProductos(data)
+            setProductoslist(data.countByCategory.data)
         })
         
     },[]);
 
     useEffect(()=>{
         console.log("Se actualizó el componente")
-    },[usuarios,usuarioslist])
+    },[productos,productoslist])
 
     let lastUser = usuarioslist.pop();
 

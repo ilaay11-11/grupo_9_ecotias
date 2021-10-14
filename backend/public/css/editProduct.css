@@ -6,6 +6,18 @@ main h2 {
 .text-danger{
     color: red;
     font-size: small;
+    font-weight: 500;
+}
+
+.select_info {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 4px;
+    padding: 0 .55rem;
+    line-height: 1.5rem;
+    outline: 0;
+    border-radius: 10px;
+    border: 1px solid #4c8444;
 }
 
 /* -------- Área principal -------- */
@@ -16,7 +28,7 @@ main h2 {
 }
 
 /* -------- Textos label -------- */
-.crear_producto label, .crear_producto p {
+.crear_producto label {
     font-weight: 500;
 }
 
@@ -102,7 +114,7 @@ input, select {
         width: 50%;
     }
 
-    .crear_producto label, .crear_producto p {
+    .crear_producto label {
         font-size: 1.2rem;
     }
 

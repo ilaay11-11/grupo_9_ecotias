@@ -46,6 +46,7 @@ const productsController = {
                 await db.Producto.create({
                     name: req.body.name,
                     description: req.body.description,
+                    image: '',
                     category_id: req.body.category,
                     price: req.body.price,
                     maker_id: req.body.maker

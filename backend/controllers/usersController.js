@@ -89,7 +89,9 @@ const usersController = {
             where: {
                 id: req.params.id
             }
-        });
+        })
+        req.session.destroy()
+        ;
         res.redirect('/');
 
     },
