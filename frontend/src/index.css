@@ -42,7 +42,10 @@ p{
   text-align: center;
 }
 .LastU{
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #D5DCF2;
   border-radius: 10px;
 

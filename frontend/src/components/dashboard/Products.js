@@ -6,6 +6,7 @@ function DashboardProducts (){
     const[productsList, setProductsList] = useState([]);
     const[countCategory, setCountByCategory] = useState([]);
     const[categoryBoard, setCategoryBoard] = useState([]);
+    const[ultimoproducto, setUltimoProducto] = useState([]);
     
     useEffect(()=>{
         fetch("http://localhost:5000/api/productos")
@@ -16,17 +17,14 @@ function DashboardProducts (){
             setProductsList(data.products)
             setCountByCategory(data.countByCategory)
             setCategoryBoard(data.countByCategory.data)
-            
+            setUltimoProducto(data.products[data.count-1])
         })
 
     }, []);
 
     useEffect(()=>{
         console.log("Se actualizó el componente")
-    },[products,productsList,countCategory, categoryBoard])
-    let lastProduct = productsList.pop();
-    
-    
+    },[products,productsList,countCategory, categoryBoard,ultimoproducto])
 
     return(
         <main>
@@ -40,9 +38,9 @@ function DashboardProducts (){
             </div>
             <div className="lastProduct"> 
                 <h3>Último producto creado</h3>
-                <div className="white">{lastProduct.name}    ${lastProduct.price}</div>
-                <div className="white">{lastProduct.description}</div>
-                <div className="white">{lastProduct.detail}</div>
+                <div className="white">{ultimoproducto.name}    ${ultimoproducto.price}</div>
+                <div className="white">{ultimoproducto.description}</div>
+                <div className="white">{ultimoproducto.detail}</div>
                 
 
             </div>
