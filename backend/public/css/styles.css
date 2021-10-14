@@ -20,7 +20,7 @@ main {
 /* ---- Contenedores topbar y header principal ---- */
 
 #menu_btn:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .nueva {
@@ -43,7 +43,7 @@ main {
 }
 /* ---- Topbar header ---- */
 .topbar_header {
-  background-color: rgb(255, 255, 249);
+  background-color: #e2ffdf82;
   border: solid rgba(144, 238, 144, 0.4);
   border-width: 0 0 1px;
 }

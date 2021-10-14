@@ -32,7 +32,8 @@ const mainController = {
       res.render("products/results", { resultados, keywords });
     });
   },
-  cart: async(req, res) => res.render("users/cart")
+  cart: async (req, res) => res.render("users/cart"),
+  dashboard: async (req, res) => res.render("users/dashboard"),
 };
 
 module.exports = mainController;

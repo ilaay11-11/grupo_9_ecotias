@@ -114,3 +114,7 @@ td {
   margin-bottom: 15px;
   justify-content: space-around;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
