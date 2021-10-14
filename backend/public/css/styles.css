@@ -1,13 +1,13 @@
 /*
  * ESTE ARCHIVO INCLUYE LOS ESTILOS DEL DOCUMENTO GENERAL, HEADER Y FOOTER.
  */
-
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 /* Estilos del documento (general)
    ======================================================================================================================================= */
 * {
     margin: 0;
     padding:0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -94,6 +94,14 @@
 .menu_items {
     display: none; /* DESAPARECE MENÚ*/
   }
+  
+/* * {
+    transition: 0.2s linear;
+}
+  input[type="checkbox"] + .menu_items {
+    transform: scaleY(1);
+    transform-origin: top;
+  } */
 
 input[type="checkbox"]:checked + .menu_items {
     display: flex;
@@ -102,7 +110,9 @@ input[type="checkbox"]:checked + .menu_items {
     text-align: center;
     background-color: rgba(229, 255, 232, 0.95);
     width: 100%;
-    position:static;
+    position: static;
+    /* transition: 0.2s linear; */
+    /* transform: scaleY(0); */
     /* z-index: 1; */
   }
 

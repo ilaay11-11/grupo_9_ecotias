@@ -5,18 +5,18 @@ const mainController = {
     await db.Producto.findAll({
       include: [{ association: "category" }],
     }).then(function (products) {
-      let brassProducts = products.filter(
-        (producto) => producto.category.name === "Brass"
+      let vinylProducts = products.filter(
+        (producto) => producto.category.name === "Vinyl"
       );
-      let steelProducts = products.filter(
-        (producto) => producto.category.name === "Steel"
+      let woodProducts = products.filter(
+        (producto) => producto.category.name === "Wood"
       );
       let graniteProducts = products.filter(
         (producto) => producto.category.name === "Granite"
       );
       res.render("users/index", {
-        brassProducts,
-        steelProducts,
+        vinylProducts,
+        woodProducts,
         graniteProducts,
       });
     });
