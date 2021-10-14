@@ -132,10 +132,12 @@ body{
     transform: translateX(-23vw);
 }
 /*ENLACES*/
-a{
+.aceptar a {
     text-decoration: none;
-    color: rgba(rgb(27, 150, 48));
+    color: rgb(27, 150, 48);
 }
+
+
 /*APARTADO ACEPTAR TÉRMINOS Y CONDICIONES*/
 .aceptar{
     display: flex;

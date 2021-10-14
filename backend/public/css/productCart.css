@@ -147,7 +147,7 @@ input[type="number"] {
 }
 
 /*----VERSIÓN TABLET----*/
-@media (min-width: 761px){
+@media (min-width: 768px){
   .agregar-nota{
     margin-top: 30px;
     margin-left: 55px;

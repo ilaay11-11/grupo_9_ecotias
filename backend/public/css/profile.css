@@ -1,42 +1,75 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-main{
-    min-height: 100vh;
-    background: linear-gradient(#ADFFA5, #81BF7C );
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main_profile {
+  /* min-height: 100vh; */
+  background: linear-gradient(#adffa5, #81bf7c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.glass{
-    background: white;
-    min-height: 80vh;
-    width: 85%;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-    border-radius: 2rem;
-    backdrop-filter: blur(3rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
-}
-
-.user-image{
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;    
+.glass {
+  background: white;
+  min-height: 60vh;
+  width: 85%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  backdrop-filter: blur(3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-.datos{
-    position: relative;
-    top: 2rem;
-    
+.user-image {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
 }
 
-.editar{
-    position: relative;
-    top: 7rem;
+.editar button {
+  font-size: 0.85rem;
+  padding: 0 1.2em;
+  border: 1px solid transparent;
+  border-radius: 99px;
+  min-height: 2.3rem;
+  max-width: 100%;
+  background-color: #52a046;
+  color: white;
+  font-weight: 500;
+}
+
+.editar button:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #4bac3d;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .glass {
+    gap: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main_profile {
+    min-height: 75vh;
+  }
+
+  .glass {
+    width: 65%;
+    min-height: 65vh;
+  }
+
+  .glass .user-image {
+    width: 155px;
+    height: 155px;
+  }
 }

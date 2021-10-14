@@ -1,27 +1,57 @@
 /*----------BODY---------*/
+.descripcion button {
+  font-size: 0.85rem;
+  padding: 0 1.2em;
+  border: 1px solid transparent;
+  border-radius: 99px;
+  min-height: 2.3rem;
+  max-width: 100%;
+  background-color: #52a046;
+  color: white;
+  font-weight: 500;
+  margin: 10px 0;
+}
 
+.descripcion button:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #4bac3d;
+  cursor: pointer;
+}
 
-.imagenes{
+.imagenes {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 12px;
 }
-#imagen-principal{
+
+.detail_container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* width: 50%; */
+  padding: 12px;
+}
+
+#imagen-principal {
   width: 85vw;
   margin-top: 5%;
-
 }
-#imagen2{
+#imagen2 {
   width: 15%;
   margin-top: 1%;
 }
-#imagen2:hover{
+#imagen2:hover {
   opacity: 0.5;
 }
-.descripcion-producto{
+.descripcion-producto_title {
+  text-align: center;
+  /* margin-left: 10%; */
+  /* margin-top: 5%; */
+}
+.descripcion-producto_detail {
   text-align: left;
-  margin-left: 10%;
-  margin-top: 5%;
+  /* margin-left: 10%; */
+  /* margin-top: 5%; */
 }
 
 /*BOTÓN DE CANTIDAD PARA AÑADIR PRODUCTOS*/
@@ -48,9 +78,10 @@ input::-webkit-inner-spin-button {
   clear: both;
   margin: 15px 0;
   position: relative;
+  text-align: center;
 }
 
-.input-group input[type='button'] {
+.input-group input[type="button"] {
   background-color: #eeeeee;
   min-width: 38px;
   width: auto;
@@ -88,58 +119,61 @@ input[type="number"] {
   -moz-appearance: textfield;
   -webkit-appearance: none;
 }
-.input-group{
-  margin-left: 10%;
+.input-group {
+  /* margin-left: 10%; */
 }
 
 /*BOTÓN AGREGAR AL CARRITO*/
+.agregar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-#agregar{
-  margin: 0 10%;
-  width: 80%;
+#agregar {
+  /* margin: 0 10%; */
+  max-width: 100%;
   background-color: white;
   border-color: yellowgreen;
   border-radius: 10px;
   font-weight: bold;
+  margin-bottom: 4px;
 }
-
 
 /*DESCRIPCIÓN ARTICULO*/
-.descripcion p{
+/* .descripcion p {
   text-align: left;
   margin-right: 10%;
-}
+} */
 
 /*RESEÑAS*/
-.reviews{
+.reviews {
   margin: 8% 10%;
 }
-#t-reviews{
+#t-reviews {
   margin-top: 3%;
   margin-bottom: 3%;
   font-style: italic;
 }
 
-.reviews input{
+.reviews input {
   background-color: white;
   border-color: yellowgreen;
   border-radius: 10px;
-  font-size:x-small;
+  font-size: x-small;
   position: relative;
   left: 30%;
   margin-top: 3%;
-
 }
 
 /*SECCIÓN TAMBIÉN TE PUEDE INTERESAR*/
-.t-t-p-i{
+.t-t-p-i {
   text-align: center;
   font-size: small;
   margin-bottom: 3%;
 }
 
-
-.img_slider_pd{
+.img_slider_pd {
   width: 80%;
   height: 20%;
   margin: 5% 10%;
@@ -150,7 +184,7 @@ input[type="number"] {
   text-align: center;
 }
 
-#b-regresar input{
+#b-regresar input {
   width: 50%;
   background-color: white;
   border-color: yellowgreen;
@@ -159,36 +193,49 @@ input[type="number"] {
   margin: 8%;
 }
 
-/*------PANTALLA 761 px------*/
+/*------PANTALLA 768 px------*/
 
-@media (min-width:768px){
-  #agregar{
+@media (min-width: 768px) {
+  #agregar {
     height: 50px;
   }
-  
+
+  .agregar {
+    display: block;
+    text-align: center;
+  }
+
+  #agregar {
+    font-size: large;
+    width: 50%;
+  }
+
+  .descripcion button {
+    width: 50%;
+  }
 }
 
 /*-----PANTALLA 1024px-------*/
 
-@media(min-width:1024px){
-  .descripcion{
+@media (min-width: 1024px) {
+  .descripcion {
     display: flex;
-    font-size:20px;
+    font-size: 20px;
     flex-grow: inherit;
+    padding: 15px;
+  }
 
+  .imagenes{
+    width: 50%;
   }
-  #imagen-principal{
-    width: 45vw;
-    margin-left: 10%;
+
+  .detail_container {
+    width: 50%;
   }
-  #agregar{
-    font-size: large;
+
+
+  #imagen-principal {
+    width: 100%;
   }
-  
 
 }
-
-
-
-
-

@@ -12,7 +12,7 @@
             <div class="main_nav_mobile">
                 <div class="menu_icon">
                 <label for="show-nav">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars" id="menu_btn"></i>
                 </label>
             </div>
             <div>
@@ -22,16 +22,16 @@
             </div>
             <div class="cart_status">
                 <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-                <p>40</p>
+                <p>12</p>
             </div>
         </div>
         <input type="checkbox" id="show-nav" hidden>
             <ul class="menu_items">
                 <% if(locals.isLogged) {%>
-                <li type="none"> <a id="loging_option" class="linkEffect" href="/usuarios/profile"> <img src="/images/userImages/<%= locals.userLogged.image ? locals.userLogged.image : 'default.png' %>" width="25" height="25" style="border-radius: 100%;"> ¡Bienvenidx!, <%= locals.userLogged.first_name%></a></li>
+                <li type="none"> <a id="loging_option" class="linkEffect" href="/usuarios/profile"> <img src="/images/userImages/<%= locals.userLogged.image ? locals.userLogged.image : 'default.png' %>" width="25" height="25" style="border-radius: 100%;"> ¡Hola, <%= locals.userLogged.name%>!</a></li>
                 <li type="none"> <a id="loging_option" class="linkEffect" href="/usuarios/logout">Salir<i class="fas fa-sign-in-alt"></i></a></li></li>
                     <%} else {%>
-                <li type="none"><a id="loging_option" href="/usuarios/login"><i class="fas fa-sign-in-alt"></i> Registrate / Inicia sesión</a></li>
+                <li type="none"><a id="loging_option" href="/usuarios/login"><i class="fas fa-sign-in-alt"></i> REGISTRATE / INICIA SESIÓN</a></li>
                 <%}%>
                 <li type="none" class="buscarNav">
                     <form action="/buscar" method="GET" id="searchForm" class="searchForm">
@@ -65,7 +65,7 @@
         </div>
         <div class="login_search">
             <% if(locals.isLogged) {%>
-            <a id="loging_option_normal" class="linkEffect" class="nueva" href="/usuarios/profile"> <img src="/images/userImages/<%= locals.userLogged.image ? locals.userLogged.image : 'default.png' %>" width="30" height="30" style="border-radius: 100%;"> !Bienvenido! <%= locals.userLogged.first_name%></a>
+            <a id="loging_option_normal" class="linkEffect" class="nueva" href="/usuarios/profile"> <img src="/images/userImages/<%= locals.userLogged.image ? locals.userLogged.image : 'default.png' %>" width="30" height="30" style="border-radius: 100%;">  ¡Hola, <%= locals.userLogged.name%>!</a>
             <%} else {%>
             <a id="loging_option_normal" class="linkEffect" href="/usuarios/login">Registrate / Inicia sesión <i class="fas fa-sign-in-alt"></i></a>
             <%}%>
@@ -79,10 +79,11 @@
 
         <div class="cart_status">
             <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-            <p>40</p>
+            <p>12</p>
         </div>
         <% if(locals.isLogged) {%>
             <a id="loging_option_normal" class="linkEffect" href="/usuarios/logout">Salir<i class="fas fa-sign-in-alt"></i></a>
         <%}%>
+        <script defer src="/js/menu.js"></script>
     </div>
     </header>

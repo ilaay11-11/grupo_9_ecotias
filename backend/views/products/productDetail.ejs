@@ -13,9 +13,9 @@
             <img src="/images/productImages/<%= productSelected.image ? productSelected.image : 'default.jpg' %>" id="imagen2">
         </div>
         
-        <div>
-            <h2 class="descripcion-producto"><%= productSelected.name %></h2>
-            <h2 class="descripcion-producto">$<%= productSelected.price %></h2>
+        <div class="detail_container">
+            <h2 class="descripcion-producto_title"><%= productSelected.name %></h2>
+            <h2 class="descripcion-producto_title">$<%= productSelected.price %></h2>
 
             <div class="input-group">
                 <input type="button" value="-" class="button-minus" data-field="quantity">
@@ -24,29 +24,34 @@
             </div>
             <div class = "agregar">
                 <input type="button" value="AGREGAR AL CARRITO" id="agregar">
+                <% if(locals.isLogged) {%>
+                    <button onclick="window.location.href='/productos/<%= productSelected.id %>/editar'">EDITAR PRODUCTO</button>
+                    <%}%>
             </div>
               
 
-        <h3 class="descripcion-producto">Categoria:</h3>
-            <p class="descripcion-producto">
+        <h3 class="descripcion-producto_detail">Categoria:</h3>
+            <p class="descripcion-producto_detail">
                 <%= productSelected.category.name %>
             </p>
-        <h3 class="descripcion-producto">Fabricante:</h3>
-            <p class="descripcion-producto">
+        <h3 class="descripcion-producto_detail">Fabricante:</h3>
+            <p class="descripcion-producto_detail">
                 <%= productSelected.maker.name %>
             </p>
-        <h3 class="descripcion-producto">Descripción:</h3>
-            <p class="descripcion-producto">
+        <h3 class="descripcion-producto_detail">Descripción:</h3>
+            <p class="descripcion-producto_detail">
                 <%= productSelected.description %>
             </p>
-        <h3 class="descripcion-producto">Ingredientes:</h3>
-            <p class="descripcion-producto">SCI (Sodium Cocoyl Isethionate), Harina de Avena, Proteína de Chícharo,
+        <h3 class="descripcion-producto_detail">Ingredientes:</h3>
+            <p class="descripcion-producto_detail">SCI (Sodium Cocoyl Isethionate), Harina de Avena, Proteína de Chícharo,
                 Manteca de Cacao, Agua de Rosas, Aceite de Almendras, y Cacao en Polvo.
             </p>
-        <h3 class="descripcion-producto">Contenido: 100g</h3>
+        <h3 class="descripcion-producto_detail">Contenido:</h3>
+        <p class="descripcion-producto_detail">100g
+        </p>
 
-        <h3 class="descripcion-producto">Modo de uso:</h3>
-             <p class="descripcion-producto">
+        <h3 class="descripcion-producto_detail">Modo de uso:</h3>
+             <p class="descripcion-producto_detail">
                 Humedece tu cabello y aplica directamente. Masajea, y luego enjuaga.
                 Tras su uso, enjuaga tu sólido y colócalo en un lugar seco, fresco, y lejos del sol.
              </p>             

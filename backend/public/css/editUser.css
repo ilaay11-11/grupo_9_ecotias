@@ -120,10 +120,10 @@ body{
     list-style: none;
 }
 
-@media (min-width: 780px){
+/* @media (min-width: 780px){
     #main-container{
         margin: 5% 25% 5% 25%;
         
     }
     
-}
+} */
