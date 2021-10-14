@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Dashboard from './components/dashboard/Users';
 import reportWebVitals from './reportWebVitals';
 import DashboardProducts from './components/dashboard/Products';

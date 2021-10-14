@@ -91,7 +91,7 @@ const productsControllerAPI = {
               },
             };
             res.json(respuesta);
-          } else if (producto.image.includes('http://dummyimage.com')) {
+          } else if (producto.image.includes("http://dummyimage.com")) {
             respuesta = {
               meta: {
                 status: 200,
@@ -102,7 +102,7 @@ const productsControllerAPI = {
                 name: producto.name,
                 description: producto.description,
                 price: producto.price,
-                image:producto.image,
+                image: producto.image,
                 additionalInfo: [
                   {
                     category: {
@@ -126,9 +126,7 @@ const productsControllerAPI = {
                 name: producto.name,
                 description: producto.description,
                 price: producto.price,
-                image:
-                  "https://ecotias.herokuapp.com" +
-                  producto.image,
+                image: "https://ecotias.herokuapp.com" + producto.image,
                 additionalInfo: [
                   {
                     category: {
