@@ -43,7 +43,7 @@ main {
 }
 /* ---- Topbar header ---- */
 .topbar_header {
-  background-color: #eeffec
+  background-color: #eeffec;
   border: solid rgba(144, 238, 144, 0.4);
   border-width: 0 0 1px;
 }
