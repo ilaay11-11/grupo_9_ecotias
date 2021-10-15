@@ -112,7 +112,7 @@ const productsController = {
           {
             name: req.body.name,
             description: req.body.description,
-            image: req.file.filename,
+            image: "/images/productImages/" + req.file.filename,
             category_id: req.body.category,
             price: req.body.price,
             maker_id: req.body.maker,
@@ -129,6 +129,7 @@ const productsController = {
             name: req.body.name,
             description: req.body.description,
             category_id: req.body.category,
+            image: "/images/productImages/default.jpg",
             price: req.body.price,
             maker_id: req.body.maker,
           },
