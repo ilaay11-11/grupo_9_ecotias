@@ -14,7 +14,7 @@ const usersController = require('../controllers/usersController');
 
 /*** CREATE ONE USER ***/
 router.get('/register',guestMiddleware, usersController.create); // MUESTRA FORMULARIO DE REGISTRO
-router.post('/', uploadUserImage.single('user-image'), validationRegisterMiddleware, usersController.store); // ENVÍA INFO DE FORMULARIO DE REGISTRO
+router.post('/', uploadUserImage.single('userImage'), validationRegisterMiddleware, usersController.store); // ENVÍA INFO DE FORMULARIO DE REGISTRO
 
 // Formulario de login
 router.get('/login', guestMiddleware, usersController.login);

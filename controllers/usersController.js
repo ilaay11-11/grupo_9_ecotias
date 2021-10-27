@@ -11,32 +11,14 @@ const usersController = {
     // index: (req, res) => res.render('users/index'),
     create: (req, res) => res.render('users/register'),
     store:  async (req, res) => {
-        // const resultValidation = validationResult(req);
-		// if (resultValidation.errors.length > 0) {
-		// 	return res.render('users/register', {
-		// 		errors: resultValidation.mapped(),
-		// 		oldData: req.body
-		// 	});
-		// };
-
-        // let newUser = await db.Usuario.findOne({
-        //     where: {
-        //         email: req.body.email
-        //     }
-        // })
-        // // .then(usuario =>console.log(usuario));
-
-        // if (newUser.email == req.body.email) {
-        //         return res.render('users/register', {
-        //             errors: {
-        //                 email: {
-        //                     msg: 'Este usuario ya está registrado'
-        //                 }
-        //             },
-        //             oldData: req.body
-        //         })
-        //     }
-
+        const resultValidation = validationResult(req);
+        console.log(resultValidation);
+		if (resultValidation.errors.length > 0) {
+			return res.render('users/register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		};
             if(req.file) {
                 await db.Usuario.create({
                     name: req.body.first_name,

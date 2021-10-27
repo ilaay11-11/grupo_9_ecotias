@@ -20,6 +20,10 @@ body{
     border: 1px solid #dc3545 !important;
 }
 
+.errores {
+    color: white;
+}
+
 /* IMAGEN USUARIO */
 #user_img{
     position:relative;
@@ -184,6 +188,15 @@ a{
 
 #IS p a:hover {
     text-decoration: underline;
+}
+.errores{
+    background-color:#5cb14f;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
 /*PANTALLA 768px*/

@@ -3,6 +3,10 @@ main h2 {
     text-align: center;
     margin: 12px 0;
 }
+.text-danger{
+    color: red;
+    font-size: small;
+}
 
 /* -------- Área principal -------- */
 .crear_producto {
