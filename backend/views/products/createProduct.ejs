@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/crearProduct.css" />
+    <title>Crear producto</title>
+  </head>
+
+  <body>
+    <%- include('../partials/header') %>
+    <main class="main_createProduct">
+      <div class="container_form">
+
+        <h2>Crear producto</h2>
+        <form
+          action="/productos/crear"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="crear_producto">
+            <div class="field">
+              <label for="name">Nombre</label>
+              <div class="control">
+                <input
+                  type="text"
+                  name="name"
+                  class="input_info"
+                  placeholder="Ej: Omeprazole"
+                  id="nombre"
+                  required
+                  value="<%= locals.oldData ? oldData.name : null %>"
+                />
+                <div class="errores text-danger">
+                  <ul></ul>
+                </div>
+              </div>
+              <% if (locals.errors && errors.name) { %>
+              <p class="text-danger"><%= errors.name.msg %></p>
+              <% } %>
+            </div>
+            <div class="field">
+              <label for="category">Categoría</label>
+              <div class="control">
+                <select name="category" id="category" class="input_info" required>
+                  <% for( let i=0; i < categories.length; i++ ) { %>
+                  <option value="<%= categories[i].id %> ">
+                    <%= categories[i].name %>
+                  </option>
+                  <% } %>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="category">Fabricante</label>
+              <div class="control">
+                <select name="maker" id="maker" class="input_info" required>
+                  <% for( let i=0; i < makers.length; i++ ) { %>
+                  <option value="<%= makers[i].id %> ">
+                    <%= makers[i].name %>
+                  </option>
+                  <% } %>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="price">Precio</label>
+              <div class="control">
+                <input
+                  type="number"
+                  name="price"
+                  class="input_info"
+                  step="0.01"
+                  placeholder="Ej: 750"
+                  value="<%= locals.oldData ? oldData.price : null %>"
+                  required
+                />
+              </div>
+              <% if (locals.errors && errors.price) { %>
+              <p class="text-danger"><%= errors.price.msg %></p>
+              <% } %>
+            </div>
+            <div class="field">
+              <label for="description">Descripción</label>
+              <div class="control">
+                <textarea
+                  name="description"
+                  id="description"
+                  class="input_info"
+                  value="<%= locals.oldData ? oldData.description : null %>"
+                  required
+                ></textarea>
+                <div class="errores1 text-danger">
+                  <ul></ul>
+                </div>
+              </div>
+              <% if (locals.errors && errors.description) { %>
+              <p class="text-danger"><%= errors.description.msg %></p>
+              <% } %>
+            </div>
+            <div class="field">
+              <label for="product_image">Imagen</label>
+              <div class="control">
+                <input
+                  type="file"
+                  name="product_image"
+                  id="product_image"
+                  class="product_image_upload"
+                  accept="image/gif,image/jpeg,image/jpg,image/png"
+                />
+                <div class="errores2 text-danger">
+                  <ul></ul>
+                </div>
+              </div>
+              <% if (locals.errors && errors.product_image) { %>
+              <p class="text-danger"><%= errors.product_image.msg %></p>
+              <% } %>
+            </div>
+          </div>
+          <div class="buttonAction">
+            <div class="control">
+              <button type="submit">Crear producto</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <!-- <script src="/js/createProduct.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<header>
+    <div class="topbar_header">
+        <p class="textSlider"><i class="fas fa-truck"></i> Envíos gratis a partir de $599</p>
+        <div class="content__header_follow_icons">
+            <a href="#"><i class="head_icon_follow fab fa-facebook-square"></i></a>
+            <a href="#"><i class="head_icon_follow fab fa-instagram-square"></i></a>
+            <a href="#"><i class="head_icon_follow fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+    <!-- ---------------- Navegación mobile ---------------- -->
+    <div class="nav_mobile">
+        <div class="main_nav_mobile">
+            <div class="menu_icon">
+                <label for="show-nav">
+                    <i class="fas fa-bars" id="menu_btn"></i>
+                </label>
+            </div>
+            <div>
+                <a href="/">
+                    <img class="logo_header" src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="cart_status">
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                <p>12</p>
+            </div>
+        </div>
+        <input type="checkbox" id="show-nav" hidden>
+        <ul class="menu_items">
+            <% if(locals.isLogged) {%>
+                <li type="none"> <a id="loging_option" class="linkEffect" href="/usuarios/profile"> <img
+                            src="/images/userImages/<%= locals.userLogged.image ? locals.userLogged.image : 'default.png' %>"
+                            width="25" height="25" style="border-radius: 100%;"> ¡Hola, <%= locals.userLogged.name%>
+                            !</a></li>
+                <li type="none"> <a id="loging_option" class="linkEffect" href="/usuarios/logout">Salir<i
+                            class="fas fa-sign-in-alt"></i></a></li>
+                </li>
+                <%} else {%>
+                    <li type="none"><a id="loging_option" href="/usuarios/login"><i class="fas fa-sign-in-alt"></i>
+                            REGISTRATE / INICIA SESIÓN</a></li>
+                    <%}%>
+                        <li type="none" class="buscarNav">
+                            <form action="/buscar" method="GET" id="searchForm" class="searchForm">
+                                <input name="keywords" type="text" placeholder="Buscar...">
+                                <a onclick="document.getElementById('searchForm').submit()" class="botonBuscarNav"
+                                    href="#"><i class="fas fa-search"></i></a>
+                            </form>
+                        </li>
+                        <li type="none"><a href="/">INICIO</a></li>
+                        <li type="none"><a href="/productos">TIENDA</a></li>
+                        <li type="none"><a href="/productos/crear">CREAR</a></li>
+                        <li type="none"><a href="#Blog">BLOG</a></li>
+                        <% if(locals.isLogged) {%>
+                            <li type="none"><a href="/dashboard">DASHBOARD</a></li>
+                            <%} else {%>
+                                <li type="none"><a href="#Contact">CONTACTO</a></li>
+                                <%}%>
+        </ul>
+    </div>
+    <!-- ---------------- Navegación normal ---------------- -->
+    <div class="nav_normal">
+        <nav class="menu_normal">
+            <ul class="menu_items_normal">
+                <li type="none"><a class="linkEffect" href="/">INICIO</a></li>
+                <li type="none"><a class="linkEffect" href="/productos">PRODUCTOS</a></li>
+                <% if(locals.isLogged) {%>
+                    <li type="none"><a class="linkEffect" href="/productos/crear">CREAR</a></li>
+                    <%} else {%>
+                        <li type="none"><a class="linkEffect" href="#Blog">BLOG</a></li>
+                        <!-- <li type="none"><a class="linkEffect" href="#Contact">CONTACTO</a></li> -->
+                        <%}%>
+
+                            <% if(locals.isLogged) {%>
+                                <li type="none"><a class="linkEffect" href="/dashboard">DASHBOARD</a></li>
+                                <%} else {%>
+                                    <li type="none"><a class="linkEffect" href="#Contact">CONTACTO</a></li>
+                                    <%}%>
+            </ul>
+        </nav>
+
+        <div>
+            <a href="/">
+                <img class="logo_header" src="/images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="login_search">
+            <% if(locals.isLogged) {%>
+                <a id="loging_option_normal" class="linkEffect" class="nueva" href="/usuarios/profile"> <img
+                        src="/images/userImages/<%= locals.userLogged.image ? locals.userLogged.image : 'default.png' %>"
+                        width="30" height="30" style="border-radius: 100%;"> ¡Hola, <%= locals.userLogged.name%>!</a>
+                <%} else {%>
+                    <a id="loging_option_normal" class="linkEffect" href="/usuarios/login">Registrate / Inicia sesión <i
+                            class="fas fa-sign-in-alt"></i></a>
+                    <%}%>
+                        <div class="searchBar">
+                            <form action="/buscar" method="GET" id="searchForm">
+                                <input name="keywords" type="text" placeholder="Buscar...">
+                                <a onclick="document.getElementById('searchForm').submit()" class="botonBuscarNav"
+                                    href="#"><i class="fas fa-search"></i></a>
+                            </form>
+                        </div>
+        </div>
+
+        <div class="cart_status">
+            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+            <p>12</p>
+        </div>
+        <% if(locals.isLogged) {%>
+            <a id="loging_option_normal" class="linkEffect" href="/usuarios/logout">Salir<i
+                    class="fas fa-sign-in-alt"></i></a>
+            <%}%>
+                <script defer src="/js/menu.js"></script>
+    </div>
+</header>

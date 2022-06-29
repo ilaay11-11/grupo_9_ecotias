@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/home.css">
+        <title>Home</title>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+        <main class="principalHome">
+            <section class="section_slider_home">
+                <div class="sliderText">
+                    <h1>BIENVENIDOS A ECO-TÍAS</h1>
+                    <h2>La mejor tienda ecológica</h2>
+                </div>
+            </section>
+            <section class="section_features_home">
+                <div class="featureHome">
+                    <i class="fas fa-truck"></i>
+                    <h3>Envío a todo México y USA</h3>
+                    <p>Envíos gratis a partir de $599 con tiempos de entrega menor a 24 hrs.</p>
+                </div>
+                <div class="featureHome">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Compra protegida</h3>
+                    <p>Datos personales protegidos, entrega de producto garantizada.</p>
+                </div>
+                <div class="featureHome">
+                    <i class="far fa-life-ring"></i>
+                    <h3>Increíble servicio al cliente</h3>
+                    <p>Dispuestos a ayudarte las 24 horas todos los días.</p>
+                </div>
+            </section>
+            <hr class="separator_dots" />
+            <section class="product_category">
+                <h2>🔥 PRODUCTOS MÁS VENDIDOS 🔥</h2>
+                <div class="productList_all">
+                    <% for(i=0; i < vinylProducts.length; i++) {%>
+                        <div class="product_individual">
+                            <a href="/productos/<%= vinylProducts[i].id %>" class="productLink">
+                                <img src="<%= vinylProducts[i].image ? vinylProducts[i].image : '/images/productImages/default.jpg' %>"
+                                    alt="producto">
+                                <p class="product_name">
+                                    <%= vinylProducts[i].name%>
+                                </p>
+                            </a>
+                            <p class="price">$<%= vinylProducts[i].price%>
+                            </p>
+                            <button class="addCartButton" type="submit">Agregar al carrito</button>
+                        </div>
+                        <% } %>
+                </div>
+            </section>
+            <br>
+            <hr class="separator_dots" />
+            <section class="product_category">
+                <h2>🤑 PRODUCTOS EN OFERTA 🤑</h2>
+                <div class="productList_all">
+                    <% for(i=0; i < woodProducts.length; i++) {%>
+                        <div class="product_individual">
+                            <a href="/productos/<%= woodProducts[i].id %>" class="productLink">
+                                <img src="<%= woodProducts[i].image ? woodProducts[i].image : '/images/productImages/default.jpg' %>"
+                                    alt="producto">
+                                <p class="product_name">
+                                    <%= woodProducts[i].name%>
+                                </p>
+                            </a>
+                            <p class="price">$<%= woodProducts[i].price%>
+                            </p>
+                            <button class="addCartButton" type="submit">Agregar al carrito</button>
+                        </div>
+                        <% } %>
+                </div>
+            </section>
+            <section class="section_newsletter_home">
+                <div class="newsletter_img">
+                    <img src="/images/deal-hero.png" alt="newsletter image">
+                </div>
+                <div class="newsletter_info">
+                    <p class="suscribe_text">Suscríbete a nuestro newsletter y recibe ofertas exclusivas en tu email</p>
+                    <input class="enterEmail" type="text" placeholder="Escribe tu email" required>
+                    <p>
+                        <button class="buttonNewsletter" type="submit">Enviar</button>
+                    </p>
+                </div>
+            </section>
+            <section class="product_category">
+                <h2>🌟 NUEVOS PRODUCTOS 🌟</h2>
+                <div class="productList_all">
+                    <% for(i=0; i < graniteProducts.length; i++) {%>
+                        <div class="product_individual">
+                            <a href="/productos/<%= graniteProducts[i].id %>" class="productLink">
+                                <img src="<%= graniteProducts[i].image ? graniteProducts[i].image : '/images/productImages/default.jpg' %>"
+                                    alt="producto">
+                                <p class="product_name">
+                                    <%= graniteProducts[i].name%>
+                                </p>
+                            </a>
+                            <p class="price">$<%= graniteProducts[i].price%>
+                            </p>
+                            <button class="addCartButton" type="submit">Agregar al carrito</button>
+                        </div>
+                        <% } %>
+                </div>
+            </section>
+            <hr class="separator_dots" />
+            <br>
+            <section class="section_blog_home">
+                <h2>¡VISITA NUESTRO BLOG!</h2>
+                <div class="latest_blogposts">
+                    <div class="entradaBlog">
+                        <a href="#"><img src="/images/blogimg_example.jpg" alt="producto"></a>
+                        <h3>Cuidado básico de plantas</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices montes vitae <a href="#"
+                                class="blogLink">[Leer más...]</a></p>
+                    </div>
+                    <div class="entradaBlog">
+                        <a href="#"><img src="/images/blogimg_example3.jpg" alt="producto"></a>
+                        <h3>¿Cuáles son las flores de otoño?</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, deserunt! Odit <a href="#"
+                                class="blogLink">[Leer más...]</a></p>
+                    </div>
+                    <div class="entradaBlog">
+                        <a href="#"><img src="/images/blogimg_example2.jpg" alt="producto"></a>
+                        <h3>No es el plástico, es el sentido común</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid quibusdam, pariatur <a
+                                href="#" class="blogLink">[Leer más...]</a></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <%- include('../partials/footer') %>
+</body>
+
+</html>
